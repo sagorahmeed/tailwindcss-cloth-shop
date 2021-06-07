@@ -1,157 +1,82 @@
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="public/styles.css">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;1,300&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200&family=Rubik:ital,wght@0,300;1,300&display=swap" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" referrerpolicy="no-referrer" />
-  <style>
-    .line {
-    fill: none;
-    stroke: black;
-    stroke-width: 6;
-    transition: stroke-dasharray 600ms cubic-bezier(0.4, 0, 0.2, 1),
-        stroke-dashoffset 600ms cubic-bezier(0.4, 0, 0.2, 1);
-    }
-    .line1 {
-    stroke-dasharray: 60 207;
-    stroke-width: 6;
-    }
-    .line2 {
-    stroke-dasharray: 60 60;
-    stroke-width: 6;
-    }
-    .line3 {
-    stroke-dasharray: 60 207;
-    stroke-width: 6;
-    }
-    .opened .line1 {
-    stroke-dasharray: 90 207;
-    stroke-dashoffset: -134;
-    stroke-width: 6;
-    }
-    .opened .line2 {
-    stroke-dasharray: 1 60;
-    stroke-dashoffset: -30;
-    stroke-width: 6;
-    }
-    .opened .line3 {
-    stroke-dasharray: 90 207;
-    stroke-dashoffset: -134;
-    stroke-width: 6;
-    }
-/* Style the active class, and buttons on mouse-over */
-.active, .btn:hover {
-  color: rgb(236, 17, 17);
-}
-  </style>
-
-<style>
-    li>ul                 { transform: translatex(100%) scale(0) }
-    li:hover>ul           { transform: translatex(101%) scale(1) }
-    li > button svg       { transform: rotate(-90deg) }
-    li:hover > button svg { transform: rotate(-270deg) }
-    .group:hover .group-hover\:scale-100 { transform: scale(1) }
-    .group:hover .group-hover\:-rotate-180 { transform: rotate(180deg) }
-    .scale-0 { transform: scale(0) }
-    .min-w-32 { min-width: 8rem }
-  </style>
-</head>
-<body>
-    <div class="container-fluid mx-auto xl:shadow lg:shadow">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <link rel="stylesheet" href="public/styles.css" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" />
+        <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;1,300&display=swap" rel="stylesheet" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" />
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200&family=Rubik:ital,wght@0,300;1,300&display=swap" rel="stylesheet" />
+        <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" referrerpolicy="no-referrer" />
+    </head>
+    <body>
+        <div class="container-fluid mx-auto xl:shadow lg:shadow">
             <div class="lg:border-b lg:border-gray-200 xl:border-b xl:border-gray-200 py-3">
                 <div class="max-w-screen-xl mx-auto px-5">
                     <div class="xl:flex xl:justify-between xl:items-center lg:flex lg:justify-between lg:items-center md:flex md:justify-between md:items-center">
                         <div class="flex justify-center items-center">
                             <div class="group inline-block">
-                                <button
-                                  class="focus:outline-none px-3 py-1 flex items-center min-w-24"
-                                >
-                                  <span class="pr-1 font-semibold flex-1 text-gray-500 uppercase text-sm font-rubik">English</span>
-                                  <span>
-                                    <svg
-                                      class="fill-current h-4 w-4 transform group-hover:-rotate-180
-                                      transition duration-150 ease-in-out"
-                                      xmlns="http://www.w3.org/2000/svg"
-                                      viewBox="0 0 20 20"
-                                    >
-                                      <path
-                                        d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"
-                                      />
-                                    </svg>
-                                  </span>
+                                <button class="focus:outline-none px-3 py-1 flex items-center min-w-24">
+                                    <span class="pr-1 font-semibold flex-1 text-gray-500 uppercase text-sm font-rubik">English</span>
+                                    <span>
+                                        <svg class="fill-current h-4 w-4 transform group-hover:-rotate-180 transition duration-150 ease-in-out" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                                            <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
+                                        </svg>
+                                    </span>
                                 </button>
-                                <ul
-                                  class="bg-white border rounded-sm bg-white z-20 transform scale-0 group-hover:scale-100 absolute 
-                                transition duration-150 ease-in-out origin-top min-w-32"
-                                >
-                                  <li class="px-3 py-1 hover:bg-gray-100">
-                                      <a href="#" class="text-xs text-gray-800 font-rubik uppercase">English</a>
-                                  </li>
-                                  <li class="px-3 py-1 hover:bg-gray-100">
-                                      <a href="#" class="text-xs text-gray-800 font-rubik uppercase">Franch</a>
-                                  </li>
-                                  <li class="px-3 py-1 hover:bg-gray-100">
-                                     <a href="#" class="text-xs text-gray-800 font-rubik uppercase">United States</a>
-                                  </li>
+                                <ul class="bg-white border rounded-sm bg-white z-20 transform scale-0 group-hover:scale-100 absolute transition duration-150 ease-in-out origin-top min-w-32">
+                                    <li class="px-3 py-1 hover:bg-gray-100">
+                                        <a href="#" class="text-xs text-gray-800 font-rubik uppercase">English</a>
+                                    </li>
+                                    <li class="px-3 py-1 hover:bg-gray-100">
+                                        <a href="#" class="text-xs text-gray-800 font-rubik uppercase">Franch</a>
+                                    </li>
+                                    <li class="px-3 py-1 hover:bg-gray-100">
+                                        <a href="#" class="text-xs text-gray-800 font-rubik uppercase">United States</a>
+                                    </li>
                                 </ul>
-                              </div>
-                              <div class="group inline-block">
-                                <button
-                                  class="focus:outline-none px-3 py-1 flex items-center min-w-24"
-                                >
-                                  <span class="pr-1 font-semibold flex-1 text-gray-500 uppercase text-sm font-rubik">usd</span>
-                                  <span>
-                                    <svg
-                                      class="fill-current h-4 w-4 transform group-hover:-rotate-180
-                                      transition duration-150 ease-in-out"
-                                      xmlns="http://www.w3.org/2000/svg"
-                                      viewBox="0 0 20 20"
-                                    >
-                                      <path
-                                        d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"
-                                      />
-                                    </svg>
-                                  </span>
+                            </div>
+                            <div class="group inline-block">
+                                <button class="focus:outline-none px-3 py-1 flex items-center min-w-24">
+                                    <span class="pr-1 font-semibold flex-1 text-gray-500 uppercase text-sm font-rubik">usd</span>
+                                    <span>
+                                        <svg class="fill-current h-4 w-4 transform group-hover:-rotate-180 transition duration-150 ease-in-out" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                                            <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
+                                        </svg>
+                                    </span>
                                 </button>
-                                <ul
-                                  class="bg-white border rounded-sm bg-white z-20 transform scale-0 group-hover:scale-100 absolute 
-                                transition duration-150 ease-in-out origin-top min-w-32"
-                                >
-                                  <li class="px-3 py-1 hover:bg-gray-100">
-                                      <a href="#" class="text-xs text-gray-800 font-rubik uppercase">use</a>
-                                  </li>
-                                  <li class="px-3 py-1 hover:bg-gray-100">
-                                      <a href="#" class="text-xs text-gray-800 font-rubik uppercase">eur</a>
-                                  </li>
-                                  <li class="px-3 py-1 hover:bg-gray-100">
-                                     <a href="#" class="text-xs text-gray-800 font-rubik uppercase">gbr</a>
-                                  </li>
+                                <ul class="bg-white border rounded-sm bg-white z-20 transform scale-0 group-hover:scale-100 absolute transition duration-150 ease-in-out origin-top min-w-32">
+                                    <li class="px-3 py-1 hover:bg-gray-100">
+                                        <a href="#" class="text-xs text-gray-800 font-rubik uppercase">use</a>
+                                    </li>
+                                    <li class="px-3 py-1 hover:bg-gray-100">
+                                        <a href="#" class="text-xs text-gray-800 font-rubik uppercase">eur</a>
+                                    </li>
+                                    <li class="px-3 py-1 hover:bg-gray-100">
+                                        <a href="#" class="text-xs text-gray-800 font-rubik uppercase">gbr</a>
+                                    </li>
                                 </ul>
-                              </div>
+                            </div>
                         </div>
                         <div class="flex justify-center items-center xl:pt-0 lg:pt-0 md:pt-0 pt-3">
                             <a href="wishlist.html" class="">
                                 <div class="flex items-center">
-                                    <img class="w-3 h-auto" src="icon_png/heart (1).png" alt="">
+                                    <img class="w-3 h-auto" src="icon_png/heart (1).png" alt="" />
                                     <p class="uppercase text-sm ml-2 font-rubik text-gray-900">wishlist</p>
                                 </div>
                             </a>
-                           <a href="signin.html" class="">
-                            <div class="flex items-center ml-4">
-                                <img class="w-3 h-auto" src="icon_png/user.png" alt="">
-                                <p class="uppercase text-sm ml-2 font-rubik text-gray-900">sign in</p>
-                            </div>
-                           </a>
+                            <a href="signin.html" class="">
+                                <div class="flex items-center ml-4">
+                                    <img class="w-3 h-auto" src="icon_png/user.png" alt="" />
+                                    <p class="uppercase text-sm ml-2 font-rubik text-gray-900">sign in</p>
+                                </div>
+                            </a>
                             <a href="signup.html" class="">
                                 <div class="flex items-center ml-4">
-                                    <img class="w-3 h-auto" src="icon_png/padlock.png" alt="">
+                                    <img class="w-3 h-auto" src="icon_png/padlock.png" alt="" />
                                     <p class="uppercase text-sm ml-2 font-rubik text-gray-900">sign up</p>
                                 </div>
                             </a>
@@ -159,59 +84,76 @@
                     </div>
                 </div>
             </div>
-            <div class="max-w-screen-xl mx-auto px-5">
-                <div x-data="{ open: false }" class="flex justify-between items-center py-6 relative">
-                    <div class="">
-                        <a href="index.html" class=""><img class="xl:w-44 xl:h-auto xl:w-44 xl:h-auto md:w-32 md:h-auto w-28 h-auto" src="images/logo2.webp" alt=""></a>
-                    </div>
-                    <div class="flex justify-between items-center">
-                       <div class="mr-12">
-                        <div id="myDIV" class="w-full">
-                            <ul :class="{'flex': open, 'hidden': !open}" class="flex-col leading-loose flex-grow pb-4 hidden md:pb-0 lg:flex lg:justify-end lg:flex-row xl:h-auto lg:h-auto h-auto top-20 xl:bg-transparent lg:bg-transparent bg-white w-full xl:flex xl:justify-end xl::flex-row xl:static lg:static absolute left-0">
-                                
-                                    <a href="#" class="btn active font-rubik px-4 py-2 mt-2 text-sm font-semibold text-gray-900 xl:mt-0 lg:mt-0 mt-2 xl:mr-4 lg:mr-4 uppercase xl:border-transparent lg:border-transparent border border-gray-200">Home</a>
-                                    <a href="#" class="btn font-rubik px-4 py-2 mt-2 text-sm font-semibold text-gray-900 xl:mt-0 lg:mt-0 mt-2 xl:mr-4 lg:mr-4 uppercase xl:border-transparent lg:border-transparent border border-gray-200">pages</a>
-                                    <a href="#" class="btn font-rubik px-4 py-2 mt-2 text-sm font-semibold text-gray-900 xl:mt-0 lg:mt-0 mt-2 xl:mr-4 lg:mr-4 uppercase xl:border-transparent lg:border-transparent border border-gray-200">products</a>
-                                    <a href="#" class="btn font-rubik px-4 py-2 mt-2 text-sm font-semibold text-gray-900 xl:mt-0 lg:mt-0 mt-2 xl:mr-4 lg:mr-4 uppercase xl:border-transparent lg:border-transparent border border-gray-200">shop</a>
-                                    <a href="#" class="btn font-rubik px-4 py-2 mt-2 text-sm font-semibold text-gray-900 xl:mt-0 lg:mt-0 mt-2 uppercase xl:border-transparent lg:border-transparent border border-gray-200">contact us</a>
-                            </ul>
+            <div class="" id="nav">
+                <div class="max-w-screen-xl mx-auto px-5">
+                    <div x-data="{ open: false }" class="flex justify-between items-center py-6 relative">
+                        <div class="">
+                            <a href="index.html" class=""><img class="xl:w-44 xl:h-auto xl:w-44 xl:h-auto md:w-32 md:h-auto w-28 h-auto" src="images/logo2.webp" alt="" /></a>
                         </div>
-                       </div>
-                        <div class="flex items-center">
-                            <div class="mr-6">
-                                <i class="fas fa-search text-gray-500 cursor-pointer"> </i>
-                           </div>
-                            <div class="relative">
-                                <i class="fas fa-shopping-cart text-gray-500 cursor-pointer"></i>
-                                <div class="flex-shrink-0 ml-2 self-end mb-1 absolute -top-3 -right-4">
-                                    <span class="flex items-center justify-center h-5 w-5 bg-red-500 text-white text-xs rounded-full">0</span>
-                                  </div>
+                        <div class="flex justify-between items-center">
+                            <div class="mr-12">
+                                <div id="myDIV" class="w-full">
+                                    <ul :class="{'flex': open, 'hidden': !open}" class="flex-col leading-loose flex-grow pb-4 hidden md:pb-0 lg:flex lg:justify-end lg:flex-row xl:h-auto lg:h-auto h-auto top-20 xl:bg-transparent lg:bg-transparent bg-white w-full xl:flex xl:justify-end xl::flex-row xl:static lg:static absolute left-0"
+                                    >
+                                        <a
+                                            href="#"
+                                            class="btn active font-rubik px-4 py-2 mt-2 text-sm font-semibold text-gray-900 xl:mt-0 lg:mt-0 mt-2 xl:mr-4 lg:mr-4 uppercase xl:border-transparent lg:border-transparent border border-gray-200"
+                                        >
+                                            Home
+                                        </a>
+                                        <a href="#" class="btn font-rubik py-2 mt-2 text-sm font-semibold text-gray-900 xl:mt-0 lg:mt-0 mt-2 xl:mr-4 lg:mr-4 uppercase xl:border-transparent lg:border-transparent border border-gray-200">
+                                            <div class="group inline-block max">
+                                                <button class="focus:outline-none px-3 flex items-center w-full">
+                                                    <span class="font-rubik text-sm font-semibold text-gray-900 uppercase pr-1">Products</span>
+                                                    <span>
+                                                        <svg class="fill-current h-4 w-4 transform group-hover:-rotate-180 transition duration-150 ease-in-out" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                                                            <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
+                                                        </svg>
+                                                    </span>
+                                                </button>
+                                                <div class="bg-white border rounded-sm bg-white z-20 transform scale-0 group-hover:scale-100 absolute transition duration-150 ease-in-out max-w-screen-xl text-center left-0 top-20" style="width: 100%;">
+                                                                                         
+                                                </div>
+                                            </div>
+                                        </a>
+                                        <a href="#" class="btn font-rubik px-4 py-2 mt-2 text-sm font-semibold text-gray-900 xl:mt-0 lg:mt-0 mt-2 xl:mr-4 lg:mr-4 uppercase xl:border-transparent lg:border-transparent border border-gray-200">
+                                            shop
+                                        </a>
+                                        <a href="#" class="btn font-rubik px-4 py-2 mt-2 text-sm font-semibold text-gray-900 xl:mt-0 lg:mt-0 mt-2 uppercase xl:border-transparent lg:border-transparent border border-gray-200">contact us</a>
+                                    </ul>
+                                </div>
                             </div>
-                        </div>
-                        <div class="xl:hidden lg:hidden block ml-8">
-                            <button @click="open = !open" class="menu focus:outline-none" onclick="this.classList.toggle('opened');this.setAttribute('aria-expanded', this.classList.contains('opened'))" aria-label="Main Menu">
-                                <svg width="36" height="auto" viewBox="0 0 100 100">
-                                  <path class="line line1" d="M 20,29.000046 H 80.000231 C 80.000231,29.000046 94.498839,28.817352 94.532987,66.711331 94.543142,77.980673 90.966081,81.670246 85.259173,81.668997 79.552261,81.667751 75.000211,74.999942 75.000211,74.999942 L 25.000021,25.000058" />
-                                  <path class="line line2" d="M 20,50 H 80" />
-                                  <path class="line line3" d="M 20,70.999954 H 80.000231 C 80.000231,70.999954 94.498839,71.182648 94.532987,33.288669 94.543142,22.019327 90.966081,18.329754 85.259173,18.331003 79.552261,18.332249 75.000211,25.000058 75.000211,25.000058 L 25.000021,74.999942" />
-                                </svg>
-                              </button>
+                            <div class="flex items-center">
+                                <div class="mr-6">
+                                    <i class="fas fa-search text-gray-500 cursor-pointer"> </i>
+                                </div>
+                                <div class="relative">
+                                    <i class="fas fa-shopping-cart text-gray-500 cursor-pointer"></i>
+                                    <div class="flex-shrink-0 ml-2 self-end mb-1 absolute -top-3 -right-4">
+                                        <span class="flex items-center justify-center h-5 w-5 bg-red-500 text-white text-xs rounded-full">0</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="xl:hidden lg:hidden block ml-8">
+                                <button @click="open = !open" class="menu focus:outline-none" onclick="this.classList.toggle('opened');this.setAttribute('aria-expanded', this.classList.contains('opened'))" aria-label="Main Menu">
+                                    <svg width="36" height="auto" viewBox="0 0 100 100">
+                                        <path
+                                            class="line line1"
+                                            d="M 20,29.000046 H 80.000231 C 80.000231,29.000046 94.498839,28.817352 94.532987,66.711331 94.543142,77.980673 90.966081,81.670246 85.259173,81.668997 79.552261,81.667751 75.000211,74.999942 75.000211,74.999942 L 25.000021,25.000058"
+                                        />
+                                        <path class="line line2" d="M 20,50 H 80" />
+                                        <path
+                                            class="line line3"
+                                            d="M 20,70.999954 H 80.000231 C 80.000231,70.999954 94.498839,71.182648 94.532987,33.288669 94.543142,22.019327 90.966081,18.329754 85.259173,18.331003 79.552261,18.332249 75.000211,25.000058 75.000211,25.000058 L 25.000021,74.999942"
+                                        />
+                                    </svg>
+                                </button>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-    </div>
-    <script>
-        // Add active class to the current button (highlight it)
-        var header = document.getElementById("myDIV");
-        var btns = header.getElementsByClassName("btn");
-        for (var i = 0; i < btns.length; i++) {
-          btns[i].addEventListener("click", function() {
-          var current = document.getElementsByClassName("active");
-          current[0].className = current[0].className.replace(" active", "");
-          this.className += " active";
-          });
-        }
-        </script>
-</body>
+        </div>
+        <script type="text/javascript" src="./styles.js"></script>
+    </body>
 </html>
