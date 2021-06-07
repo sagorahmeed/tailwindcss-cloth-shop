@@ -51,10 +51,114 @@
   color: rgb(236, 17, 17);
 }
   </style>
+
+<style>
+    li>ul                 { transform: translatex(100%) scale(0) }
+    li:hover>ul           { transform: translatex(101%) scale(1) }
+    li > button svg       { transform: rotate(-90deg) }
+    li:hover > button svg { transform: rotate(-270deg) }
+    .group:hover .group-hover\:scale-100 { transform: scale(1) }
+    .group:hover .group-hover\:-rotate-180 { transform: rotate(180deg) }
+    .scale-0 { transform: scale(0) }
+    .min-w-32 { min-width: 8rem }
+  </style>
 </head>
 <body>
-    <div class="container-fluid mx-auto lg:border-b lg:border-gray-200 xl:border-b xl:border-gray-200">
-        <div class="container mx-auto">
+    <div class="container-fluid mx-auto xl:shadow lg:shadow">
+            <div class="lg:border-b lg:border-gray-200 xl:border-b xl:border-gray-200 py-3">
+                <div class="max-w-screen-xl mx-auto px-5">
+                    <div class="xl:flex xl:justify-between xl:items-center lg:flex lg:justify-between lg:items-center md:flex md:justify-between md:items-center">
+                        <div class="flex justify-center items-center">
+                            <div class="group inline-block">
+                                <button
+                                  class="focus:outline-none px-3 py-1 flex items-center min-w-24"
+                                >
+                                  <span class="pr-1 font-semibold flex-1 text-gray-500 uppercase text-sm font-rubik">English</span>
+                                  <span>
+                                    <svg
+                                      class="fill-current h-4 w-4 transform group-hover:-rotate-180
+                                      transition duration-150 ease-in-out"
+                                      xmlns="http://www.w3.org/2000/svg"
+                                      viewBox="0 0 20 20"
+                                    >
+                                      <path
+                                        d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"
+                                      />
+                                    </svg>
+                                  </span>
+                                </button>
+                                <ul
+                                  class="bg-white border rounded-sm bg-white z-20 transform scale-0 group-hover:scale-100 absolute 
+                                transition duration-150 ease-in-out origin-top min-w-32"
+                                >
+                                  <li class="px-3 py-1 hover:bg-gray-100">
+                                      <a href="#" class="text-xs text-gray-800 font-rubik uppercase">English</a>
+                                  </li>
+                                  <li class="px-3 py-1 hover:bg-gray-100">
+                                      <a href="#" class="text-xs text-gray-800 font-rubik uppercase">Franch</a>
+                                  </li>
+                                  <li class="px-3 py-1 hover:bg-gray-100">
+                                     <a href="#" class="text-xs text-gray-800 font-rubik uppercase">United States</a>
+                                  </li>
+                                </ul>
+                              </div>
+                              <div class="group inline-block">
+                                <button
+                                  class="focus:outline-none px-3 py-1 flex items-center min-w-24"
+                                >
+                                  <span class="pr-1 font-semibold flex-1 text-gray-500 uppercase text-sm font-rubik">usd</span>
+                                  <span>
+                                    <svg
+                                      class="fill-current h-4 w-4 transform group-hover:-rotate-180
+                                      transition duration-150 ease-in-out"
+                                      xmlns="http://www.w3.org/2000/svg"
+                                      viewBox="0 0 20 20"
+                                    >
+                                      <path
+                                        d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"
+                                      />
+                                    </svg>
+                                  </span>
+                                </button>
+                                <ul
+                                  class="bg-white border rounded-sm bg-white z-20 transform scale-0 group-hover:scale-100 absolute 
+                                transition duration-150 ease-in-out origin-top min-w-32"
+                                >
+                                  <li class="px-3 py-1 hover:bg-gray-100">
+                                      <a href="#" class="text-xs text-gray-800 font-rubik uppercase">use</a>
+                                  </li>
+                                  <li class="px-3 py-1 hover:bg-gray-100">
+                                      <a href="#" class="text-xs text-gray-800 font-rubik uppercase">eur</a>
+                                  </li>
+                                  <li class="px-3 py-1 hover:bg-gray-100">
+                                     <a href="#" class="text-xs text-gray-800 font-rubik uppercase">gbr</a>
+                                  </li>
+                                </ul>
+                              </div>
+                        </div>
+                        <div class="flex justify-center items-center xl:pt-0 lg:pt-0 md:pt-0 pt-3">
+                            <a href="wishlist.html" class="">
+                                <div class="flex items-center">
+                                    <img class="w-3 h-auto" src="icon_png/heart (1).png" alt="">
+                                    <p class="uppercase text-sm ml-2 font-rubik text-gray-900">wishlist</p>
+                                </div>
+                            </a>
+                           <a href="signin.html" class="">
+                            <div class="flex items-center ml-4">
+                                <img class="w-3 h-auto" src="icon_png/user.png" alt="">
+                                <p class="uppercase text-sm ml-2 font-rubik text-gray-900">sign in</p>
+                            </div>
+                           </a>
+                            <a href="signup.html" class="">
+                                <div class="flex items-center ml-4">
+                                    <img class="w-3 h-auto" src="icon_png/padlock.png" alt="">
+                                    <p class="uppercase text-sm ml-2 font-rubik text-gray-900">sign up</p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
             <div class="max-w-screen-xl mx-auto px-5">
                 <div x-data="{ open: false }" class="flex justify-between items-center py-6 relative">
                     <div class="">
@@ -66,8 +170,9 @@
                             <ul :class="{'flex': open, 'hidden': !open}" class="flex-col leading-loose flex-grow pb-4 hidden md:pb-0 lg:flex lg:justify-end lg:flex-row xl:h-auto lg:h-auto h-auto top-20 xl:bg-transparent lg:bg-transparent bg-white w-full xl:flex xl:justify-end xl::flex-row xl:static lg:static absolute left-0">
                                 
                                     <a href="#" class="btn active font-rubik px-4 py-2 mt-2 text-sm font-semibold text-gray-900 xl:mt-0 lg:mt-0 mt-2 xl:mr-4 lg:mr-4 uppercase xl:border-transparent lg:border-transparent border border-gray-200">Home</a>
-                                    <a href="#" class="btn font-rubik px-4 py-2 mt-2 text-sm font-semibold text-gray-900 xl:mt-0 lg:mt-0 mt-2 xl:mr-4 lg:mr-4 uppercase xl:border-transparent lg:border-transparent border border-gray-200">Portfolio</a>
-                                    <a href="#" class="btn font-rubik px-4 py-2 mt-2 text-sm font-semibold text-gray-900 xl:mt-0 lg:mt-0 mt-2 xl:mr-4 lg:mr-4 uppercase xl:border-transparent lg:border-transparent border border-gray-200">Blog</a>
+                                    <a href="#" class="btn font-rubik px-4 py-2 mt-2 text-sm font-semibold text-gray-900 xl:mt-0 lg:mt-0 mt-2 xl:mr-4 lg:mr-4 uppercase xl:border-transparent lg:border-transparent border border-gray-200">pages</a>
+                                    <a href="#" class="btn font-rubik px-4 py-2 mt-2 text-sm font-semibold text-gray-900 xl:mt-0 lg:mt-0 mt-2 xl:mr-4 lg:mr-4 uppercase xl:border-transparent lg:border-transparent border border-gray-200">products</a>
+                                    <a href="#" class="btn font-rubik px-4 py-2 mt-2 text-sm font-semibold text-gray-900 xl:mt-0 lg:mt-0 mt-2 xl:mr-4 lg:mr-4 uppercase xl:border-transparent lg:border-transparent border border-gray-200">shop</a>
                                     <a href="#" class="btn font-rubik px-4 py-2 mt-2 text-sm font-semibold text-gray-900 xl:mt-0 lg:mt-0 mt-2 uppercase xl:border-transparent lg:border-transparent border border-gray-200">contact us</a>
                             </ul>
                         </div>
@@ -95,7 +200,6 @@
                     </div>
                 </div>
             </div>
-        </div>
     </div>
     <script>
         // Add active class to the current button (highlight it)
