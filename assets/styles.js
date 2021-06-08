@@ -14,14 +14,14 @@ for (var i = 0; i < btns.length; i++) {
 //sticky nav
     window.onscroll = function() {myFunction()};
                 
-    var navbar = document.getElementById("nav");
-    var sticky = navbar.offsetTop;
+    var navbarcon = document.getElementById("content");
+    var sticky = navbarcon.offsetTop;
 
     function myFunction() {
         if (window.pageYOffset >= sticky) {
-        navbar.classList.add("sticky")
-        } else {
-        navbar.classList.remove("sticky");
+            navbarcon.classList.add("sticky")
+        } else {navbarcon
+            navbarcon.classList.remove("sticky");
         }
     }
 //sticky nav
