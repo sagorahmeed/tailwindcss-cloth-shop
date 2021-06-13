@@ -12,6 +12,49 @@
         <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" referrerpolicy="no-referrer" />
         <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>
+        <style>
+            .animated {
+                -webkit-animation-duration: 1s;
+                animation-duration: 1s;
+                -webkit-animation-fill-mode: both;
+                animation-fill-mode: both;
+            }
+    
+            .animated.faster {
+                -webkit-animation-duration: 500ms;
+                animation-duration: 500ms;
+            }
+    
+            .fadeIn {
+                -webkit-animation-name: fadeIn;
+                animation-name: fadeIn;
+            }
+    
+            .fadeOut {
+                -webkit-animation-name: fadeOut;
+                animation-name: fadeOut;
+            }
+    
+            @keyframes fadeIn {
+                from {
+                    opacity: 0;
+                }
+    
+                to {
+                    opacity: 1;
+                }
+            }
+    
+            @keyframes fadeOut {
+                from {
+                    opacity: 1;
+                }
+    
+                to {
+                    opacity: 0;
+                }
+            }
+        </style>
     </head>
     <body class="dark:bg-gray-600">
         <div class="container-fluid mx-auto bg-white">
@@ -23,7 +66,7 @@
                                 <button class="focus:outline-none py-1 flex items-center min-w-24">
                                     <span class="pr-1 font-semibold flex-1 text-gray-500 uppercase text-sm font-rubik dark:text-gray-200">English</span>
                                     <span>
-                                        <svg class="fill-current h-4 w-4 transform group-hover:-rotate-180 transition duration-150 ease-in-out dark:text-gray-100" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                                        <svg class="fill-current h-4 w-4 transform group-hover:-rotate-180 transition text-gray-500 duration-150 ease-in-out dark:text-gray-100" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
                                             <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
                                         </svg>
                                     </span>
@@ -44,7 +87,7 @@
                                 <button class="focus:outline-none px-3 py-1 flex items-center min-w-24">
                                     <span class="pr-1 font-semibold flex-1 text-gray-500 uppercase text-sm font-rubik dark:text-gray-200">usd</span>
                                     <span>
-                                        <svg class="fill-current h-4 w-4 transform group-hover:-rotate-180 transition duration-150 ease-in-out dark:text-gray-100" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                                        <svg class="fill-current h-4 w-4 transform group-hover:-rotate-180 transition text-gray-500 duration-150 ease-in-out dark:text-gray-100" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
                                             <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
                                         </svg>
                                     </span>
@@ -220,7 +263,7 @@
                             </div>
                             <div class="flex items-center">
                                 <div class="mr-6">
-                                    <i class="fas fa-search text-gray-500 cursor-pointer dark:text-gray-200"> </i>
+                                    <i  onclick="openModal()" class="fas fa-search text-gray-500 cursor-pointer dark:text-gray-200"> </i>
                                 </div>
                                 <div class="relative">
                                     <i class="fas fa-shopping-cart text-gray-500 cursor-pointer dark:text-gray-200"></i>
@@ -1823,6 +1866,32 @@
                </div>
            </div>
        </div>
+
+ <!--modal-->
+	<div class="main-modal fixed w-full h-100 inset-0 z-50 overflow-hidden flex justify-center items-center animated fadeIn faster"
+    style="background: rgba(0,0,0,.7);">
+    <div
+        class="modal-container w-11/12 md:max-w-md mx-auto rounded z-50 overflow-y-auto">
+        <div class="modal-content py-4 text-left px-6 hover:cur">
+            
+            <div class="flex justify-end pt-2 absolute top-10 right-10">
+                <button
+                    class="focus:outline-none modal-close px-4 p-3 rounded-lg text-black"><i class="fas fa-times text-gray-200 xl:text-4xl lg:text-4xl md:text-4xl text-lg hover:text-red-600 transition duration-300 ease-in-out"></i>
+                </button>
+            </div>
+            <form class="flex">
+                <input class="border border-transparent focus:outline-none focus:ring-2 focus:ring-red-600 focus:border-transparent ... h-12 w-full px-4" type="search">
+                <button class="bg-red-600 hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-red-600 focus:ring-opacity-50 ... w-auto h-12 px-4">
+                    <i class="fas fa-search text-white"></i>
+                </button>
+              </form>
+        </div>
+    </div>
+</div>
+<!--modal-->
+<script>
+    
+</script>
         <script type="text/javascript" src="./styles.js"></script>
     </body>
 </html>

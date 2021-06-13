@@ -42,7 +42,6 @@
 .btn:hover {
     color: rgb(236, 17, 17);
 }
-
 li > ul {
     transform: translatex(100%) scale(0);
 }
