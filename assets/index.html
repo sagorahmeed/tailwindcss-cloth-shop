@@ -13,52 +13,80 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" referrerpolicy="no-referrer" />
         <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>
         <style>
-            .animated {
-                -webkit-animation-duration: 1s;
-                animation-duration: 1s;
-                -webkit-animation-fill-mode: both;
-                animation-fill-mode: both;
+        .line {
+            fill: none;
+            stroke: black;
+            stroke-width: 6;
+            transition: stroke-dasharray 600ms cubic-bezier(0.4, 0, 0.2, 1), stroke-dashoffset 600ms cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .line1 {
+            stroke-dasharray: 60 207;
+            stroke-width: 6;
+        }
+        .line2 {
+            stroke-dasharray: 60 60;
+            stroke-width: 6;
+        }
+        .line3 {
+            stroke-dasharray: 60 207;
+            stroke-width: 6;
+        }
+        .opened .line1 {
+            stroke-dasharray: 90 207;
+            stroke-dashoffset: -134;
+            stroke-width: 6;
+        }
+        .opened .line2 {
+            stroke-dasharray: 1 60;
+            stroke-dashoffset: -30;
+            stroke-width: 6;
+        }
+        .opened .line3 {
+            stroke-dasharray: 90 207;
+            stroke-dashoffset: -134;
+            stroke-width: 6;
+        }
+        .active,
+        .btn:hover {
+            color: rgb(236, 17, 17);
+        }
+        li > ul {
+            transform: translatex(100%) scale(0);
+        }
+        li:hover > ul {
+            transform: translatex(101%) scale(1);
+        }
+        li > button svg {
+            transform: rotate(-90deg);
+        }
+        li:hover > button svg {
+            transform: rotate(-270deg);
+        }
+        .group:hover .group-hover\:scale-100 {
+            transform: scale(1);
+        }
+        .group:hover .group-hover\:-rotate-180 {
+            transform: rotate(180deg);
+        }
+        .scale-0 {
+            transform: scale(0);
+        }
+        .min-w-32 {
+            min-width: 8rem;
+        }
+        .sticky {
+            position: fixed;
+            top: 0;
+            width: 100%;
             }
-    
-            .animated.faster {
-                -webkit-animation-duration: 500ms;
-                animation-duration: 500ms;
-            }
-    
-            .fadeIn {
-                -webkit-animation-name: fadeIn;
-                animation-name: fadeIn;
-            }
-    
-            .fadeOut {
-                -webkit-animation-name: fadeOut;
-                animation-name: fadeOut;
-            }
-    
-            @keyframes fadeIn {
-                from {
-                    opacity: 0;
-                }
-    
-                to {
-                    opacity: 1;
-                }
-            }
-    
-            @keyframes fadeOut {
-                from {
-                    opacity: 1;
-                }
-    
-                to {
-                    opacity: 0;
-                }
+            #content {
+            background-color: white;
             }
         </style>
     </head>
-    <body class="dark:bg-gray-600">
+    <body class="dark:bg-gray-900">
         <div class="container-fluid mx-auto bg-white">
-            <div class="lg:border-b lg:border-gray-200 xl:border-b xl:border-gray-200 py-3 dark:bg-gray-900 dark:border-gray-600 px-5">
+            <div class="border-b border-gray-200 py-3 dark:bg-gray-900 dark:border-gray-600 px-5">
                 <div class="max-w-screen-xl mx-auto">
                     <div class="xl:flex xl:justify-between xl:items-center lg:flex lg:justify-between lg:items-center md:flex md:justify-between md:items-center">
                         <div class="flex justify-center items-center">
@@ -132,7 +160,7 @@
                 <div class="max-w-screen-xl mx-auto">
                     <div x-data="{ open: false }" class="flex justify-between items-center py-6 relative">
                         <div class="">
-                            <a href="index.html" class="text-xl text-gray-800 dark:text-gray-200 font-bold font-rubik">Logo</a>
+                            <a href="index.html" class="text-xl text-gray-800 font-bold font-rubik">Logo</a>
                         </div>
                         <div class="flex justify-end items-center space-x-2">
                             <svg
@@ -171,11 +199,11 @@
                                 <div id="myDIV" class="w-full">
                                     <ul
                                         :class="{'flex': open, 'hidden': !open}"
-                                        class="flex-col xl:px-0 z-40 lg:px-0 px-4 leading-loose flex-grow pb-4 hidden md:pb-0 lg:flex lg:justify-end lg:flex-row xl:h-auto lg:h-auto h-auto top-20 xl:bg-transparent lg:bg-transparent bg-white dark:bg-gray-900 w-full xl:flex xl:justify-end xl::flex-row xl:static lg:static absolute left-0"
+                                        class="flex-col xl:px-0 z-40 lg:px-0 px-4 leading-loose flex-grow pb-4 hidden md:pb-0 lg:flex lg:justify-end lg:flex-row xl:h-auto lg:h-auto h-auto top-20 xl:bg-transparent lg:bg-transparent bg-white w-full xl:flex xl:justify-end xl::flex-row xl:static lg:static absolute left-0"
                                     >
                                         <a
                                             href="index.html"
-                                            class="btn active font-rubik px-4 py-2 mt-2 text-sm font-semibold text-gray-900 xl:mt-0 lg:mt-0 mt-2 xl:mr-4 lg:mr-4 uppercase xl:border-transparent lg:border-transparent border border-gray-200 dark:text-gray-200 transition duration-300 ease-in-out xl:dark:border-transparent lg:dark:border-transparent dark:border-gray-600"
+                                            class="btn active font-rubik px-4 py-2 mt-2 text-sm font-semibold text-gray-900 xl:mt-0 lg:mt-0 mt-2 xl:mr-4 lg:mr-4 uppercase xl:border-transparent lg:border-transparent border border-gray-200 transition duration-300 ease-in-out xl:dark:border-transparent lg:dark:border-transparent dark:border-gray-600"
                                         >
                                             Home
                                         </a>
@@ -185,12 +213,12 @@
                                                     @click="open = !open"
                                                     class="focus:outline-none font-rubik px-4 py-2 mt-2 text-sm font-semibold text-gray-900 xl:mt-0 lg:mt-0 mt-2 xl:mr-4 lg:mr-4 uppercase xl:border-transparent lg:border-transparent border border-gray-200 flex flex-row items-center w-full px-4 py-2 mt-2 text-sm font-semibold md:inline md:mt-0 text-left md:mt-2 xl:dark:border-transparent lg:dark:border-transparent dark:border-gray-600"
                                                 >
-                                                    <span class="dark:text-gray-200 transition duration-300 ease-in-out">pages</span>
+                                                    <span class="transition duration-300 ease-in-out">pages</span>
                                                     <svg
                                                         fill="currentColor"
                                                         viewBox="0 0 20 20"
                                                         :class="{'rotate-180': open, 'rotate-0': !open}"
-                                                        class="inline w-4 h-4 mt-1 ml-1 transition-transform duration-200 transform md:-mt-1 dark:text-gray-200"
+                                                        class="inline w-4 h-4 mt-1 ml-1 transition-transform duration-200 transform md:-mt-1"
                                                     >
                                                         <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path>
                                                     </svg>
@@ -205,7 +233,7 @@
                                                     x-transition:leave-end="transform opacity-0 scale-95"
                                                     class="absolute left-0 xl:w-56 lg:w-56 w-full md:max-w-screen-sm md:w-screen mt-2 origin-top-right"
                                                 >
-                                                    <div class="px-2 pt-2 pb-4 bg-white rounded-md shadow-xl dark-mode:bg-gray-700">
+                                                    <div class="px-2 pt-2 pb-4 bg-white rounded-md shadow-xl">
                                                         <ul class="px-3 py-3">
                                                             <li class="">
                                                                 <a href="about.html" class="capitalize text-gray-800 text-sm font-rubik font-medium hover:text-red-600 transition duration-300 ease-in-out dark:text-gray-700">about us</a>
@@ -242,19 +270,19 @@
                                         </a>
                                         <a
                                             href="product.html"
-                                            class="btn font-rubik px-4 py-2 mt-2 text-sm font-semibold text-gray-900 xl:mt-0 lg:mt-0 mt-2 xl:mr-4 lg:mr-4 uppercase xl:border-transparent lg:border-transparent border border-gray-200 dark:text-gray-200 transition duration-300 ease-in-out xl:dark:border-transparent lg:dark:border-transparent dark:border-gray-600"
+                                            class="btn font-rubik px-4 py-2 mt-2 text-sm font-semibold text-gray-900 xl:mt-0 lg:mt-0 mt-2 xl:mr-4 lg:mr-4 uppercase xl:border-transparent lg:border-transparent border border-gray-200 transition duration-300 ease-in-out xl:dark:border-transparent lg:dark:border-transparent dark:border-gray-600"
                                         >
                                             products
                                         </a>
                                         <a
                                             href="shop.html"
-                                            class="btn font-rubik px-4 py-2 mt-2 text-sm font-semibold text-gray-900 xl:mt-0 lg:mt-0 mt-2 xl:mr-4 lg:mr-4 uppercase xl:border-transparent lg:border-transparent border border-gray-200 dark:text-gray-200 transition duration-300 ease-in-out xl:dark:border-transparent lg:dark:border-transparent dark:border-gray-600"
+                                            class="btn font-rubik px-4 py-2 mt-2 text-sm font-semibold text-gray-900 xl:mt-0 lg:mt-0 mt-2 xl:mr-4 lg:mr-4 uppercase xl:border-transparent lg:border-transparent border border-gray-200 transition duration-300 ease-in-out xl:dark:border-transparent lg:dark:border-transparent dark:border-gray-600"
                                         >
                                             shop
                                         </a>
                                         <a
                                             href="contact.html"
-                                            class="btn font-rubik px-4 py-2 mt-2 text-sm font-semibold text-gray-900 xl:mt-0 lg:mt-0 mt-2 uppercase xl:border-transparent lg:border-transparent border border-gray-200 dark:text-gray-200 transition duration-300 ease-in-out xl:dark:border-transparent lg:dark:border-transparent dark:border-gray-600"
+                                            class="btn font-rubik px-4 py-2 mt-2 text-sm font-semibold text-gray-900 xl:mt-0 lg:mt-0 mt-2 uppercase xl:border-transparent lg:border-transparent border border-gray-200 transition duration-300 ease-in-out xl:dark:border-transparent lg:dark:border-transparent dark:border-gray-600"
                                         >
                                             contact us
                                         </a>
@@ -263,10 +291,10 @@
                             </div>
                             <div class="flex items-center">
                                 <div class="mr-6">
-                                    <i  onclick="openModal()" class="fas fa-search text-gray-500 cursor-pointer dark:text-gray-200"> </i>
+                                    <i  onclick="openModal()" class="fas fa-search text-gray-500 cursor-pointer"> </i>
                                 </div>
                                 <div class="relative">
-                                    <i class="fas fa-shopping-cart text-gray-500 cursor-pointer dark:text-gray-200"></i>
+                                    <i class="fas fa-shopping-cart text-gray-500 cursor-pointer"></i>
                                     <div class="flex-shrink-0 ml-2 self-end mb-1 absolute -top-3 -right-4">
                                         <span class="flex items-center justify-center h-5 w-5 bg-red-500 text-white text-xs rounded-full">0</span>
                                     </div>
@@ -274,7 +302,7 @@
                             </div>
                             <div class="xl:hidden lg:hidden block ml-8">
                                 <button @click="open = !open" class="menu focus:outline-none" onclick="this.classList.toggle('opened');this.setAttribute('aria-expanded', this.classList.contains('opened'))" aria-label="Main Menu">
-                                    <svg class="dark:bg-gray-100" width="36" height="auto" viewBox="0 0 100 100">
+                                    <svg class="" width="36" height="auto" viewBox="0 0 100 100">
                                         <path
                                             class="line line1"
                                             d="M 20,29.000046 H 80.000231 C 80.000231,29.000046 94.498839,28.817352 94.532987,66.711331 94.543142,77.980673 90.966081,81.670246 85.259173,81.668997 79.552261,81.667751 75.000211,74.999942 75.000211,74.999942 L 25.000021,25.000058"
@@ -343,13 +371,13 @@
             <div class="container mx-auto">
                 <div class="max-w-screen-xl mx-auto mt-4  rounded">
                 <!-- Tabs -->
-                <h1 class="flex justify-center text-4xl font-semibold font-rubic pb-3">Exclusive Products</h1>
+                <h1 class="flex justify-center text-4xl font-semibold font-rubic pb-3 dark:text-gray-200">Exclusive Products</h1>
                    <div class="flex justify-center items-center">
                         <ul id="tabs" class="grid grid-rows-2 grid-cols-2 gap-4 md:flex md:justify-center md:items-center lg:flex lg:justify-center lg:items-center xl:flex xl:justify-center xl:items-center px-1 pt-2 ">
-                            <li class="py-1 mx-2 text-center font-semibold text-gray-800 rounded-t opacity-50"><a class="capitalize" id="default-tab" href="#first">best sellers</a></li>
-                            <li class="py-1 mx-2 text-center font-semibold text-gray-800 rounded-t opacity-50"><a class="capitalize" href="#second">featured</a></li>
-                            <li class="py-1 mx-2 text-center font-semibold text-gray-800 rounded-t opacity-50"><a class="capitalize" href="#third">new arrival</a></li>
-                            <li class="py-1 mx-2 text-center font-semibold text-gray-800 rounded-t opacity-50"><a class="capitalize" href="#fourth">speacial offer</a></li>
+                            <li class="py-1 mx-2 text-center font-semibold text-gray-800 rounded-t opacity-50 dark:text-gray-200"><a class="capitalize" id="default-tab" href="#first">best sellers</a></li>
+                            <li class="py-1 mx-2 text-center font-semibold text-gray-800 rounded-t opacity-50 dark:text-gray-200"><a class="capitalize" href="#second">featured</a></li>
+                            <li class="py-1 mx-2 text-center font-semibold text-gray-800 rounded-t opacity-50 dark:text-gray-200"><a class="capitalize" href="#third">new arrival</a></li>
+                            <li class="py-1 mx-2 text-center font-semibold text-gray-800 rounded-t opacity-50 dark:text-gray-200"><a class="capitalize" href="#fourth">speacial offer</a></li>
                         </ul>
                    </div>
 
@@ -1459,7 +1487,7 @@
         </div>
         <div class="container mx-auto py-20">
             <div class="max-w-screen-xl mx-auto">
-                <h1 class="flex justify-center text-4xl font-semibold font-rubic pb-3">featured Products</h1>
+                <h1 class="flex justify-center text-4xl font-semibold font-rubic pb-3 dark:text-gray-200">featured Products</h1>
                 <div class="sm:grid sm:grid-cols-2 md:grid md:grid-cols-2 lg:grid lg:grid-cols-4 xl:grid xl:grid-cols-4 gap-6 pt-10 px-4">
                     <div class="shadow hover:shadow-lg transition duration-300 ease-in-out group">
                        <div class="overflow-hidden relative">
@@ -1866,29 +1894,6 @@
                </div>
            </div>
        </div>
-
- <!--modal-->
-	<div class="main-modal fixed w-full h-100 inset-0 z-50 overflow-hidden flex justify-center items-center animated fadeIn faster"
-    style="background: rgba(0,0,0,.7);">
-    <div
-        class="modal-container w-11/12 md:max-w-md mx-auto rounded z-50 overflow-y-auto">
-        <div class="modal-content py-4 text-left px-6 hover:cur">
-            
-            <div class="flex justify-end pt-2 absolute top-10 right-10">
-                <button
-                    class="focus:outline-none modal-close px-4 p-3 rounded-lg text-black"><i class="fas fa-times text-gray-200 xl:text-4xl lg:text-4xl md:text-4xl text-lg hover:text-red-600 transition duration-300 ease-in-out"></i>
-                </button>
-            </div>
-            <form class="flex">
-                <input class="border border-transparent focus:outline-none focus:ring-2 focus:ring-red-600 focus:border-transparent ... h-12 w-full px-4" type="search">
-                <button class="bg-red-600 hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-red-600 focus:ring-opacity-50 ... w-auto h-12 px-4">
-                    <i class="fas fa-search text-white"></i>
-                </button>
-              </form>
-        </div>
-    </div>
-</div>
-<!--modal-->
 <script>
     
 </script>
