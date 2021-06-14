@@ -5,5 +5,73 @@
 }
 @tailwind utilities;
 /* navbar and dropdown */
-
+.line {
+    fill: none;
+    stroke: black;
+    stroke-width: 6;
+    transition: stroke-dasharray 600ms cubic-bezier(0.4, 0, 0.2, 1), stroke-dashoffset 600ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.line1 {
+    stroke-dasharray: 60 207;
+    stroke-width: 6;
+}
+.line2 {
+    stroke-dasharray: 60 60;
+    stroke-width: 6;
+}
+.line3 {
+    stroke-dasharray: 60 207;
+    stroke-width: 6;
+}
+.opened .line1 {
+    stroke-dasharray: 90 207;
+    stroke-dashoffset: -134;
+    stroke-width: 6;
+}
+.opened .line2 {
+    stroke-dasharray: 1 60;
+    stroke-dashoffset: -30;
+    stroke-width: 6;
+}
+.opened .line3 {
+    stroke-dasharray: 90 207;
+    stroke-dashoffset: -134;
+    stroke-width: 6;
+}
+.active,
+.btn:hover {
+    color: rgb(236, 17, 17);
+}
+li > ul {
+    transform: translatex(100%) scale(0);
+}
+li:hover > ul {
+    transform: translatex(101%) scale(1);
+}
+li > button svg {
+    transform: rotate(-90deg);
+}
+li:hover > button svg {
+    transform: rotate(-270deg);
+}
+.group:hover .group-hover\:scale-100 {
+    transform: scale(1);
+}
+.group:hover .group-hover\:-rotate-180 {
+    transform: rotate(180deg);
+}
+.scale-0 {
+    transform: scale(0);
+}
+.min-w-32 {
+    min-width: 8rem;
+}
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    }
+    #content {
+    background-color: white;
+    }
 /* navbar and dropdown */
