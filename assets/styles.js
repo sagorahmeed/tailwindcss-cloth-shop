@@ -119,3 +119,21 @@ tabTogglers.forEach(function (toggler) {
 
 document.getElementById("default-tab").click();
 //tab
+
+
+function openModal(){
+    const searContent = document.getElementById('searchInput');
+    searContent.classList.toggle('hidden');
+}
+$(document).ready(function(){
+    $("#one").click(function(){
+      $("#one").hide();
+      $("#two").show();
+    });
+});
+$(document).ready(function(){
+    $("#two").click(function(){
+      $("#two").hide();
+      $("#one").show();
+    });
+});

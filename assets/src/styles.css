@@ -3,6 +3,9 @@
 #toggle:checked ~ label div.toggle-dot{
     @apply translate-x-4;
 }
+.body{
+    @apply dark:bg-gray-900;
+}
 @tailwind utilities;
 /* navbar and dropdown */
 .line {
