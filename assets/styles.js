@@ -12,7 +12,7 @@ checkbox.addEventListener("click", toggleDarkMode);
 // active css
 // Add active class to the current button (highlight it)
 var header = document.getElementById("myDIV");
-var btns = header.getElementsByClassName("btn");
+var btns = header.getElementsByClassName("active_btn");
 for (var i = 0; i < btns.length; i++) {
     btns[i].addEventListener("click", function () {
         var current = document.getElementsByClassName("active");
@@ -121,19 +121,3 @@ document.getElementById("default-tab").click();
 //tab
 
 
-function openModal(){
-    const searContent = document.getElementById('searchInput');
-    searContent.classList.toggle('hidden');
-}
-$(document).ready(function(){
-    $("#one").click(function(){
-      $("#one").hide();
-      $("#two").show();
-    });
-});
-$(document).ready(function(){
-    $("#two").click(function(){
-      $("#two").hide();
-      $("#one").show();
-    });
-});

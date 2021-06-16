@@ -3,10 +3,58 @@
 #toggle:checked ~ label div.toggle-dot{
     @apply translate-x-4;
 }
+.btn{
+    @apply bg-red-600 py-4 px-8 text-gray-100 text-sm uppercase hover:bg-gray-900 hover:text-gray-100 transition duration-300 ease-in-out;
+}
 .body{
     @apply dark:bg-gray-900;
 }
 @tailwind utilities;
+/* top navbar start */
+.top-nav{
+    @apply border-b border-gray-200 py-3 dark:bg-gray-900 dark:border-gray-600 px-5;
+}
+.top-nav-wrapper{
+    @apply xl:flex xl:justify-between xl:items-center lg:flex lg:justify-between lg:items-center md:flex md:justify-between md:items-center;
+}
+.dropdown{
+    @apply pr-1 font-semibold flex-1 text-gray-500 uppercase text-sm dark:text-gray-200;
+}
+.dropdown-arrow{
+    @apply h-4 w-4 transform group-hover:-rotate-180 transition text-gray-500 duration-150 ease-in-out dark:text-gray-100;
+}
+.dropdown-list{
+    @apply bg-white border rounded-sm bg-white z-20 transform scale-0 group-hover:scale-100 absolute transition duration-150 ease-in-out origin-top min-w-32;
+}
+.dropdown-item{
+    @apply text-xs text-gray-800 uppercase;
+}
+.main-menu-item{
+    @apply px-4 py-2 mt-2 text-sm font-semibold text-gray-900 xl:mt-0 lg:mt-0 mt-2 xl:mr-4 lg:mr-4 uppercase xl:border-transparent lg:border-transparent border border-gray-200 transition duration-300 ease-in-out;
+}
+.page-item{
+    @apply capitalize text-gray-800 text-sm font-medium hover:text-red-600 transition duration-300 ease-in-out dark:text-gray-700;
+}
+.prebtn-header{
+    @apply absolute left-10 top-0 flex items-center h-full xl:visible lg:visible md:visible invisible;
+}
+.prebtn{
+    @apply bg-gray-50 h-12 w-12 hover:bg-red-600 group transition duration-300 ease-in-out focus:outline-none;
+}
+.left-arrow{
+    @apply flex justify-center items-center text-gray-500 group-hover:text-gray-200 transition duration-300 ease-in-out;
+}
+
+/* top navbar end */
+
+/* slider start */
+
+.slider-blog{
+    @apply bg-cover bg-center h-auto text-white px-10 object-fill h-4/6 relative;
+}
+
+/* slider end */
+
 /* navbar and dropdown */
 .line {
     fill: none;
@@ -42,7 +90,7 @@
     stroke-width: 6;
 }
 .active,
-.btn:hover {
+.active_btn:hover {
     color: rgb(236, 17, 17);
 }
 li > ul {
