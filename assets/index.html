@@ -130,18 +130,12 @@
                                         :class="{'flex': open, 'hidden': !open}"
                                         class="flex-col xl:px-0 z-40 xl:py-0 lg:py-0 py-7 lg:px-0 px-4 leading-loose flex-grow pb-4 hidden md:pb-0 lg:flex lg:justify-end lg:flex-row xl:h-auto lg:h-auto h-auto top-20 xl:bg-transparent lg:bg-transparent bg-white w-full xl:flex xl:justify-end xl::flex-row xl:static lg:static absolute left-0"
                                     >
-                                        <a
-                                            href="index.html"
-                                            class="active_btn active font-rubik main-menu-item"
-                                        >
+                                        <a href="index.html" class="active_btn active font-rubik main-menu-item">
                                             Home
                                         </a>
                                         <a href="#" class="">
                                             <div @click.away="open = false" class="relative z-40" x-data="{ open: false }">
-                                                <button
-                                                    @click="open = !open"
-                                                    class="focus:outline-none font-rubik main-menu-item w-full text-left"
-                                                >
+                                                <button @click="open = !open" class="focus:outline-none font-rubik main-menu-item w-full text-left">
                                                     <span class="transition duration-300 ease-in-out">pages</span>
                                                     <svg fill="currentColor" viewBox="0 0 20 20" :class="{'rotate-180': open, 'rotate-0': !open}" class="inline w-4 h-4 mt-1 ml-1 transition-transform duration-200 transform md:-mt-1">
                                                         <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path>
@@ -192,22 +186,13 @@
                                                 </div>
                                             </div>
                                         </a>
-                                        <a
-                                            href="product.html"
-                                            class="active_btn font-rubik main-menu-item"
-                                        >
+                                        <a href="product.html" class="active_btn font-rubik main-menu-item">
                                             products
                                         </a>
-                                        <a
-                                            href="shop.html"
-                                            class="active_btn font-rubik main-menu-item"
-                                        >
+                                        <a href="shop.html" class="active_btn font-rubik main-menu-item">
                                             shop
                                         </a>
-                                        <a
-                                            href="contact.html"
-                                            class="active_btn font-rubik main-menu-item"
-                                        >
+                                        <a href="contact.html" class="active_btn font-rubik main-menu-item">
                                             contact us
                                         </a>
                                     </ul>
@@ -216,7 +201,8 @@
                             <div class="">
                                 <div class="flex items-center relative">
                                     <div class="mr-6">
-                                        <i class="fas fa-search text-gray-500 cursor-pointer w-4" onclick="openNav()"> </i>                                    </div>
+                                        <i class="fas fa-search text-gray-500 cursor-pointer w-4" onclick="openNav()"> </i>
+                                    </div>
                                     <div class="relative">
                                         <i class="fas fa-shopping-cart text-gray-500 cursor-pointer"></i>
                                         <div class="flex-shrink-0 ml-2 self-end mb-1 absolute -top-3 -right-4">
@@ -1819,9 +1805,62 @@
             </div>
         </div>
 
-        <div class="contaier mx-auto">
-            <div class="max-w-screen-xl mx-auto">
-                   
+        <div class="container-fluid mx-auto bg-yellow-50 py-20">
+            <div class="contaier mx-auto">
+                <div class="max-w-screen-xl mx-auto px-4">
+                    <div class="text-center max-w-md mx-auto pb-10">
+                        <p class="text-pink-600 text-lg font-medium">Testimonial</p>
+                        <h1 class="text-4xl text-gray-800 font-semibold pt-3">Our Client Say!</h1>
+                        <p class="text-gray-600 pt-">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.</p>
+                    </div>
+                    <div class="slideshow-container shadow-lg bg-white py-10 rounded-lg">
+                        <div class="mySlides fade max-w-md text-center mx-auto">
+                            <img src="images/user1.webp" class="w-20 h-20 rounded-full mx-auto" alt="" />
+                            <div class="text-xl text-gray-900 pt-2">Lissa Castro</div>
+                            <h1 class="text-pink-500 py-1">Designer</h1>
+                            <div class="text-gray-600 font-medium font-rubik text-sm">
+                                Sed ut perspiciatis unde omnis iste natus error sit voluptatem amet laudantium, quaeillo inventore sed veritatis et quasi architecto beatae vitae dicta sunt explicabo eiusmod tempor incididunt ut labore.
+                            </div>
+                        </div>
+
+                        <div class="mySlides fade max-w-md text-center mx-auto">
+                            <img src="images/user2.webp" class="w-20 h-20 rounded-full mx-auto" alt="" />
+                            <div class="text-xl text-gray-900 pt-2">Adin Smith</div>
+                            <h1 class="text-pink-500 py-1">Designer</h1>
+                            <div class="text-gray-600 font-medium font-rubik text-sm">
+                                Sed ut perspiciatis unde omnis iste natus error sit voluptatem amet laudantium, quaeillo inventore sed veritatis et quasi architecto beatae vitae dicta sunt explicabo eiusmod tempor incididunt ut labore.
+                            </div>
+                        </div>
+
+                        <div class="mySlides fade max-w-md text-center mx-auto">
+                            <img src="images/user3.webp" class="w-20 h-20 rounded-full mx-auto" alt="" />
+                            <div class="text-xl text-gray-900 pt-2">Daisy Lana</div>
+                            <h1 class="text-pink-500 py-1">Designer</h1>
+                            <div class="text-gray-600 font-medium font-rubik text-sm">
+                                Sed ut perspiciatis unde omnis iste natus error sit voluptatem amet laudantium, quaeillo inventore sed veritatis et quasi architecto beatae vitae dicta sunt explicabo eiusmod tempor incididunt ut labore.
+                            </div>
+                        </div>
+                        <div class="mySlides fade max-w-md text-center mx-auto">
+                            <img src="images/user4.webp" class="w-20 h-20 rounded-full mx-auto" alt="" />
+                            <div class="text-xl text-gray-900 pt-2">John Becker</div>
+                            <h1 class="text-pink-500 py-1">Designer</h1>
+                            <div class="text-gray-600 font-medium font-rubik text-sm">
+                                Sed ut perspiciatis unde omnis iste natus error sit voluptatem amet laudantium, quaeillo inventore sed veritatis et quasi architecto beatae vitae dicta sunt explicabo eiusmod tempor incididunt ut labore.
+                            </div>
+                        </div>
+
+                        <a class="prev bg-red-500" onclick="plusSlides(-1)">&#10094;</a>
+                        <a class="next bg-red-500" onclick="plusSlides(1)">&#10095;</a>
+                    </div>
+                    <br />
+
+                    <div style="text-align: center;">
+                        <span class="dot" onclick="currentSlide(1)"></span>
+                        <span class="dot" onclick="currentSlide(2)"></span>
+                        <span class="dot" onclick="currentSlide(3)"></span>
+                        <span class="dot" onclick="currentSlide(4)"></span>
+                    </div>
+                </div>
             </div>
         </div>
         <div class="container-fluid mx-auto bg-red-600 py-12">
@@ -1833,7 +1872,7 @@
                         </div>
                         <div class="xl:pt-0 lg:pt-0 pt-5">
                             <div class="flex justify-center">
-                                <input class="bg-white border-transparent" type="text" placeholder=" Your email address">
+                                <input class="bg-white border-transparent" type="text" placeholder=" Your email address" />
                                 <button class="bg-gray-700 text-white px-3 font-semibold font-rubik hover:bg-gray-900 transition duration-300 ease-in-out">Sign Up</button>
                             </div>
                         </div>
@@ -1975,35 +2014,35 @@
             </div>
         </div>
         <div id="mySidenav" class="sidenav">
-             <div class="max-w-screen-md mx-auto">
+            <div class="max-w-screen-md mx-auto">
                 <div class="h-full w-full mx-auto flex justify-center items-center xl:px-0 lg:px-0 md:px-0 px-10 relative">
                     <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
                     <form class="flex">
-                        <input class="border w-full h-10 border-transparent focus:outline-none focus:ring-2 focus:ring-red-600 focus:border-transparent ...">
+                        <input class="border w-full h-10 border-transparent focus:outline-none focus:ring-2 focus:ring-red-600 focus:border-transparent ..." />
                         <button class="bg-red-600 h-10 w-28 hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-red-600 focus:ring-opacity-50 text-white ...">
-                          Search
+                            Search
                         </button>
-                      </form>
+                    </form>
                 </div>
-             </div>
-          </div>
+            </div>
+        </div>
         <script>
             function openNav() {
-              document.getElementById("mySidenav").style.width = "100%";
+                document.getElementById("mySidenav").style.width = "100%";
             }
-            
+
             function closeNav() {
-              document.getElementById("mySidenav").style.width = "0%";
+                document.getElementById("mySidenav").style.width = "0%";
             }
-            </script>
-            <script>
-                $('.autoplay').slick({
+        </script>
+        <script>
+            $(".autoplay").slick({
                 slidesToShow: 3,
                 slidesToScroll: 1,
                 autoplay: true,
                 autoplaySpeed: 2000,
-                });
-            </script>
+            });
+        </script>
         <script type="text/javascript" src="./styles.js"></script>
     </body>
 </html>

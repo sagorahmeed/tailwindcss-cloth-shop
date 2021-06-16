@@ -1,47 +1,47 @@
 @tailwind base;
 @tailwind components;
-#toggle:checked ~ label div.toggle-dot{
+#toggle:checked ~ label div.toggle-dot {
     @apply translate-x-4;
 }
-.btn{
+.btn {
     @apply bg-red-600 py-4 px-8 text-gray-100 text-sm uppercase hover:bg-gray-900 hover:text-gray-100 transition duration-300 ease-in-out;
 }
-.body{
+.body {
     @apply dark:bg-gray-900;
 }
 @tailwind utilities;
 /* top navbar start */
-.top-nav{
+.top-nav {
     @apply border-b border-gray-200 py-3 dark:bg-gray-900 dark:border-gray-600 px-5;
 }
-.top-nav-wrapper{
+.top-nav-wrapper {
     @apply xl:flex xl:justify-between xl:items-center lg:flex lg:justify-between lg:items-center md:flex md:justify-between md:items-center;
 }
-.dropdown{
+.dropdown {
     @apply pr-1 font-semibold flex-1 text-gray-500 uppercase text-sm dark:text-gray-200;
 }
-.dropdown-arrow{
+.dropdown-arrow {
     @apply h-4 w-4 transform group-hover:-rotate-180 transition text-gray-500 duration-150 ease-in-out dark:text-gray-100;
 }
-.dropdown-list{
+.dropdown-list {
     @apply bg-white border rounded-sm bg-white z-20 transform scale-0 group-hover:scale-100 absolute transition duration-150 ease-in-out origin-top min-w-32;
 }
-.dropdown-item{
+.dropdown-item {
     @apply text-xs text-gray-800 uppercase;
 }
-.main-menu-item{
+.main-menu-item {
     @apply px-4 py-2 mt-2 text-sm font-semibold text-gray-900 xl:mt-0 lg:mt-0 mt-2 xl:mr-4 lg:mr-4 uppercase xl:border-transparent lg:border-transparent border border-gray-200 transition duration-300 ease-in-out;
 }
-.page-item{
+.page-item {
     @apply capitalize text-gray-800 text-sm font-medium hover:text-red-600 transition duration-300 ease-in-out dark:text-gray-700;
 }
-.prebtn-header{
+.prebtn-header {
     @apply absolute left-10 top-0 flex items-center h-full xl:visible lg:visible md:visible invisible;
 }
-.prebtn{
+.prebtn {
     @apply bg-gray-50 h-12 w-12 hover:bg-red-600 group transition duration-300 ease-in-out focus:outline-none;
 }
-.left-arrow{
+.left-arrow {
     @apply flex justify-center items-center text-gray-500 group-hover:text-gray-200 transition duration-300 ease-in-out;
 }
 
@@ -49,12 +49,126 @@
 
 /* slider start */
 
-.slider-blog{
+.slider-blog {
     @apply bg-cover bg-center h-auto text-white px-10 object-fill h-4/6 relative;
 }
 
 /* slider end */
 
+.mySlides {
+    display: none;
+}
+img {
+    vertical-align: middle;
+}
+
+/* Slideshow container */
+.slideshow-container {
+    max-width: 1000px;
+    position: relative;
+    margin: auto;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px 10px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Caption text */
+.text {
+    color: #f2f2f2;
+    font-size: 15px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+    cursor: pointer;
+    height: 10px;
+    width: 10px;
+    margin: 0 2px;
+    background-color: rgb(223, 217, 217);
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active,
+.dot:hover {
+    background-color: #f00f0f;
+}
+
+/* Fading animation */
+.fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+    from {
+        opacity: 0.4;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fade {
+    from {
+        opacity: 0.4;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+    .prev,
+    .next,
+    .text {
+        font-size: 11px;
+    }
+}
 /* navbar and dropdown */
 .line {
     fill: none;
@@ -121,47 +235,47 @@ li:hover > button svg {
     position: fixed;
     top: 0;
     width: 100%;
-    }
-    #content {
+}
+#content {
     background-color: white;
-    }
-    .sidenav {
-        height: 100%;
-        width: 0;
-        position: fixed;
-        z-index: 1000;
-        top: 0;
-        left: 0;
-        background-color: rgba(17, 17, 17, 0.734);
-        overflow-x: hidden;
-        transition: 0.5s;
-        padding-top: 60px;
-      }
-      
-      .sidenav a {
-        padding: 8px 8px 8px 32px;
-        text-decoration: none;
-        font-size: 25px;
-        color: #818181;
-        display: block;
-        transition: 0.3s;
-      }
-      
-      .sidenav a:hover {
-        color: #f1f1f1;
-      }
-      
-      .sidenav .closebtn {
-        position: absolute;
-        top: 0;
-        right: 25px;
-        font-size: 36px;
-        margin-left: 50px;
-        color: rgb(240, 237, 232);
-        transition:  0.3s ease-in-out;
-      }
-      .sidenav .closebtn:hover{
-          color: rgb(218, 11, 11);
-          transition:  0.3s ease-in-out;
-      }
+}
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    background-color: rgba(17, 17, 17, 0.734);
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+    color: rgb(240, 237, 232);
+    transition: 0.3s ease-in-out;
+}
+.sidenav .closebtn:hover {
+    color: rgb(218, 11, 11);
+    transition: 0.3s ease-in-out;
+}
 /* navbar and dropdown */
