@@ -130,7 +130,7 @@ img {
     transition: background-color 0.6s ease;
 }
 
-.active,
+.active_dot,
 .dot:hover {
     background-color: #f00f0f;
 }
