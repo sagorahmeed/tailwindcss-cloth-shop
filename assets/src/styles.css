@@ -103,9 +103,6 @@
     background-color:#080808;
     text-indent:-9999px;
     display:none;
-    -webkit-border-radius:60px;
-    -moz-border-radius:60px;
-    border-radius:60px
     }
     #scroll span {
     position:absolute;
