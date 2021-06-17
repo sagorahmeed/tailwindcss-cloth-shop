@@ -12,7 +12,6 @@
         <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" referrerpolicy="no-referrer" />
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-        
     </head>
     <body class="body">
         <div class="container-fluid mx-auto bg-white">
@@ -137,7 +136,6 @@
                                         >
                                             Home
                                         </a>
-                                        <a href="#" class="">
                                             <div @click.away="open = false" class="relative z-40" x-data="{ open: false }">
                                                 <button
                                                     @click="open = !open"
@@ -192,7 +190,6 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                        </a>
                                         <a
                                             href="product.html"
                                             class="active_btn font-rubik main-menu-item"
@@ -300,335 +297,337 @@
                     <h1 class="flex justify-center text-4xl font-semibold font-rubic pb-3 dark:text-gray-200">Exclusive Products</h1>
                     <div class="flex justify-center items-center">
                         <ul id="tabs" class="grid grid-rows-2 grid-cols-2 gap-4 md:flex md:justify-center md:items-center lg:flex lg:justify-center lg:items-center xl:flex xl:justify-center xl:items-center px-1 pt-2">
-                            <li class="py-1 mx-2 text-center font-semibold text-gray-800 rounded-t opacity-50 dark:text-gray-200"><a class="capitalize" id="default-tab" href="#first">best sellers</a></li>
-                            <li class="py-1 mx-2 text-center font-semibold text-gray-800 rounded-t opacity-50 dark:text-gray-200"><a class="capitalize" href="#second">featured</a></li>
-                            <li class="py-1 mx-2 text-center font-semibold text-gray-800 rounded-t opacity-50 dark:text-gray-200"><a class="capitalize" href="#third">new arrival</a></li>
-                            <li class="py-1 mx-2 text-center font-semibold text-gray-800 rounded-t opacity-50 dark:text-gray-200"><a class="capitalize" href="#fourth">speacial offer</a></li>
+                            <li class="py-1 mx-2 text-center font-semibold text-gray-800 rounded-t dark:text-gray-200"><a class="capitalize font-serif" id="default-tab" href="#first">best sellers</a></li>
+                            <li class="py-1 mx-2 text-center font-semibold text-gray-800 rounded-t dark:text-gray-200"><a class="capitalize font-serif" href="#second">featured</a></li>
+                            <li class="py-1 mx-2 text-center font-semibold text-gray-800 rounded-t dark:text-gray-200"><a class="capitalize font-serif" href="#third">new arrival</a></li>
+                            <li class="py-1 mx-2 text-center font-semibold text-gray-800 rounded-t dark:text-gray-200"><a class="capitalize font-serif" href="#fourth">speacial offer</a></li>
                         </ul>
                     </div>
 
                     <!-- Tab Contents -->
                     <div class="py-20" id="tab-contents">
                         <div id="first" class="p-4">
-                            <div class="sm:grid sm:grid-cols-2 md:grid md:grid-cols-2 lg:grid lg:grid-cols-4 xl:grid xl:grid-cols-4 gap-6">
-                                <div class="shadow hover:shadow-lg transition duration-300 ease-in-out group">
-                                    <div class="overflow-hidden relative">
-                                        <img class="w-full transition duration-700 ease-in-out" src="prod_img/product_img1-1.webp" alt="image" />
-                                        <p class="bg-red-500 text-white font-medium px-3 absolute top-2 left-2 font-rubic text-white">-40%</p>
+                            <div class="cart_main_header">
+                                <div class="cart_body">
+                                    <div class="cart_desc">
+                                        <img class="cart_img" src="prod_img/product_img1-1.webp" alt="image" />
+                                        <p class="cart_dis_title">-40%</p>
                                         <div class="flex justify-center">
-                                            <div class="absolute bottom-4 opacity-0 group-hover:opacity-100 transition duration-500 ease-in-out">
-                                                <a href="cart.html" class="bg-gray-900 px-3 py-3 hover:bg-red-500 transition duration-300 ease-in-out">
-                                                    <i class="fas fa-shopping-cart transition duration-300 ease-in-out flex justify-center items-center text-gray-100"></i>
+                                            <div class="icon_desc">
+                                                <a href="cart.html" class="icon_header">
+                                                    <i class="fas fa-shopping-cart link_icon"></i>
                                                 </a>
-                                                <a href="random.html" class="bg-gray-900 px-3 py-3 hover:bg-red-500 transition duration-300 ease-in-out">
-                                                    <i class="fas fa-random transition duration-300 ease-in-out flex justify-center items-center text-gray-100"></i>
+                                                <a href="random.html" class="icon_header">
+                                                    <i class="fas fa-random link_icon"></i>
                                                 </a>
-                                                <a href="single_prod.html" class="bg-gray-900 px-3 py-3 hover:bg-red-500 transition duration-300 ease-in-out">
-                                                    <i class="fas fa-search transition duration-300 ease-in-out flex justify-center items-center text-gray-100"></i>
+                                                <a href="single_prod.html" class="icon_header">
+                                                    <i class="fas fa-search link_icon"></i>
                                                 </a>
-                                                <a href="cart.html" class="bg-gray-900 px-3 py-3 hover:bg-red-500 transition duration-300 ease-in-out">
-                                                    <i class="fas fa-heart transition duration-300 ease-in-out flex justify-center items-center text-gray-100"></i>
+                                                <a href="cart.html" class="icon_header">
+                                                    <i class="fas fa-heart link_icon"></i>
                                                 </a>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="px-4 py-3 bg-white">
-                                        <a href="#" class=""><h1 class="camelcase text-gray-800 font-rubic font-semibold text-lg hover:text-red-500 transition duration-300 ease-in-out">blue dress for women</h1></a>
+                                        <a href="#" class=""><h1 class="cart_header">Blue Dress For Women</h1></a>
                                         <div class="flex py-2">
-                                            <p class="line-through text-gray-600 mr-2 font-rubic font-normal text-sm">$65.00</p>
-                                            <p class="text-red-600 mr-2 font-rubic font-se text-sm">$39.00</p>
+                                            <p class="cart_pord_off_dis">$65.00</p>
+                                            <p class="cart_prod_price">$39.00</p>
                                         </div>
                                         <div class="flex">
                                             <div class="">
-                                                <i class="fas fa-star text-yellow-400 text-sm"></i>
-                                                <i class="fas fa-star text-yellow-400 text-sm"></i>
-                                                <i class="fas fa-star text-yellow-400 text-sm"></i>
-                                                <i class="far fa-star text-gray-400 text-sm"></i>
-                                                <i class="far fa-star text-gray-400 text-sm"></i>
+                                                <i class="fas fa-star text-yellow-400 text-xs"></i>
+                                                <i class="fas fa-star text-yellow-400 text-xs"></i>
+                                                <i class="fas fa-star text-yellow-400 text-xs"></i>
+                                                <i class="far fa-star text-gray-400 text-xs"></i>
+                                                <i class="far fa-star text-gray-400 text-xs"></i>
                                             </div>
                                             <div class="ml-2">
-                                                <p class="text-gray-500 font-rubic font-medium">(1)</p>
+                                                <p class="text-gray-500 font-medium text-sm">(1)</p>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="shadow hover:shadow-lg transition duration-300 ease-in-out group xl:mt-0 lg:mt-0 md:mt-0 sm:mt-0 mt-6">
-                                    <div class="overflow-hidden relative">
-                                        <img class="w-full transition duration-700 ease-in-out" src="prod_img/product_img3-1.webp" alt="image" />
+                                <div class="cart_body">
+                                    <div class="cart_desc">
+                                        <img class="cart_img" src="prod_img/product_img3-1.webp" alt="image" />
                                         <div class="flex justify-center">
-                                            <div class="absolute bottom-4 opacity-0 group-hover:opacity-100 transition duration-500 ease-in-out">
-                                                <a href="cart.html" class="bg-gray-900 px-3 py-3 hover:bg-red-500 transition duration-300 ease-in-out">
-                                                    <i class="fas fa-shopping-cart transition duration-300 ease-in-out flex justify-center items-center text-gray-100"></i>
+                                            <div class="icon_desc">
+                                                <a href="cart.html" class="icon_header">
+                                                    <i class="fas fa-shopping-cart link_icon"></i>
                                                 </a>
-                                                <a href="random.html" class="bg-gray-900 px-3 py-3 hover:bg-red-500 transition duration-300 ease-in-out">
-                                                    <i class="fas fa-random transition duration-300 ease-in-out flex justify-center items-center text-gray-100"></i>
+                                                <a href="random.html" class="icon_header">
+                                                    <i class="fas fa-random link_icon"></i>
                                                 </a>
-                                                <a href="single_prod.html" class="bg-gray-900 px-3 py-3 hover:bg-red-500 transition duration-300 ease-in-out">
-                                                    <i class="fas fa-search transition duration-300 ease-in-out flex justify-center items-center text-gray-100"></i>
+                                                <a href="single_prod.html" class="icon_header">
+                                                    <i class="fas fa-search link_icon"></i>
                                                 </a>
-                                                <a href="cart.html" class="bg-gray-900 px-3 py-3 hover:bg-red-500 transition duration-300 ease-in-out">
-                                                    <i class="fas fa-heart transition duration-300 ease-in-out flex justify-center items-center text-gray-100"></i>
+                                                <a href="cart.html" class="icon_header">
+                                                    <i class="fas fa-heart link_icon"></i>
                                                 </a>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="px-4 py-3 bg-white">
-                                        <a href="#" class=""><h1 class="camelcase text-gray-800 font-rubic font-semibold text-lg hover:text-red-500 transition duration-300 ease-in-out">Women Full Slive Dress</h1></a>
+                                        <a href="#" class=""><h1 class="cart_header">Women Full Sliv Dress</h1></a>
                                         <div class="flex py-2">
-                                            <p class="text-red-600 mr-2 font-rubic font-se text-sm">$70.00</p>
+                                            <p class="cart_pord_off_dis">$70.00</p>
                                         </div>
                                         <div class="flex">
                                             <div class="">
-                                                <i class="fas fa-star text-yellow-400 text-sm"></i>
-                                                <i class="fas fa-star text-yellow-400 text-sm"></i>
-                                                <i class="fas fa-star text-yellow-400 text-sm"></i>
-                                                <i class="far fa-star text-gray-400 text-sm"></i>
-                                                <i class="far fa-star text-gray-400 text-sm"></i>
+                                                <i class="fas fa-star text-yellow-400 text-xs"></i>
+                                                <i class="fas fa-star text-yellow-400 text-xs"></i>
+                                                <i class="fas fa-star text-yellow-400 text-xs"></i>
+                                                <i class="far fa-star text-gray-400 text-xs"></i>
+                                                <i class="far fa-star text-gray-400 text-xs"></i>
                                             </div>
                                             <div class="ml-2">
-                                                <p class="text-gray-500 font-rubic font-medium">(1)</p>
+                                                <p class="text-gray-500 font-medium text-sm">(1)</p>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="shadow hover:shadow-lg transition duration-300 ease-in-out group xl:mt-0 lg:mt-0 md:mt-0 sm:mt-0 mt-6">
-                                    <div class="overflow-hidden relative">
-                                        <img class="w-full transition duration-700 ease-in-out" src="prod_img/product_img4-1.webp" alt="image" />
-                                        <p class="bg-red-500 text-white font-medium px-3 absolute top-2 left-2 font-rubic text-white">-40%</p>
+                                 <div class="cart_body">
+                                    <div class="cart_desc">
+                                        <img class="cart_img" src="prod_img/product_img4-1.webp" alt="image" />
+                                        <p class="cart_dis_title">-40%</p>
                                         <div class="flex justify-center">
-                                            <div class="absolute bottom-4 opacity-0 group-hover:opacity-100 transition duration-500 ease-in-out">
-                                                <a href="cart.html" class="bg-gray-900 px-3 py-3 hover:bg-red-500 transition duration-300 ease-in-out">
-                                                    <i class="fas fa-shopping-cart transition duration-300 ease-in-out flex justify-center items-center text-gray-100"></i>
+                                            <div class="icon_desc">
+                                                <a href="cart.html" class="icon_header">
+                                                    <i class="fas fa-shopping-cart link_icon"></i>
                                                 </a>
-                                                <a href="random.html" class="bg-gray-900 px-3 py-3 hover:bg-red-500 transition duration-300 ease-in-out">
-                                                    <i class="fas fa-random transition duration-300 ease-in-out flex justify-center items-center text-gray-100"></i>
+                                                <a href="random.html" class="icon_header">
+                                                    <i class="fas fa-random link_icon"></i>
                                                 </a>
-                                                <a href="single_prod.html" class="bg-gray-900 px-3 py-3 hover:bg-red-500 transition duration-300 ease-in-out">
-                                                    <i class="fas fa-search transition duration-300 ease-in-out flex justify-center items-center text-gray-100"></i>
+                                                <a href="single_prod.html" class="icon_header">
+                                                    <i class="fas fa-search link_icon"></i>
                                                 </a>
-                                                <a href="cart.html" class="bg-gray-900 px-3 py-3 hover:bg-red-500 transition duration-300 ease-in-out">
-                                                    <i class="fas fa-heart transition duration-300 ease-in-out flex justify-center items-center text-gray-100"></i>
+                                                <a href="cart.html" class="icon_header">
+                                                    <i class="fas fa-heart link_icon"></i>
                                                 </a>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="px-4 py-3 bg-white">
-                                        <a href="#" class=""><h1 class="camelcase text-gray-800 font-rubic font-semibold text-lg hover:text-red-500 transition duration-300 ease-in-out">Light Blue Shirt</h1></a>
+                                        <a href="#" class=""><h1 class="cart_header">Light Blue Shirt</h1></a>
                                         <div class="flex py-2">
-                                            <p class="line-through text-gray-600 mr-2 font-rubic font-normal text-sm">$69.00</p>
-                                            <p class="text-red-600 mr-2 font-rubic font-se text-sm">$39.00</p>
+                                            <p class="cart_pord_off_dis">$65.00</p>
+                                            <p class="cart_prod_price">$69.00</p>
                                         </div>
                                         <div class="flex">
                                             <div class="">
-                                                <i class="fas fa-star text-yellow-400 text-sm"></i>
-                                                <i class="fas fa-star text-yellow-400 text-sm"></i>
-                                                <i class="fas fa-star text-yellow-400 text-sm"></i>
-                                                <i class="far fa-star text-gray-400 text-sm"></i>
-                                                <i class="far fa-star text-gray-400 text-sm"></i>
+                                                <i class="fas fa-star text-yellow-400 text-xs"></i>
+                                                <i class="fas fa-star text-yellow-400 text-xs"></i>
+                                                <i class="fas fa-star text-yellow-400 text-xs"></i>
+                                                <i class="far fa-star text-gray-400 text-xs"></i>
+                                                <i class="far fa-star text-gray-400 text-xs"></i>
                                             </div>
                                             <div class="ml-2">
-                                                <p class="text-gray-500 font-rubic font-medium">(1)</p>
+                                                <p class="text-gray-500 font-medium text-sm">(1)</p>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="shadow hover:shadow-lg transition duration-300 ease-in-out group xl:mt-0 lg:mt-0 md:mt-0 sm:mt-0 mt-6">
-                                    <div class="overflow-hidden relative">
-                                        <img class="w-full transition duration-700 ease-in-out" src="prod_img/product_img6-1.webp" alt="image" />
+                               <div class="cart_body">
+                                    <div class="cart_desc">
+                                        <img class="cart_img" src="prod_img/product_img6-1.webp" alt="image" />
+                                        <p class="cart_dis_title">-40%</p>
                                         <div class="flex justify-center">
-                                            <div class="absolute bottom-4 opacity-0 group-hover:opacity-100 transition duration-500 ease-in-out">
-                                                <a href="cart.html" class="bg-gray-900 px-3 py-3 hover:bg-red-500 transition duration-300 ease-in-out">
-                                                    <i class="fas fa-shopping-cart transition duration-300 ease-in-out flex justify-center items-center text-gray-100"></i>
+                                            <div class="icon_desc">
+                                                <a href="cart.html" class="icon_header">
+                                                    <i class="fas fa-shopping-cart link_icon"></i>
                                                 </a>
-                                                <a href="random.html" class="bg-gray-900 px-3 py-3 hover:bg-red-500 transition duration-300 ease-in-out">
-                                                    <i class="fas fa-random transition duration-300 ease-in-out flex justify-center items-center text-gray-100"></i>
+                                                <a href="random.html" class="icon_header">
+                                                    <i class="fas fa-random link_icon"></i>
                                                 </a>
-                                                <a href="single_prod.html" class="bg-gray-900 px-3 py-3 hover:bg-red-500 transition duration-300 ease-in-out">
-                                                    <i class="fas fa-search transition duration-300 ease-in-out flex justify-center items-center text-gray-100"></i>
+                                                <a href="single_prod.html" class="icon_header">
+                                                    <i class="fas fa-search link_icon"></i>
                                                 </a>
-                                                <a href="cart.html" class="bg-gray-900 px-3 py-3 hover:bg-red-500 transition duration-300 ease-in-out">
-                                                    <i class="fas fa-heart transition duration-300 ease-in-out flex justify-center items-center text-gray-100"></i>
+                                                <a href="cart.html" class="icon_header">
+                                                    <i class="fas fa-heart link_icon"></i>
                                                 </a>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="px-4 py-3 bg-white">
-                                        <a href="#" class=""><h1 class="camelcase text-gray-800 font-rubic font-semibold text-lg hover:text-red-500 transition duration-300 ease-in-out">blue Casual Check Shirt</h1></a>
+                                        <a href="#" class=""><h1 class="cart_header">Blue Casual Check Shirt</h1></a>
                                         <div class="flex py-2">
-                                            <p class="text-red-600 mr-2 font-rubic font-se text-sm">$55.00</p>
+                                            <p class="cart_pord_off_dis">$33.00</p>
+                                            <p class="cart_prod_price">$55.00</p>
                                         </div>
                                         <div class="flex">
                                             <div class="">
-                                                <i class="fas fa-star text-yellow-400 text-sm"></i>
-                                                <i class="fas fa-star text-yellow-400 text-sm"></i>
-                                                <i class="fas fa-star text-yellow-400 text-sm"></i>
-                                                <i class="far fa-star text-gray-400 text-sm"></i>
-                                                <i class="far fa-star text-gray-400 text-sm"></i>
+                                                <i class="fas fa-star text-yellow-400 text-xs"></i>
+                                                <i class="fas fa-star text-yellow-400 text-xs"></i>
+                                                <i class="fas fa-star text-yellow-400 text-xs"></i>
+                                                <i class="fas fa-star text-yellow-400 text-xs"></i>
+                                                <i class="fas fa-star text-yellow-400 text-xs"></i>
                                             </div>
                                             <div class="ml-2">
-                                                <p class="text-gray-500 font-rubic font-medium">(1)</p>
+                                                <p class="text-gray-500 font-medium text-sm">(1)</p>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="shadow hover:shadow-lg transition duration-300 ease-in-out group xl:mt-0 lg:mt-0 md:mt-0 sm:mt-0 mt-6">
-                                    <div class="overflow-hidden relative">
-                                        <img class="w-full transition duration-700 ease-in-out" src="prod_img/product_img11-1.webp" alt="image" />
-                                        <p class="bg-red-500 text-white font-medium px-3 absolute top-2 left-2 font-rubic text-white">-20%</p>
+                                 <div class="cart_body">
+                                    <div class="cart_desc">
+                                        <img class="cart_img" src="prod_img/product_img7-1.webp" alt="image" />
                                         <div class="flex justify-center">
-                                            <div class="absolute bottom-4 opacity-0 group-hover:opacity-100 transition duration-500 ease-in-out">
-                                                <a href="cart.html" class="bg-gray-900 px-3 py-3 hover:bg-red-500 transition duration-300 ease-in-out">
-                                                    <i class="fas fa-shopping-cart transition duration-300 ease-in-out flex justify-center items-center text-gray-100"></i>
+                                            <div class="icon_desc">
+                                                <a href="cart.html" class="icon_header">
+                                                    <i class="fas fa-shopping-cart link_icon"></i>
                                                 </a>
-                                                <a href="random.html" class="bg-gray-900 px-3 py-3 hover:bg-red-500 transition duration-300 ease-in-out">
-                                                    <i class="fas fa-random transition duration-300 ease-in-out flex justify-center items-center text-gray-100"></i>
+                                                <a href="random.html" class="icon_header">
+                                                    <i class="fas fa-random link_icon"></i>
                                                 </a>
-                                                <a href="single_prod.html" class="bg-gray-900 px-3 py-3 hover:bg-red-500 transition duration-300 ease-in-out">
-                                                    <i class="fas fa-search transition duration-300 ease-in-out flex justify-center items-center text-gray-100"></i>
+                                                <a href="single_prod.html" class="icon_header">
+                                                    <i class="fas fa-search link_icon"></i>
                                                 </a>
-                                                <a href="cart.html" class="bg-gray-900 px-3 py-3 hover:bg-red-500 transition duration-300 ease-in-out">
-                                                    <i class="fas fa-heart transition duration-300 ease-in-out flex justify-center items-center text-gray-100"></i>
+                                                <a href="cart.html" class="icon_header">
+                                                    <i class="fas fa-heart link_icon"></i>
                                                 </a>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="px-4 py-3 bg-white">
-                                        <a href="#" class=""><h1 class="camelcase text-gray-800 font-rubic font-semibold text-lg hover:text-red-500 transition duration-300 ease-in-out">Black Dress for Women</h1></a>
+                                        <a href="#" class=""><h1 class="cart_header">White Line Dress</h1></a>
                                         <div class="flex py-2">
-                                            <p class="text-red-600 mr-2 font-rubic font-se text-sm">$70.00</p>
+                                            <p class="cart_pord_off_dis">$45.00</p>
                                         </div>
                                         <div class="flex">
                                             <div class="">
-                                                <i class="fas fa-star text-yellow-400 text-sm"></i>
-                                                <i class="fas fa-star text-yellow-400 text-sm"></i>
-                                                <i class="fas fa-star text-yellow-400 text-sm"></i>
-                                                <i class="far fa-star text-gray-400 text-sm"></i>
-                                                <i class="far fa-star text-gray-400 text-sm"></i>
+                                                <i class="fas fa-star text-yellow-400 text-xs"></i>
+                                                <i class="fas fa-star text-yellow-400 text-xs"></i>
+                                                <i class="fas fa-star text-yellow-400 text-xs"></i>
+                                                <i class="fas fa-star text-yellow-400 text-xs"></i>
+                                                <i class="far fa-star text-gray-400 text-xs"></i>
                                             </div>
                                             <div class="ml-2">
-                                                <p class="text-gray-500 font-rubic font-medium">(1)</p>
+                                                <p class="text-gray-500 font-medium text-sm">(1)</p>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="shadow hover:shadow-lg transition duration-300 ease-in-out group xl:mt-0 lg:mt-0 md:mt-0 sm:mt-0 mt-6">
-                                    <div class="overflow-hidden relative">
-                                        <img class="w-full transition duration-700 ease-in-out" src="prod_img/product_img7-1.webp" alt="image" />
+                                 <div class="cart_body">
+                                    <div class="cart_desc">
+                                        <img class="cart_img" src="prod_img/product_img8-1.webp" alt="image" />
+                                        <p class="cart_dis_title">-23%</p>
                                         <div class="flex justify-center">
-                                            <div class="absolute bottom-4 opacity-0 group-hover:opacity-100 transition duration-500 ease-in-out">
-                                                <a href="cart.html" class="bg-gray-900 px-3 py-3 hover:bg-red-500 transition duration-300 ease-in-out">
-                                                    <i class="fas fa-shopping-cart transition duration-300 ease-in-out flex justify-center items-center text-gray-100"></i>
+                                            <div class="icon_desc">
+                                                <a href="cart.html" class="icon_header">
+                                                    <i class="fas fa-shopping-cart link_icon"></i>
                                                 </a>
-                                                <a href="random.html" class="bg-gray-900 px-3 py-3 hover:bg-red-500 transition duration-300 ease-in-out">
-                                                    <i class="fas fa-random transition duration-300 ease-in-out flex justify-center items-center text-gray-100"></i>
+                                                <a href="random.html" class="icon_header">
+                                                    <i class="fas fa-random link_icon"></i>
                                                 </a>
-                                                <a href="single_prod.html" class="bg-gray-900 px-3 py-3 hover:bg-red-500 transition duration-300 ease-in-out">
-                                                    <i class="fas fa-search transition duration-300 ease-in-out flex justify-center items-center text-gray-100"></i>
+                                                <a href="single_prod.html" class="icon_header">
+                                                    <i class="fas fa-search link_icon"></i>
                                                 </a>
-                                                <a href="cart.html" class="bg-gray-900 px-3 py-3 hover:bg-red-500 transition duration-300 ease-in-out">
-                                                    <i class="fas fa-heart transition duration-300 ease-in-out flex justify-center items-center text-gray-100"></i>
+                                                <a href="cart.html" class="icon_header">
+                                                    <i class="fas fa-heart link_icon"></i>
                                                 </a>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="px-4 py-3 bg-white">
-                                        <a href="#" class=""><h1 class="camelcase text-gray-800 font-rubic font-semibold text-lg hover:text-red-500 transition duration-300 ease-in-out">White Line Dress</h1></a>
+                                        <a href="#" class=""><h1 class="cart_header">Men Blue Jins Shirt</h1></a>
                                         <div class="flex py-2">
-                                            <p class="line-through text-gray-600 mr-2 font-rubic font-normal text-sm">$69.00</p>
-                                            <p class="text-red-600 mr-2 font-rubic font-se text-sm">$39.00</p>
+                                            <p class="cart_pord_off_dis">$69.00</p>
+                                            <p class="cart_prod_price">$39.00</p>
                                         </div>
                                         <div class="flex">
                                             <div class="">
-                                                <i class="fas fa-star text-yellow-400 text-sm"></i>
-                                                <i class="fas fa-star text-yellow-400 text-sm"></i>
-                                                <i class="fas fa-star text-yellow-400 text-sm"></i>
-                                                <i class="far fa-star text-gray-400 text-sm"></i>
-                                                <i class="far fa-star text-gray-400 text-sm"></i>
+                                                <i class="fas fa-star text-yellow-400 text-xs"></i>
+                                                <i class="fas fa-star text-yellow-400 text-xs"></i>
+                                                <i class="fas fa-star text-yellow-400 text-xs"></i>
+                                                <i class="far fa-star text-gray-400 text-xs"></i>
+                                                <i class="far fa-star text-gray-400 text-xs"></i>
                                             </div>
                                             <div class="ml-2">
-                                                <p class="text-gray-500 font-rubic font-medium">(1)</p>
+                                                <p class="text-gray-500 font-medium text-sm">(1)</p>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="shadow hover:shadow-lg transition duration-300 ease-in-out group xl:mt-0 lg:mt-0 md:mt-0 sm:mt-0 mt-6">
-                                    <div class="overflow-hidden relative">
-                                        <img class="w-full transition duration-700 ease-in-out" src="prod_img/product_img8-1.webp" alt="image" />
-                                        <p class="bg-red-500 text-white font-medium px-3 absolute top-2 left-2 font-rubic text-white">-40%</p>
+                               <div class="cart_body">
+                                    <div class="cart_desc">
+                                        <img class="cart_img" src="prod_img/product_img11-1.webp" alt="image" />
+                                        <p class="cart_dis_title">-23%</p>
                                         <div class="flex justify-center">
-                                            <div class="absolute bottom-4 opacity-0 group-hover:opacity-100 transition duration-500 ease-in-out">
-                                                <a href="cart.html" class="bg-gray-900 px-3 py-3 hover:bg-red-500 transition duration-300 ease-in-out">
-                                                    <i class="fas fa-shopping-cart transition duration-300 ease-in-out flex justify-center items-center text-gray-100"></i>
+                                            <div class="icon_desc">
+                                                <a href="cart.html" class="icon_header">
+                                                    <i class="fas fa-shopping-cart link_icon"></i>
                                                 </a>
-                                                <a href="random.html" class="bg-gray-900 px-3 py-3 hover:bg-red-500 transition duration-300 ease-in-out">
-                                                    <i class="fas fa-random transition duration-300 ease-in-out flex justify-center items-center text-gray-100"></i>
+                                                <a href="random.html" class="icon_header">
+                                                    <i class="fas fa-random link_icon"></i>
                                                 </a>
-                                                <a href="single_prod.html" class="bg-gray-900 px-3 py-3 hover:bg-red-500 transition duration-300 ease-in-out">
-                                                    <i class="fas fa-search transition duration-300 ease-in-out flex justify-center items-center text-gray-100"></i>
+                                                <a href="single_prod.html" class="icon_header">
+                                                    <i class="fas fa-search link_icon"></i>
                                                 </a>
-                                                <a href="cart.html" class="bg-gray-900 px-3 py-3 hover:bg-red-500 transition duration-300 ease-in-out">
-                                                    <i class="fas fa-heart transition duration-300 ease-in-out flex justify-center items-center text-gray-100"></i>
+                                                <a href="cart.html" class="icon_header">
+                                                    <i class="fas fa-heart link_icon"></i>
                                                 </a>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="px-4 py-3 bg-white">
-                                        <a href="#" class=""><h1 class="camelcase text-gray-800 font-rubic font-semibold text-lg hover:text-red-500 transition duration-300 ease-in-out">Men Blue Jins Shirt</h1></a>
+                                        <a href="#" class=""><h1 class="cart_header">Black Dress For Women</h1></a>
                                         <div class="flex py-2">
-                                            <p class="line-through text-gray-600 mr-2 font-rubic font-normal text-sm">$65.00</p>
-                                            <p class="text-red-600 mr-2 font-rubic font-se text-sm">$45.00</p>
+                                            <p class="cart_pord_off_dis">$65.00</p>
+                                            <p class="cart_prod_price">$05.00</p>
                                         </div>
                                         <div class="flex">
                                             <div class="">
-                                                <i class="fas fa-star text-yellow-400 text-sm"></i>
-                                                <i class="fas fa-star text-yellow-400 text-sm"></i>
-                                                <i class="fas fa-star text-yellow-400 text-sm"></i>
-                                                <i class="far fa-star text-gray-400 text-sm"></i>
-                                                <i class="far fa-star text-gray-400 text-sm"></i>
+                                                <i class="fas fa-star text-yellow-400 text-xs"></i>
+                                                <i class="fas fa-star text-yellow-400 text-xs"></i>
+                                                <i class="fas fa-star text-yellow-400 text-xs"></i>
+                                                <i class="fas fa-star text-yellow-400 text-xs"></i>
+                                                <i class="fas fa-star text-yellow-400 text-xs"></i>
                                             </div>
                                             <div class="ml-2">
-                                                <p class="text-gray-500 font-rubic font-medium">(1)</p>
+                                                <p class="text-gray-500 font-medium text-sm">(2)</p>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="shadow hover:shadow-lg transition duration-300 ease-in-out group xl:mt-0 lg:mt-0 md:mt-0 sm:mt-0 mt-6">
-                                    <div class="overflow-hidden relative">
-                                        <img class="w-full transition duration-700 ease-in-out" src="prod_img/product_img9-1.webp" alt="image" />
-                                        <p class="bg-red-500 text-white font-medium px-3 absolute top-2 left-2 font-rubic text-white">-40%</p>
+                                <div class="cart_body">
+                                    <div class="cart_desc">
+                                        <img class="cart_img" src="prod_img/product_img9-1.webp" alt="image" />
+                                        <p class="cart_dis_title">-23%</p>
                                         <div class="flex justify-center">
-                                            <div class="absolute bottom-4 opacity-0 group-hover:opacity-100 transition duration-500 ease-in-out">
-                                                <a href="cart.html" class="bg-gray-900 px-3 py-3 hover:bg-red-500 transition duration-300 ease-in-out">
-                                                    <i class="fas fa-shopping-cart transition duration-300 ease-in-out flex justify-center items-center text-gray-100"></i>
+                                            <div class="icon_desc">
+                                                <a href="cart.html" class="icon_header">
+                                                    <i class="fas fa-shopping-cart link_icon"></i>
                                                 </a>
-                                                <a href="random.html" class="bg-gray-900 px-3 py-3 hover:bg-red-500 transition duration-300 ease-in-out">
-                                                    <i class="fas fa-random transition duration-300 ease-in-out flex justify-center items-center text-gray-100"></i>
+                                                <a href="random.html" class="icon_header">
+                                                    <i class="fas fa-random link_icon"></i>
                                                 </a>
-                                                <a href="single_prod.html" class="bg-gray-900 px-3 py-3 hover:bg-red-500 transition duration-300 ease-in-out">
-                                                    <i class="fas fa-search transition duration-300 ease-in-out flex justify-center items-center text-gray-100"></i>
+                                                <a href="single_prod.html" class="icon_header">
+                                                    <i class="fas fa-search link_icon"></i>
                                                 </a>
-                                                <a href="cart.html" class="bg-gray-900 px-3 py-3 hover:bg-red-500 transition duration-300 ease-in-out">
-                                                    <i class="fas fa-heart transition duration-300 ease-in-out flex justify-center items-center text-gray-100"></i>
+                                                <a href="cart.html" class="icon_header">
+                                                    <i class="fas fa-heart link_icon"></i>
                                                 </a>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="px-4 py-3 bg-white">
-                                        <a href="#" class=""><h1 class="camelcase text-gray-800 font-rubic font-semibold text-lg hover:text-red-500 transition duration-300 ease-in-out">T-Shirt For Girls</h1></a>
+                                        <a href="#" class=""><h1 class="cart_header">T-Shirt For Women</h1></a>
                                         <div class="flex py-2">
-                                            <p class="line-through text-gray-600 mr-2 font-rubic font-normal text-sm">$65.00</p>
-                                            <p class="text-red-600 mr-2 font-rubic font-se text-sm">$39.00</p>
+                                            <p class="cart_pord_off_dis">$65.00</p>
+                                            <p class="cart_prod_price">$05.00</p>
                                         </div>
                                         <div class="flex">
                                             <div class="">
-                                                <i class="fas fa-star text-yellow-400 text-sm"></i>
-                                                <i class="fas fa-star text-yellow-400 text-sm"></i>
-                                                <i class="fas fa-star text-yellow-400 text-sm"></i>
-                                                <i class="far fa-star text-gray-400 text-sm"></i>
-                                                <i class="far fa-star text-gray-400 text-sm"></i>
+                                                <i class="fas fa-star text-yellow-400 text-xs"></i>
+                                                <i class="fas fa-star text-yellow-400 text-xs"></i>
+                                                <i class="fas fa-star text-yellow-400 text-xs"></i>
+                                                <i class="fas fa-star text-yellow-400 text-xs"></i>
+                                                <i class="fas fa-star text-yellow-400 text-xs"></i>
                                             </div>
                                             <div class="ml-2">
-                                                <p class="text-gray-500 font-rubic font-medium">(1)</p>
+                                                <p class="text-gray-500 font-medium text-sm">(2)</p>
                                             </div>
                                         </div>
                                     </div>
@@ -636,325 +635,245 @@
                             </div>
                         </div>
                         <div id="second" class="hidden p-4">
-                            <div class="sm:grid sm:grid-cols-2 md:grid md:grid-cols-2 lg:grid lg:grid-cols-4 xl:grid xl:grid-cols-4 gap-6">
-                                <div class="shadow hover:shadow-lg transition duration-300 ease-in-out group">
-                                    <div class="overflow-hidden relative">
-                                        <img class="w-full transition duration-700 ease-in-out" src="prod_img/product_img1-1.webp" alt="image" />
-                                        <p class="bg-red-500 text-white font-medium px-3 absolute top-2 left-2 font-rubic text-white">-40%</p>
+                            <div class="cart_main_header">
+                                <div class="cart_body">
+                                    <div class="cart_desc">
+                                        <img class="cart_img" src="prod_img/product_img1-1.webp" alt="image" />
+                                        <p class="cart_dis_title">-40%</p>
                                         <div class="flex justify-center">
-                                            <div class="absolute bottom-4 opacity-0 group-hover:opacity-100 transition duration-500 ease-in-out">
-                                                <a href="cart.html" class="bg-gray-900 px-3 py-3 hover:bg-red-500 transition duration-300 ease-in-out">
-                                                    <i class="fas fa-shopping-cart transition duration-300 ease-in-out flex justify-center items-center text-gray-100"></i>
+                                            <div class="icon_desc">
+                                                <a href="cart.html" class="icon_header">
+                                                    <i class="fas fa-shopping-cart link_icon"></i>
                                                 </a>
-                                                <a href="random.html" class="bg-gray-900 px-3 py-3 hover:bg-red-500 transition duration-300 ease-in-out">
-                                                    <i class="fas fa-random transition duration-300 ease-in-out flex justify-center items-center text-gray-100"></i>
+                                                <a href="random.html" class="icon_header">
+                                                    <i class="fas fa-random link_icon"></i>
                                                 </a>
-                                                <a href="single_prod.html" class="bg-gray-900 px-3 py-3 hover:bg-red-500 transition duration-300 ease-in-out">
-                                                    <i class="fas fa-search transition duration-300 ease-in-out flex justify-center items-center text-gray-100"></i>
+                                                <a href="single_prod.html" class="icon_header">
+                                                    <i class="fas fa-search link_icon"></i>
                                                 </a>
-                                                <a href="cart.html" class="bg-gray-900 px-3 py-3 hover:bg-red-500 transition duration-300 ease-in-out">
-                                                    <i class="fas fa-heart transition duration-300 ease-in-out flex justify-center items-center text-gray-100"></i>
+                                                <a href="cart.html" class="icon_header">
+                                                    <i class="fas fa-heart link_icon"></i>
                                                 </a>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="px-4 py-3 bg-white">
-                                        <a href="#" class=""><h1 class="camelcase text-gray-800 font-rubic font-semibold text-lg hover:text-red-500 transition duration-300 ease-in-out">blue dress for women</h1></a>
+                                        <a href="#" class=""><h1 class="cart_header">Blue Dress For Women</h1></a>
                                         <div class="flex py-2">
-                                            <p class="line-through text-gray-600 mr-2 font-rubic font-normal text-sm">$65.00</p>
-                                            <p class="text-red-600 mr-2 font-rubic font-se text-sm">$39.00</p>
+                                            <p class="cart_pord_off_dis">$65.00</p>
+                                            <p class="cart_prod_price">$39.00</p>
                                         </div>
                                         <div class="flex">
                                             <div class="">
-                                                <i class="fas fa-star text-yellow-400 text-sm"></i>
-                                                <i class="fas fa-star text-yellow-400 text-sm"></i>
-                                                <i class="fas fa-star text-yellow-400 text-sm"></i>
-                                                <i class="far fa-star text-gray-400 text-sm"></i>
-                                                <i class="far fa-star text-gray-400 text-sm"></i>
+                                                <i class="fas fa-star text-yellow-400 text-xs"></i>
+                                                <i class="fas fa-star text-yellow-400 text-xs"></i>
+                                                <i class="fas fa-star text-yellow-400 text-xs"></i>
+                                                <i class="far fa-star text-gray-400 text-xs"></i>
+                                                <i class="far fa-star text-gray-400 text-xs"></i>
                                             </div>
                                             <div class="ml-2">
-                                                <p class="text-gray-500 font-rubic font-medium">(1)</p>
+                                                <p class="text-gray-500 font-medium text-sm">(1)</p>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="shadow hover:shadow-lg transition duration-300 ease-in-out group xl:mt-0 lg:mt-0 md:mt-0 sm:mt-0 mt-6">
-                                    <div class="overflow-hidden relative">
-                                        <img class="w-full transition duration-700 ease-in-out" src="prod_img/product_img3-1.webp" alt="image" />
+                                <div class="cart_body">
+                                    <div class="cart_desc">
+                                        <img class="cart_img" src="prod_img/product_img3-1.webp" alt="image" />
                                         <div class="flex justify-center">
-                                            <div class="absolute bottom-4 opacity-0 group-hover:opacity-100 transition duration-500 ease-in-out">
-                                                <a href="cart.html" class="bg-gray-900 px-3 py-3 hover:bg-red-500 transition duration-300 ease-in-out">
-                                                    <i class="fas fa-shopping-cart transition duration-300 ease-in-out flex justify-center items-center text-gray-100"></i>
+                                            <div class="icon_desc">
+                                                <a href="cart.html" class="icon_header">
+                                                    <i class="fas fa-shopping-cart link_icon"></i>
                                                 </a>
-                                                <a href="random.html" class="bg-gray-900 px-3 py-3 hover:bg-red-500 transition duration-300 ease-in-out">
-                                                    <i class="fas fa-random transition duration-300 ease-in-out flex justify-center items-center text-gray-100"></i>
+                                                <a href="random.html" class="icon_header">
+                                                    <i class="fas fa-random link_icon"></i>
                                                 </a>
-                                                <a href="single_prod.html" class="bg-gray-900 px-3 py-3 hover:bg-red-500 transition duration-300 ease-in-out">
-                                                    <i class="fas fa-search transition duration-300 ease-in-out flex justify-center items-center text-gray-100"></i>
+                                                <a href="single_prod.html" class="icon_header">
+                                                    <i class="fas fa-search link_icon"></i>
                                                 </a>
-                                                <a href="cart.html" class="bg-gray-900 px-3 py-3 hover:bg-red-500 transition duration-300 ease-in-out">
-                                                    <i class="fas fa-heart transition duration-300 ease-in-out flex justify-center items-center text-gray-100"></i>
+                                                <a href="cart.html" class="icon_header">
+                                                    <i class="fas fa-heart link_icon"></i>
                                                 </a>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="px-4 py-3 bg-white">
-                                        <a href="#" class=""><h1 class="camelcase text-gray-800 font-rubic font-semibold text-lg hover:text-red-500 transition duration-300 ease-in-out">Women Full Slive Dress</h1></a>
+                                        <a href="#" class=""><h1 class="cart_header">Women Full Sliv Dress</h1></a>
                                         <div class="flex py-2">
-                                            <p class="text-red-600 mr-2 font-rubic font-se text-sm">$70.00</p>
+                                            <p class="cart_pord_off_dis">$70.00</p>
                                         </div>
                                         <div class="flex">
                                             <div class="">
-                                                <i class="fas fa-star text-yellow-400 text-sm"></i>
-                                                <i class="fas fa-star text-yellow-400 text-sm"></i>
-                                                <i class="fas fa-star text-yellow-400 text-sm"></i>
-                                                <i class="far fa-star text-gray-400 text-sm"></i>
-                                                <i class="far fa-star text-gray-400 text-sm"></i>
+                                                <i class="fas fa-star text-yellow-400 text-xs"></i>
+                                                <i class="fas fa-star text-yellow-400 text-xs"></i>
+                                                <i class="fas fa-star text-yellow-400 text-xs"></i>
+                                                <i class="far fa-star text-gray-400 text-xs"></i>
+                                                <i class="far fa-star text-gray-400 text-xs"></i>
                                             </div>
                                             <div class="ml-2">
-                                                <p class="text-gray-500 font-rubic font-medium">(1)</p>
+                                                <p class="text-gray-500 font-medium text-sm">(1)</p>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="shadow hover:shadow-lg transition duration-300 ease-in-out group xl:mt-0 lg:mt-0 md:mt-0 sm:mt-0 mt-6">
-                                    <div class="overflow-hidden relative">
-                                        <img class="w-full transition duration-700 ease-in-out" src="prod_img/product_img4-1.webp" alt="image" />
-                                        <p class="bg-red-500 text-white font-medium px-3 absolute top-2 left-2 font-rubic text-white">-40%</p>
+                                 <div class="cart_body">
+                                    <div class="cart_desc">
+                                        <img class="cart_img" src="prod_img/product_img4-1.webp" alt="image" />
+                                        <p class="cart_dis_title">-40%</p>
                                         <div class="flex justify-center">
-                                            <div class="absolute bottom-4 opacity-0 group-hover:opacity-100 transition duration-500 ease-in-out">
-                                                <a href="cart.html" class="bg-gray-900 px-3 py-3 hover:bg-red-500 transition duration-300 ease-in-out">
-                                                    <i class="fas fa-shopping-cart transition duration-300 ease-in-out flex justify-center items-center text-gray-100"></i>
+                                            <div class="icon_desc">
+                                                <a href="cart.html" class="icon_header">
+                                                    <i class="fas fa-shopping-cart link_icon"></i>
                                                 </a>
-                                                <a href="random.html" class="bg-gray-900 px-3 py-3 hover:bg-red-500 transition duration-300 ease-in-out">
-                                                    <i class="fas fa-random transition duration-300 ease-in-out flex justify-center items-center text-gray-100"></i>
+                                                <a href="random.html" class="icon_header">
+                                                    <i class="fas fa-random link_icon"></i>
                                                 </a>
-                                                <a href="single_prod.html" class="bg-gray-900 px-3 py-3 hover:bg-red-500 transition duration-300 ease-in-out">
-                                                    <i class="fas fa-search transition duration-300 ease-in-out flex justify-center items-center text-gray-100"></i>
+                                                <a href="single_prod.html" class="icon_header">
+                                                    <i class="fas fa-search link_icon"></i>
                                                 </a>
-                                                <a href="cart.html" class="bg-gray-900 px-3 py-3 hover:bg-red-500 transition duration-300 ease-in-out">
-                                                    <i class="fas fa-heart transition duration-300 ease-in-out flex justify-center items-center text-gray-100"></i>
+                                                <a href="cart.html" class="icon_header">
+                                                    <i class="fas fa-heart link_icon"></i>
                                                 </a>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="px-4 py-3 bg-white">
-                                        <a href="#" class=""><h1 class="camelcase text-gray-800 font-rubic font-semibold text-lg hover:text-red-500 transition duration-300 ease-in-out">Light Blue Shirt</h1></a>
+                                        <a href="#" class=""><h1 class="cart_header">Light Blue Shirt</h1></a>
                                         <div class="flex py-2">
-                                            <p class="line-through text-gray-600 mr-2 font-rubic font-normal text-sm">$69.00</p>
-                                            <p class="text-red-600 mr-2 font-rubic font-se text-sm">$39.00</p>
+                                            <p class="cart_pord_off_dis">$65.00</p>
+                                            <p class="cart_prod_price">$69.00</p>
                                         </div>
                                         <div class="flex">
                                             <div class="">
-                                                <i class="fas fa-star text-yellow-400 text-sm"></i>
-                                                <i class="fas fa-star text-yellow-400 text-sm"></i>
-                                                <i class="fas fa-star text-yellow-400 text-sm"></i>
-                                                <i class="far fa-star text-gray-400 text-sm"></i>
-                                                <i class="far fa-star text-gray-400 text-sm"></i>
+                                                <i class="fas fa-star text-yellow-400 text-xs"></i>
+                                                <i class="fas fa-star text-yellow-400 text-xs"></i>
+                                                <i class="fas fa-star text-yellow-400 text-xs"></i>
+                                                <i class="far fa-star text-gray-400 text-xs"></i>
+                                                <i class="far fa-star text-gray-400 text-xs"></i>
                                             </div>
                                             <div class="ml-2">
-                                                <p class="text-gray-500 font-rubic font-medium">(1)</p>
+                                                <p class="text-gray-500 font-medium text-sm">(1)</p>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="shadow hover:shadow-lg transition duration-300 ease-in-out group xl:mt-0 lg:mt-0 md:mt-0 sm:mt-0 mt-6">
-                                    <div class="overflow-hidden relative">
-                                        <img class="w-full transition duration-700 ease-in-out" src="prod_img/product_img6-1.webp" alt="image" />
+                               <div class="cart_body">
+                                    <div class="cart_desc">
+                                        <img class="cart_img" src="prod_img/product_img6-1.webp" alt="image" />
+                                        <p class="cart_dis_title">-40%</p>
                                         <div class="flex justify-center">
-                                            <div class="absolute bottom-4 opacity-0 group-hover:opacity-100 transition duration-500 ease-in-out">
-                                                <a href="cart.html" class="bg-gray-900 px-3 py-3 hover:bg-red-500 transition duration-300 ease-in-out">
-                                                    <i class="fas fa-shopping-cart transition duration-300 ease-in-out flex justify-center items-center text-gray-100"></i>
+                                            <div class="icon_desc">
+                                                <a href="cart.html" class="icon_header">
+                                                    <i class="fas fa-shopping-cart link_icon"></i>
                                                 </a>
-                                                <a href="random.html" class="bg-gray-900 px-3 py-3 hover:bg-red-500 transition duration-300 ease-in-out">
-                                                    <i class="fas fa-random transition duration-300 ease-in-out flex justify-center items-center text-gray-100"></i>
+                                                <a href="random.html" class="icon_header">
+                                                    <i class="fas fa-random link_icon"></i>
                                                 </a>
-                                                <a href="single_prod.html" class="bg-gray-900 px-3 py-3 hover:bg-red-500 transition duration-300 ease-in-out">
-                                                    <i class="fas fa-search transition duration-300 ease-in-out flex justify-center items-center text-gray-100"></i>
+                                                <a href="single_prod.html" class="icon_header">
+                                                    <i class="fas fa-search link_icon"></i>
                                                 </a>
-                                                <a href="cart.html" class="bg-gray-900 px-3 py-3 hover:bg-red-500 transition duration-300 ease-in-out">
-                                                    <i class="fas fa-heart transition duration-300 ease-in-out flex justify-center items-center text-gray-100"></i>
+                                                <a href="cart.html" class="icon_header">
+                                                    <i class="fas fa-heart link_icon"></i>
                                                 </a>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="px-4 py-3 bg-white">
-                                        <a href="#" class=""><h1 class="camelcase text-gray-800 font-rubic font-semibold text-lg hover:text-red-500 transition duration-300 ease-in-out">blue Casual Check Shirt</h1></a>
+                                        <a href="#" class=""><h1 class="cart_header">Blue Casual Check Shirt</h1></a>
                                         <div class="flex py-2">
-                                            <p class="text-red-600 mr-2 font-rubic font-se text-sm">$55.00</p>
+                                            <p class="cart_pord_off_dis">$33.00</p>
+                                            <p class="cart_prod_price">$55.00</p>
                                         </div>
                                         <div class="flex">
                                             <div class="">
-                                                <i class="fas fa-star text-yellow-400 text-sm"></i>
-                                                <i class="fas fa-star text-yellow-400 text-sm"></i>
-                                                <i class="fas fa-star text-yellow-400 text-sm"></i>
-                                                <i class="far fa-star text-gray-400 text-sm"></i>
-                                                <i class="far fa-star text-gray-400 text-sm"></i>
+                                                <i class="fas fa-star text-yellow-400 text-xs"></i>
+                                                <i class="fas fa-star text-yellow-400 text-xs"></i>
+                                                <i class="fas fa-star text-yellow-400 text-xs"></i>
+                                                <i class="fas fa-star text-yellow-400 text-xs"></i>
+                                                <i class="fas fa-star text-yellow-400 text-xs"></i>
                                             </div>
                                             <div class="ml-2">
-                                                <p class="text-gray-500 font-rubic font-medium">(1)</p>
+                                                <p class="text-gray-500 font-medium text-sm">(1)</p>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="shadow hover:shadow-lg transition duration-300 ease-in-out group xl:mt-0 lg:mt-0 md:mt-0 sm:mt-0 mt-6">
-                                    <div class="overflow-hidden relative">
-                                        <img class="w-full transition duration-700 ease-in-out" src="prod_img/product_img11-1.webp" alt="image" />
-                                        <p class="bg-red-500 text-white font-medium px-3 absolute top-2 left-2 font-rubic text-white">-20%</p>
+                                 <div class="cart_body">
+                                    <div class="cart_desc">
+                                        <img class="cart_img" src="prod_img/product_img7-1.webp" alt="image" />
                                         <div class="flex justify-center">
-                                            <div class="absolute bottom-4 opacity-0 group-hover:opacity-100 transition duration-500 ease-in-out">
-                                                <a href="cart.html" class="bg-gray-900 px-3 py-3 hover:bg-red-500 transition duration-300 ease-in-out">
-                                                    <i class="fas fa-shopping-cart transition duration-300 ease-in-out flex justify-center items-center text-gray-100"></i>
+                                            <div class="icon_desc">
+                                                <a href="cart.html" class="icon_header">
+                                                    <i class="fas fa-shopping-cart link_icon"></i>
                                                 </a>
-                                                <a href="random.html" class="bg-gray-900 px-3 py-3 hover:bg-red-500 transition duration-300 ease-in-out">
-                                                    <i class="fas fa-random transition duration-300 ease-in-out flex justify-center items-center text-gray-100"></i>
+                                                <a href="random.html" class="icon_header">
+                                                    <i class="fas fa-random link_icon"></i>
                                                 </a>
-                                                <a href="single_prod.html" class="bg-gray-900 px-3 py-3 hover:bg-red-500 transition duration-300 ease-in-out">
-                                                    <i class="fas fa-search transition duration-300 ease-in-out flex justify-center items-center text-gray-100"></i>
+                                                <a href="single_prod.html" class="icon_header">
+                                                    <i class="fas fa-search link_icon"></i>
                                                 </a>
-                                                <a href="cart.html" class="bg-gray-900 px-3 py-3 hover:bg-red-500 transition duration-300 ease-in-out">
-                                                    <i class="fas fa-heart transition duration-300 ease-in-out flex justify-center items-center text-gray-100"></i>
+                                                <a href="cart.html" class="icon_header">
+                                                    <i class="fas fa-heart link_icon"></i>
                                                 </a>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="px-4 py-3 bg-white">
-                                        <a href="#" class=""><h1 class="camelcase text-gray-800 font-rubic font-semibold text-lg hover:text-red-500 transition duration-300 ease-in-out">Black Dress for Women</h1></a>
+                                        <a href="#" class=""><h1 class="cart_header">White Line Dress</h1></a>
                                         <div class="flex py-2">
-                                            <p class="text-red-600 mr-2 font-rubic font-se text-sm">$70.00</p>
+                                            <p class="cart_pord_off_dis">$45.00</p>
                                         </div>
                                         <div class="flex">
                                             <div class="">
-                                                <i class="fas fa-star text-yellow-400 text-sm"></i>
-                                                <i class="fas fa-star text-yellow-400 text-sm"></i>
-                                                <i class="fas fa-star text-yellow-400 text-sm"></i>
-                                                <i class="far fa-star text-gray-400 text-sm"></i>
-                                                <i class="far fa-star text-gray-400 text-sm"></i>
+                                                <i class="fas fa-star text-yellow-400 text-xs"></i>
+                                                <i class="fas fa-star text-yellow-400 text-xs"></i>
+                                                <i class="fas fa-star text-yellow-400 text-xs"></i>
+                                                <i class="fas fa-star text-yellow-400 text-xs"></i>
+                                                <i class="far fa-star text-gray-400 text-xs"></i>
                                             </div>
                                             <div class="ml-2">
-                                                <p class="text-gray-500 font-rubic font-medium">(1)</p>
+                                                <p class="text-gray-500 font-medium text-sm">(1)</p>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="shadow hover:shadow-lg transition duration-300 ease-in-out group xl:mt-0 lg:mt-0 md:mt-0 sm:mt-0 mt-6">
-                                    <div class="overflow-hidden relative">
-                                        <img class="w-full transition duration-700 ease-in-out" src="prod_img/product_img7-1.webp" alt="image" />
+                                 <div class="cart_body">
+                                    <div class="cart_desc">
+                                        <img class="cart_img" src="prod_img/product_img8-1.webp" alt="image" />
+                                        <p class="cart_dis_title">-23%</p>
                                         <div class="flex justify-center">
-                                            <div class="absolute bottom-4 opacity-0 group-hover:opacity-100 transition duration-500 ease-in-out">
-                                                <a href="cart.html" class="bg-gray-900 px-3 py-3 hover:bg-red-500 transition duration-300 ease-in-out">
-                                                    <i class="fas fa-shopping-cart transition duration-300 ease-in-out flex justify-center items-center text-gray-100"></i>
+                                            <div class="icon_desc">
+                                                <a href="cart.html" class="icon_header">
+                                                    <i class="fas fa-shopping-cart link_icon"></i>
                                                 </a>
-                                                <a href="random.html" class="bg-gray-900 px-3 py-3 hover:bg-red-500 transition duration-300 ease-in-out">
-                                                    <i class="fas fa-random transition duration-300 ease-in-out flex justify-center items-center text-gray-100"></i>
+                                                <a href="random.html" class="icon_header">
+                                                    <i class="fas fa-random link_icon"></i>
                                                 </a>
-                                                <a href="single_prod.html" class="bg-gray-900 px-3 py-3 hover:bg-red-500 transition duration-300 ease-in-out">
-                                                    <i class="fas fa-search transition duration-300 ease-in-out flex justify-center items-center text-gray-100"></i>
+                                                <a href="single_prod.html" class="icon_header">
+                                                    <i class="fas fa-search link_icon"></i>
                                                 </a>
-                                                <a href="cart.html" class="bg-gray-900 px-3 py-3 hover:bg-red-500 transition duration-300 ease-in-out">
-                                                    <i class="fas fa-heart transition duration-300 ease-in-out flex justify-center items-center text-gray-100"></i>
+                                                <a href="cart.html" class="icon_header">
+                                                    <i class="fas fa-heart link_icon"></i>
                                                 </a>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="px-4 py-3 bg-white">
-                                        <a href="#" class=""><h1 class="camelcase text-gray-800 font-rubic font-semibold text-lg hover:text-red-500 transition duration-300 ease-in-out">White Line Dress</h1></a>
+                                        <a href="#" class=""><h1 class="cart_header">Men Blue Jins Shirt</h1></a>
                                         <div class="flex py-2">
-                                            <p class="line-through text-gray-600 mr-2 font-rubic font-normal text-sm">$69.00</p>
-                                            <p class="text-red-600 mr-2 font-rubic font-se text-sm">$39.00</p>
+                                            <p class="cart_pord_off_dis">$69.00</p>
+                                            <p class="cart_prod_price">$39.00</p>
                                         </div>
                                         <div class="flex">
                                             <div class="">
-                                                <i class="fas fa-star text-yellow-400 text-sm"></i>
-                                                <i class="fas fa-star text-yellow-400 text-sm"></i>
-                                                <i class="fas fa-star text-yellow-400 text-sm"></i>
-                                                <i class="far fa-star text-gray-400 text-sm"></i>
-                                                <i class="far fa-star text-gray-400 text-sm"></i>
+                                                <i class="fas fa-star text-yellow-400 text-xs"></i>
+                                                <i class="fas fa-star text-yellow-400 text-xs"></i>
+                                                <i class="fas fa-star text-yellow-400 text-xs"></i>
+                                                <i class="far fa-star text-gray-400 text-xs"></i>
+                                                <i class="far fa-star text-gray-400 text-xs"></i>
                                             </div>
                                             <div class="ml-2">
-                                                <p class="text-gray-500 font-rubic font-medium">(1)</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="shadow hover:shadow-lg transition duration-300 ease-in-out group xl:mt-0 lg:mt-0 md:mt-0 sm:mt-0 mt-6">
-                                    <div class="overflow-hidden relative">
-                                        <img class="w-full transition duration-700 ease-in-out" src="prod_img/product_img8-1.webp" alt="image" />
-                                        <p class="bg-red-500 text-white font-medium px-3 absolute top-2 left-2 font-rubic text-white">-40%</p>
-                                        <div class="flex justify-center">
-                                            <div class="absolute bottom-4 opacity-0 group-hover:opacity-100 transition duration-500 ease-in-out">
-                                                <a href="cart.html" class="bg-gray-900 px-3 py-3 hover:bg-red-500 transition duration-300 ease-in-out">
-                                                    <i class="fas fa-shopping-cart transition duration-300 ease-in-out flex justify-center items-center text-gray-100"></i>
-                                                </a>
-                                                <a href="random.html" class="bg-gray-900 px-3 py-3 hover:bg-red-500 transition duration-300 ease-in-out">
-                                                    <i class="fas fa-random transition duration-300 ease-in-out flex justify-center items-center text-gray-100"></i>
-                                                </a>
-                                                <a href="single_prod.html" class="bg-gray-900 px-3 py-3 hover:bg-red-500 transition duration-300 ease-in-out">
-                                                    <i class="fas fa-search transition duration-300 ease-in-out flex justify-center items-center text-gray-100"></i>
-                                                </a>
-                                                <a href="cart.html" class="bg-gray-900 px-3 py-3 hover:bg-red-500 transition duration-300 ease-in-out">
-                                                    <i class="fas fa-heart transition duration-300 ease-in-out flex justify-center items-center text-gray-100"></i>
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="px-4 py-3 bg-white">
-                                        <a href="#" class=""><h1 class="camelcase text-gray-800 font-rubic font-semibold text-lg hover:text-red-500 transition duration-300 ease-in-out">Men Blue Jins Shirt</h1></a>
-                                        <div class="flex py-2">
-                                            <p class="line-through text-gray-600 mr-2 font-rubic font-normal text-sm">$65.00</p>
-                                            <p class="text-red-600 mr-2 font-rubic font-se text-sm">$45.00</p>
-                                        </div>
-                                        <div class="flex">
-                                            <div class="">
-                                                <i class="fas fa-star text-yellow-400 text-sm"></i>
-                                                <i class="fas fa-star text-yellow-400 text-sm"></i>
-                                                <i class="fas fa-star text-yellow-400 text-sm"></i>
-                                                <i class="far fa-star text-gray-400 text-sm"></i>
-                                                <i class="far fa-star text-gray-400 text-sm"></i>
-                                            </div>
-                                            <div class="ml-2">
-                                                <p class="text-gray-500 font-rubic font-medium">(1)</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="shadow hover:shadow-lg transition duration-300 ease-in-out group xl:mt-0 lg:mt-0 md:mt-0 sm:mt-0 mt-6">
-                                    <div class="overflow-hidden relative">
-                                        <img class="w-full transition duration-700 ease-in-out" src="prod_img/product_img9-1.webp" alt="image" />
-                                        <p class="bg-red-500 text-white font-medium px-3 absolute top-2 left-2 font-rubic text-white">-40%</p>
-                                        <div class="flex justify-center">
-                                            <div class="absolute bottom-4 opacity-0 group-hover:opacity-100 transition duration-500 ease-in-out">
-                                                <a href="cart.html" class="bg-gray-900 px-3 py-3 hover:bg-red-500 transition duration-300 ease-in-out">
-                                                    <i class="fas fa-shopping-cart transition duration-300 ease-in-out flex justify-center items-center text-gray-100"></i>
-                                                </a>
-                                                <a href="random.html" class="bg-gray-900 px-3 py-3 hover:bg-red-500 transition duration-300 ease-in-out">
-                                                    <i class="fas fa-random transition duration-300 ease-in-out flex justify-center items-center text-gray-100"></i>
-                                                </a>
-                                                <a href="single_prod.html" class="bg-gray-900 px-3 py-3 hover:bg-red-500 transition duration-300 ease-in-out">
-                                                    <i class="fas fa-search transition duration-300 ease-in-out flex justify-center items-center text-gray-100"></i>
-                                                </a>
-                                                <a href="cart.html" class="bg-gray-900 px-3 py-3 hover:bg-red-500 transition duration-300 ease-in-out">
-                                                    <i class="fas fa-heart transition duration-300 ease-in-out flex justify-center items-center text-gray-100"></i>
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="px-4 py-3 bg-white">
-                                        <a href="#" class=""><h1 class="camelcase text-gray-800 font-rubic font-semibold text-lg hover:text-red-500 transition duration-300 ease-in-out">T-Shirt For Girls</h1></a>
-                                        <div class="flex py-2">
-                                            <p class="line-through text-gray-600 mr-2 font-rubic font-normal text-sm">$65.00</p>
-                                            <p class="text-red-600 mr-2 font-rubic font-se text-sm">$39.00</p>
-                                        </div>
-                                        <div class="flex">
-                                            <div class="">
-                                                <i class="fas fa-star text-yellow-400 text-sm"></i>
-                                                <i class="fas fa-star text-yellow-400 text-sm"></i>
-                                                <i class="fas fa-star text-yellow-400 text-sm"></i>
-                                                <i class="far fa-star text-gray-400 text-sm"></i>
-                                                <i class="far fa-star text-gray-400 text-sm"></i>
-                                            </div>
-                                            <div class="ml-2">
-                                                <p class="text-gray-500 font-rubic font-medium">(1)</p>
+                                                <p class="text-gray-500 font-medium text-sm">(1)</p>
                                             </div>
                                         </div>
                                     </div>
@@ -962,325 +881,204 @@
                             </div>
                         </div>
                         <div id="third" class="hidden p-4">
-                            <div class="sm:grid sm:grid-cols-2 md:grid md:grid-cols-2 lg:grid lg:grid-cols-4 xl:grid xl:grid-cols-4 gap-6">
-                                <div class="shadow hover:shadow-lg transition duration-300 ease-in-out group">
-                                    <div class="overflow-hidden relative">
-                                        <img class="w-full transition duration-700 ease-in-out" src="prod_img/product_img1-1.webp" alt="image" />
-                                        <p class="bg-red-500 text-white font-medium px-3 absolute top-2 left-2 font-rubic text-white">-40%</p>
+                            <div class="cart_main_header">
+                                <div class="cart_body">
+                                    <div class="cart_desc">
+                                        <img class="cart_img" src="prod_img/product_img1-1.webp" alt="image" />
+                                        <p class="cart_dis_title">-40%</p>
                                         <div class="flex justify-center">
-                                            <div class="absolute bottom-4 opacity-0 group-hover:opacity-100 transition duration-500 ease-in-out">
-                                                <a href="cart.html" class="bg-gray-900 px-3 py-3 hover:bg-red-500 transition duration-300 ease-in-out">
-                                                    <i class="fas fa-shopping-cart transition duration-300 ease-in-out flex justify-center items-center text-gray-100"></i>
+                                            <div class="icon_desc">
+                                                <a href="cart.html" class="icon_header">
+                                                    <i class="fas fa-shopping-cart link_icon"></i>
                                                 </a>
-                                                <a href="random.html" class="bg-gray-900 px-3 py-3 hover:bg-red-500 transition duration-300 ease-in-out">
-                                                    <i class="fas fa-random transition duration-300 ease-in-out flex justify-center items-center text-gray-100"></i>
+                                                <a href="random.html" class="icon_header">
+                                                    <i class="fas fa-random link_icon"></i>
                                                 </a>
-                                                <a href="single_prod.html" class="bg-gray-900 px-3 py-3 hover:bg-red-500 transition duration-300 ease-in-out">
-                                                    <i class="fas fa-search transition duration-300 ease-in-out flex justify-center items-center text-gray-100"></i>
+                                                <a href="single_prod.html" class="icon_header">
+                                                    <i class="fas fa-search link_icon"></i>
                                                 </a>
-                                                <a href="cart.html" class="bg-gray-900 px-3 py-3 hover:bg-red-500 transition duration-300 ease-in-out">
-                                                    <i class="fas fa-heart transition duration-300 ease-in-out flex justify-center items-center text-gray-100"></i>
+                                                <a href="cart.html" class="icon_header">
+                                                    <i class="fas fa-heart link_icon"></i>
                                                 </a>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="px-4 py-3 bg-white">
-                                        <a href="#" class=""><h1 class="camelcase text-gray-800 font-rubic font-semibold text-lg hover:text-red-500 transition duration-300 ease-in-out">blue dress for women</h1></a>
+                                        <a href="#" class=""><h1 class="cart_header">Blue Dress For Women</h1></a>
                                         <div class="flex py-2">
-                                            <p class="line-through text-gray-600 mr-2 font-rubic font-normal text-sm">$65.00</p>
-                                            <p class="text-red-600 mr-2 font-rubic font-se text-sm">$39.00</p>
+                                            <p class="cart_pord_off_dis">$65.00</p>
+                                            <p class="cart_prod_price">$39.00</p>
                                         </div>
                                         <div class="flex">
                                             <div class="">
-                                                <i class="fas fa-star text-yellow-400 text-sm"></i>
-                                                <i class="fas fa-star text-yellow-400 text-sm"></i>
-                                                <i class="fas fa-star text-yellow-400 text-sm"></i>
-                                                <i class="far fa-star text-gray-400 text-sm"></i>
-                                                <i class="far fa-star text-gray-400 text-sm"></i>
+                                                <i class="fas fa-star text-yellow-400 text-xs"></i>
+                                                <i class="fas fa-star text-yellow-400 text-xs"></i>
+                                                <i class="fas fa-star text-yellow-400 text-xs"></i>
+                                                <i class="far fa-star text-gray-400 text-xs"></i>
+                                                <i class="far fa-star text-gray-400 text-xs"></i>
                                             </div>
                                             <div class="ml-2">
-                                                <p class="text-gray-500 font-rubic font-medium">(1)</p>
+                                                <p class="text-gray-500 font-medium text-sm">(1)</p>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="shadow hover:shadow-lg transition duration-300 ease-in-out group xl:mt-0 lg:mt-0 md:mt-0 sm:mt-0 mt-6">
-                                    <div class="overflow-hidden relative">
-                                        <img class="w-full transition duration-700 ease-in-out" src="prod_img/product_img3-1.webp" alt="image" />
+                                <div class="cart_body">
+                                    <div class="cart_desc">
+                                        <img class="cart_img" src="prod_img/product_img3-1.webp" alt="image" />
                                         <div class="flex justify-center">
-                                            <div class="absolute bottom-4 opacity-0 group-hover:opacity-100 transition duration-500 ease-in-out">
-                                                <a href="cart.html" class="bg-gray-900 px-3 py-3 hover:bg-red-500 transition duration-300 ease-in-out">
-                                                    <i class="fas fa-shopping-cart transition duration-300 ease-in-out flex justify-center items-center text-gray-100"></i>
+                                            <div class="icon_desc">
+                                                <a href="cart.html" class="icon_header">
+                                                    <i class="fas fa-shopping-cart link_icon"></i>
                                                 </a>
-                                                <a href="random.html" class="bg-gray-900 px-3 py-3 hover:bg-red-500 transition duration-300 ease-in-out">
-                                                    <i class="fas fa-random transition duration-300 ease-in-out flex justify-center items-center text-gray-100"></i>
+                                                <a href="random.html" class="icon_header">
+                                                    <i class="fas fa-random link_icon"></i>
                                                 </a>
-                                                <a href="single_prod.html" class="bg-gray-900 px-3 py-3 hover:bg-red-500 transition duration-300 ease-in-out">
-                                                    <i class="fas fa-search transition duration-300 ease-in-out flex justify-center items-center text-gray-100"></i>
+                                                <a href="single_prod.html" class="icon_header">
+                                                    <i class="fas fa-search link_icon"></i>
                                                 </a>
-                                                <a href="cart.html" class="bg-gray-900 px-3 py-3 hover:bg-red-500 transition duration-300 ease-in-out">
-                                                    <i class="fas fa-heart transition duration-300 ease-in-out flex justify-center items-center text-gray-100"></i>
+                                                <a href="cart.html" class="icon_header">
+                                                    <i class="fas fa-heart link_icon"></i>
                                                 </a>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="px-4 py-3 bg-white">
-                                        <a href="#" class=""><h1 class="camelcase text-gray-800 font-rubic font-semibold text-lg hover:text-red-500 transition duration-300 ease-in-out">Women Full Slive Dress</h1></a>
+                                        <a href="#" class=""><h1 class="cart_header">Women Full Sliv Dress</h1></a>
                                         <div class="flex py-2">
-                                            <p class="text-red-600 mr-2 font-rubic font-se text-sm">$70.00</p>
+                                            <p class="cart_pord_off_dis">$70.00</p>
                                         </div>
                                         <div class="flex">
                                             <div class="">
-                                                <i class="fas fa-star text-yellow-400 text-sm"></i>
-                                                <i class="fas fa-star text-yellow-400 text-sm"></i>
-                                                <i class="fas fa-star text-yellow-400 text-sm"></i>
-                                                <i class="far fa-star text-gray-400 text-sm"></i>
-                                                <i class="far fa-star text-gray-400 text-sm"></i>
+                                                <i class="fas fa-star text-yellow-400 text-xs"></i>
+                                                <i class="fas fa-star text-yellow-400 text-xs"></i>
+                                                <i class="fas fa-star text-yellow-400 text-xs"></i>
+                                                <i class="far fa-star text-gray-400 text-xs"></i>
+                                                <i class="far fa-star text-gray-400 text-xs"></i>
                                             </div>
                                             <div class="ml-2">
-                                                <p class="text-gray-500 font-rubic font-medium">(1)</p>
+                                                <p class="text-gray-500 font-medium text-sm">(1)</p>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="shadow hover:shadow-lg transition duration-300 ease-in-out group xl:mt-0 lg:mt-0 md:mt-0 sm:mt-0 mt-6">
-                                    <div class="overflow-hidden relative">
-                                        <img class="w-full transition duration-700 ease-in-out" src="prod_img/product_img4-1.webp" alt="image" />
-                                        <p class="bg-red-500 text-white font-medium px-3 absolute top-2 left-2 font-rubic text-white">-40%</p>
+                                 <div class="cart_body">
+                                    <div class="cart_desc">
+                                        <img class="cart_img" src="prod_img/product_img4-1.webp" alt="image" />
+                                        <p class="cart_dis_title">-40%</p>
                                         <div class="flex justify-center">
-                                            <div class="absolute bottom-4 opacity-0 group-hover:opacity-100 transition duration-500 ease-in-out">
-                                                <a href="cart.html" class="bg-gray-900 px-3 py-3 hover:bg-red-500 transition duration-300 ease-in-out">
-                                                    <i class="fas fa-shopping-cart transition duration-300 ease-in-out flex justify-center items-center text-gray-100"></i>
+                                            <div class="icon_desc">
+                                                <a href="cart.html" class="icon_header">
+                                                    <i class="fas fa-shopping-cart link_icon"></i>
                                                 </a>
-                                                <a href="random.html" class="bg-gray-900 px-3 py-3 hover:bg-red-500 transition duration-300 ease-in-out">
-                                                    <i class="fas fa-random transition duration-300 ease-in-out flex justify-center items-center text-gray-100"></i>
+                                                <a href="random.html" class="icon_header">
+                                                    <i class="fas fa-random link_icon"></i>
                                                 </a>
-                                                <a href="single_prod.html" class="bg-gray-900 px-3 py-3 hover:bg-red-500 transition duration-300 ease-in-out">
-                                                    <i class="fas fa-search transition duration-300 ease-in-out flex justify-center items-center text-gray-100"></i>
+                                                <a href="single_prod.html" class="icon_header">
+                                                    <i class="fas fa-search link_icon"></i>
                                                 </a>
-                                                <a href="cart.html" class="bg-gray-900 px-3 py-3 hover:bg-red-500 transition duration-300 ease-in-out">
-                                                    <i class="fas fa-heart transition duration-300 ease-in-out flex justify-center items-center text-gray-100"></i>
+                                                <a href="cart.html" class="icon_header">
+                                                    <i class="fas fa-heart link_icon"></i>
                                                 </a>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="px-4 py-3 bg-white">
-                                        <a href="#" class=""><h1 class="camelcase text-gray-800 font-rubic font-semibold text-lg hover:text-red-500 transition duration-300 ease-in-out">Light Blue Shirt</h1></a>
+                                        <a href="#" class=""><h1 class="cart_header">Light Blue Shirt</h1></a>
                                         <div class="flex py-2">
-                                            <p class="line-through text-gray-600 mr-2 font-rubic font-normal text-sm">$69.00</p>
-                                            <p class="text-red-600 mr-2 font-rubic font-se text-sm">$39.00</p>
+                                            <p class="cart_pord_off_dis">$65.00</p>
+                                            <p class="cart_prod_price">$69.00</p>
                                         </div>
                                         <div class="flex">
                                             <div class="">
-                                                <i class="fas fa-star text-yellow-400 text-sm"></i>
-                                                <i class="fas fa-star text-yellow-400 text-sm"></i>
-                                                <i class="fas fa-star text-yellow-400 text-sm"></i>
-                                                <i class="far fa-star text-gray-400 text-sm"></i>
-                                                <i class="far fa-star text-gray-400 text-sm"></i>
+                                                <i class="fas fa-star text-yellow-400 text-xs"></i>
+                                                <i class="fas fa-star text-yellow-400 text-xs"></i>
+                                                <i class="fas fa-star text-yellow-400 text-xs"></i>
+                                                <i class="far fa-star text-gray-400 text-xs"></i>
+                                                <i class="far fa-star text-gray-400 text-xs"></i>
                                             </div>
                                             <div class="ml-2">
-                                                <p class="text-gray-500 font-rubic font-medium">(1)</p>
+                                                <p class="text-gray-500 font-medium text-sm">(1)</p>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="shadow hover:shadow-lg transition duration-300 ease-in-out group xl:mt-0 lg:mt-0 md:mt-0 sm:mt-0 mt-6">
-                                    <div class="overflow-hidden relative">
-                                        <img class="w-full transition duration-700 ease-in-out" src="prod_img/product_img6-1.webp" alt="image" />
+                               <div class="cart_body">
+                                    <div class="cart_desc">
+                                        <img class="cart_img" src="prod_img/product_img6-1.webp" alt="image" />
+                                        <p class="cart_dis_title">-40%</p>
                                         <div class="flex justify-center">
-                                            <div class="absolute bottom-4 opacity-0 group-hover:opacity-100 transition duration-500 ease-in-out">
-                                                <a href="cart.html" class="bg-gray-900 px-3 py-3 hover:bg-red-500 transition duration-300 ease-in-out">
-                                                    <i class="fas fa-shopping-cart transition duration-300 ease-in-out flex justify-center items-center text-gray-100"></i>
+                                            <div class="icon_desc">
+                                                <a href="cart.html" class="icon_header">
+                                                    <i class="fas fa-shopping-cart link_icon"></i>
                                                 </a>
-                                                <a href="random.html" class="bg-gray-900 px-3 py-3 hover:bg-red-500 transition duration-300 ease-in-out">
-                                                    <i class="fas fa-random transition duration-300 ease-in-out flex justify-center items-center text-gray-100"></i>
+                                                <a href="random.html" class="icon_header">
+                                                    <i class="fas fa-random link_icon"></i>
                                                 </a>
-                                                <a href="single_prod.html" class="bg-gray-900 px-3 py-3 hover:bg-red-500 transition duration-300 ease-in-out">
-                                                    <i class="fas fa-search transition duration-300 ease-in-out flex justify-center items-center text-gray-100"></i>
+                                                <a href="single_prod.html" class="icon_header">
+                                                    <i class="fas fa-search link_icon"></i>
                                                 </a>
-                                                <a href="cart.html" class="bg-gray-900 px-3 py-3 hover:bg-red-500 transition duration-300 ease-in-out">
-                                                    <i class="fas fa-heart transition duration-300 ease-in-out flex justify-center items-center text-gray-100"></i>
+                                                <a href="cart.html" class="icon_header">
+                                                    <i class="fas fa-heart link_icon"></i>
                                                 </a>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="px-4 py-3 bg-white">
-                                        <a href="#" class=""><h1 class="camelcase text-gray-800 font-rubic font-semibold text-lg hover:text-red-500 transition duration-300 ease-in-out">blue Casual Check Shirt</h1></a>
+                                        <a href="#" class=""><h1 class="cart_header">Blue Casual Check Shirt</h1></a>
                                         <div class="flex py-2">
-                                            <p class="text-red-600 mr-2 font-rubic font-se text-sm">$55.00</p>
+                                            <p class="cart_pord_off_dis">$33.00</p>
+                                            <p class="cart_prod_price">$55.00</p>
                                         </div>
                                         <div class="flex">
                                             <div class="">
-                                                <i class="fas fa-star text-yellow-400 text-sm"></i>
-                                                <i class="fas fa-star text-yellow-400 text-sm"></i>
-                                                <i class="fas fa-star text-yellow-400 text-sm"></i>
-                                                <i class="far fa-star text-gray-400 text-sm"></i>
-                                                <i class="far fa-star text-gray-400 text-sm"></i>
+                                                <i class="fas fa-star text-yellow-400 text-xs"></i>
+                                                <i class="fas fa-star text-yellow-400 text-xs"></i>
+                                                <i class="fas fa-star text-yellow-400 text-xs"></i>
+                                                <i class="fas fa-star text-yellow-400 text-xs"></i>
+                                                <i class="fas fa-star text-yellow-400 text-xs"></i>
                                             </div>
                                             <div class="ml-2">
-                                                <p class="text-gray-500 font-rubic font-medium">(1)</p>
+                                                <p class="text-gray-500 font-medium text-sm">(1)</p>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="shadow hover:shadow-lg transition duration-300 ease-in-out group xl:mt-0 lg:mt-0 md:mt-0 sm:mt-0 mt-6">
-                                    <div class="overflow-hidden relative">
-                                        <img class="w-full transition duration-700 ease-in-out" src="prod_img/product_img11-1.webp" alt="image" />
-                                        <p class="bg-red-500 text-white font-medium px-3 absolute top-2 left-2 font-rubic text-white">-20%</p>
+                                 <div class="cart_body">
+                                    <div class="cart_desc">
+                                        <img class="cart_img" src="prod_img/product_img7-1.webp" alt="image" />
                                         <div class="flex justify-center">
-                                            <div class="absolute bottom-4 opacity-0 group-hover:opacity-100 transition duration-500 ease-in-out">
-                                                <a href="cart.html" class="bg-gray-900 px-3 py-3 hover:bg-red-500 transition duration-300 ease-in-out">
-                                                    <i class="fas fa-shopping-cart transition duration-300 ease-in-out flex justify-center items-center text-gray-100"></i>
+                                            <div class="icon_desc">
+                                                <a href="cart.html" class="icon_header">
+                                                    <i class="fas fa-shopping-cart link_icon"></i>
                                                 </a>
-                                                <a href="random.html" class="bg-gray-900 px-3 py-3 hover:bg-red-500 transition duration-300 ease-in-out">
-                                                    <i class="fas fa-random transition duration-300 ease-in-out flex justify-center items-center text-gray-100"></i>
+                                                <a href="random.html" class="icon_header">
+                                                    <i class="fas fa-random link_icon"></i>
                                                 </a>
-                                                <a href="single_prod.html" class="bg-gray-900 px-3 py-3 hover:bg-red-500 transition duration-300 ease-in-out">
-                                                    <i class="fas fa-search transition duration-300 ease-in-out flex justify-center items-center text-gray-100"></i>
+                                                <a href="single_prod.html" class="icon_header">
+                                                    <i class="fas fa-search link_icon"></i>
                                                 </a>
-                                                <a href="cart.html" class="bg-gray-900 px-3 py-3 hover:bg-red-500 transition duration-300 ease-in-out">
-                                                    <i class="fas fa-heart transition duration-300 ease-in-out flex justify-center items-center text-gray-100"></i>
+                                                <a href="cart.html" class="icon_header">
+                                                    <i class="fas fa-heart link_icon"></i>
                                                 </a>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="px-4 py-3 bg-white">
-                                        <a href="#" class=""><h1 class="camelcase text-gray-800 font-rubic font-semibold text-lg hover:text-red-500 transition duration-300 ease-in-out">Black Dress for Women</h1></a>
+                                        <a href="#" class=""><h1 class="cart_header">White Line Dress</h1></a>
                                         <div class="flex py-2">
-                                            <p class="text-red-600 mr-2 font-rubic font-se text-sm">$70.00</p>
+                                            <p class="cart_pord_off_dis">$45.00</p>
                                         </div>
                                         <div class="flex">
                                             <div class="">
-                                                <i class="fas fa-star text-yellow-400 text-sm"></i>
-                                                <i class="fas fa-star text-yellow-400 text-sm"></i>
-                                                <i class="fas fa-star text-yellow-400 text-sm"></i>
-                                                <i class="far fa-star text-gray-400 text-sm"></i>
-                                                <i class="far fa-star text-gray-400 text-sm"></i>
+                                                <i class="fas fa-star text-yellow-400 text-xs"></i>
+                                                <i class="fas fa-star text-yellow-400 text-xs"></i>
+                                                <i class="fas fa-star text-yellow-400 text-xs"></i>
+                                                <i class="fas fa-star text-yellow-400 text-xs"></i>
+                                                <i class="far fa-star text-gray-400 text-xs"></i>
                                             </div>
                                             <div class="ml-2">
-                                                <p class="text-gray-500 font-rubic font-medium">(1)</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="shadow hover:shadow-lg transition duration-300 ease-in-out group xl:mt-0 lg:mt-0 md:mt-0 sm:mt-0 mt-6">
-                                    <div class="overflow-hidden relative">
-                                        <img class="w-full transition duration-700 ease-in-out" src="prod_img/product_img7-1.webp" alt="image" />
-                                        <div class="flex justify-center">
-                                            <div class="absolute bottom-4 opacity-0 group-hover:opacity-100 transition duration-500 ease-in-out">
-                                                <a href="cart.html" class="bg-gray-900 px-3 py-3 hover:bg-red-500 transition duration-300 ease-in-out">
-                                                    <i class="fas fa-shopping-cart transition duration-300 ease-in-out flex justify-center items-center text-gray-100"></i>
-                                                </a>
-                                                <a href="random.html" class="bg-gray-900 px-3 py-3 hover:bg-red-500 transition duration-300 ease-in-out">
-                                                    <i class="fas fa-random transition duration-300 ease-in-out flex justify-center items-center text-gray-100"></i>
-                                                </a>
-                                                <a href="single_prod.html" class="bg-gray-900 px-3 py-3 hover:bg-red-500 transition duration-300 ease-in-out">
-                                                    <i class="fas fa-search transition duration-300 ease-in-out flex justify-center items-center text-gray-100"></i>
-                                                </a>
-                                                <a href="cart.html" class="bg-gray-900 px-3 py-3 hover:bg-red-500 transition duration-300 ease-in-out">
-                                                    <i class="fas fa-heart transition duration-300 ease-in-out flex justify-center items-center text-gray-100"></i>
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="px-4 py-3 bg-white">
-                                        <a href="#" class=""><h1 class="camelcase text-gray-800 font-rubic font-semibold text-lg hover:text-red-500 transition duration-300 ease-in-out">White Line Dress</h1></a>
-                                        <div class="flex py-2">
-                                            <p class="line-through text-gray-600 mr-2 font-rubic font-normal text-sm">$69.00</p>
-                                            <p class="text-red-600 mr-2 font-rubic font-se text-sm">$39.00</p>
-                                        </div>
-                                        <div class="flex">
-                                            <div class="">
-                                                <i class="fas fa-star text-yellow-400 text-sm"></i>
-                                                <i class="fas fa-star text-yellow-400 text-sm"></i>
-                                                <i class="fas fa-star text-yellow-400 text-sm"></i>
-                                                <i class="far fa-star text-gray-400 text-sm"></i>
-                                                <i class="far fa-star text-gray-400 text-sm"></i>
-                                            </div>
-                                            <div class="ml-2">
-                                                <p class="text-gray-500 font-rubic font-medium">(1)</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="shadow hover:shadow-lg transition duration-300 ease-in-out group xl:mt-0 lg:mt-0 md:mt-0 sm:mt-0 mt-6">
-                                    <div class="overflow-hidden relative">
-                                        <img class="w-full transition duration-700 ease-in-out" src="prod_img/product_img8-1.webp" alt="image" />
-                                        <p class="bg-red-500 text-white font-medium px-3 absolute top-2 left-2 font-rubic text-white">-40%</p>
-                                        <div class="flex justify-center">
-                                            <div class="absolute bottom-4 opacity-0 group-hover:opacity-100 transition duration-500 ease-in-out">
-                                                <a href="cart.html" class="bg-gray-900 px-3 py-3 hover:bg-red-500 transition duration-300 ease-in-out">
-                                                    <i class="fas fa-shopping-cart transition duration-300 ease-in-out flex justify-center items-center text-gray-100"></i>
-                                                </a>
-                                                <a href="random.html" class="bg-gray-900 px-3 py-3 hover:bg-red-500 transition duration-300 ease-in-out">
-                                                    <i class="fas fa-random transition duration-300 ease-in-out flex justify-center items-center text-gray-100"></i>
-                                                </a>
-                                                <a href="single_prod.html" class="bg-gray-900 px-3 py-3 hover:bg-red-500 transition duration-300 ease-in-out">
-                                                    <i class="fas fa-search transition duration-300 ease-in-out flex justify-center items-center text-gray-100"></i>
-                                                </a>
-                                                <a href="cart.html" class="bg-gray-900 px-3 py-3 hover:bg-red-500 transition duration-300 ease-in-out">
-                                                    <i class="fas fa-heart transition duration-300 ease-in-out flex justify-center items-center text-gray-100"></i>
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="px-4 py-3 bg-white">
-                                        <a href="#" class=""><h1 class="camelcase text-gray-800 font-rubic font-semibold text-lg hover:text-red-500 transition duration-300 ease-in-out">Men Blue Jins Shirt</h1></a>
-                                        <div class="flex py-2">
-                                            <p class="line-through text-gray-600 mr-2 font-rubic font-normal text-sm">$65.00</p>
-                                            <p class="text-red-600 mr-2 font-rubic font-se text-sm">$45.00</p>
-                                        </div>
-                                        <div class="flex">
-                                            <div class="">
-                                                <i class="fas fa-star text-yellow-400 text-sm"></i>
-                                                <i class="fas fa-star text-yellow-400 text-sm"></i>
-                                                <i class="fas fa-star text-yellow-400 text-sm"></i>
-                                                <i class="far fa-star text-gray-400 text-sm"></i>
-                                                <i class="far fa-star text-gray-400 text-sm"></i>
-                                            </div>
-                                            <div class="ml-2">
-                                                <p class="text-gray-500 font-rubic font-medium">(1)</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="shadow hover:shadow-lg transition duration-300 ease-in-out group xl:mt-0 lg:mt-0 md:mt-0 sm:mt-0 mt-6">
-                                    <div class="overflow-hidden relative">
-                                        <img class="w-full transition duration-700 ease-in-out" src="prod_img/product_img9-1.webp" alt="image" />
-                                        <p class="bg-red-500 text-white font-medium px-3 absolute top-2 left-2 font-rubic text-white">-40%</p>
-                                        <div class="flex justify-center">
-                                            <div class="absolute bottom-4 opacity-0 group-hover:opacity-100 transition duration-500 ease-in-out">
-                                                <a href="cart.html" class="bg-gray-900 px-3 py-3 hover:bg-red-500 transition duration-300 ease-in-out">
-                                                    <i class="fas fa-shopping-cart transition duration-300 ease-in-out flex justify-center items-center text-gray-100"></i>
-                                                </a>
-                                                <a href="random.html" class="bg-gray-900 px-3 py-3 hover:bg-red-500 transition duration-300 ease-in-out">
-                                                    <i class="fas fa-random transition duration-300 ease-in-out flex justify-center items-center text-gray-100"></i>
-                                                </a>
-                                                <a href="single_prod.html" class="bg-gray-900 px-3 py-3 hover:bg-red-500 transition duration-300 ease-in-out">
-                                                    <i class="fas fa-search transition duration-300 ease-in-out flex justify-center items-center text-gray-100"></i>
-                                                </a>
-                                                <a href="cart.html" class="bg-gray-900 px-3 py-3 hover:bg-red-500 transition duration-300 ease-in-out">
-                                                    <i class="fas fa-heart transition duration-300 ease-in-out flex justify-center items-center text-gray-100"></i>
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="px-4 py-3 bg-white">
-                                        <a href="#" class=""><h1 class="camelcase text-gray-800 font-rubic font-semibold text-lg hover:text-red-500 transition duration-300 ease-in-out">T-Shirt For Girls</h1></a>
-                                        <div class="flex py-2">
-                                            <p class="line-through text-gray-600 mr-2 font-rubic font-normal text-sm">$65.00</p>
-                                            <p class="text-red-600 mr-2 font-rubic font-se text-sm">$39.00</p>
-                                        </div>
-                                        <div class="flex">
-                                            <div class="">
-                                                <i class="fas fa-star text-yellow-400 text-sm"></i>
-                                                <i class="fas fa-star text-yellow-400 text-sm"></i>
-                                                <i class="fas fa-star text-yellow-400 text-sm"></i>
-                                                <i class="far fa-star text-gray-400 text-sm"></i>
-                                                <i class="far fa-star text-gray-400 text-sm"></i>
-                                            </div>
-                                            <div class="ml-2">
-                                                <p class="text-gray-500 font-rubic font-medium">(1)</p>
+                                                <p class="text-gray-500 font-medium text-sm">(1)</p>
                                             </div>
                                         </div>
                                     </div>
@@ -1288,325 +1086,165 @@
                             </div>
                         </div>
                         <div id="fourth" class="hidden p-4">
-                            <div class="sm:grid sm:grid-cols-2 md:grid md:grid-cols-2 lg:grid lg:grid-cols-4 xl:grid xl:grid-cols-4 gap-6">
-                                <div class="shadow hover:shadow-lg transition duration-300 ease-in-out group">
-                                    <div class="overflow-hidden relative">
-                                        <img class="w-full transition duration-700 ease-in-out" src="prod_img/product_img1-1.webp" alt="image" />
-                                        <p class="bg-red-500 text-white font-medium px-3 absolute top-2 left-2 font-rubic text-white">-40%</p>
+                           <div class="cart_main_header">
+                                <div class="cart_body">
+                                    <div class="cart_desc">
+                                        <img class="cart_img" src="prod_img/product_img1-1.webp" alt="image" />
+                                        <p class="cart_dis_title">-40%</p>
                                         <div class="flex justify-center">
-                                            <div class="absolute bottom-4 opacity-0 group-hover:opacity-100 transition duration-500 ease-in-out">
-                                                <a href="cart.html" class="bg-gray-900 px-3 py-3 hover:bg-red-500 transition duration-300 ease-in-out">
-                                                    <i class="fas fa-shopping-cart transition duration-300 ease-in-out flex justify-center items-center text-gray-100"></i>
+                                            <div class="icon_desc">
+                                                <a href="cart.html" class="icon_header">
+                                                    <i class="fas fa-shopping-cart link_icon"></i>
                                                 </a>
-                                                <a href="random.html" class="bg-gray-900 px-3 py-3 hover:bg-red-500 transition duration-300 ease-in-out">
-                                                    <i class="fas fa-random transition duration-300 ease-in-out flex justify-center items-center text-gray-100"></i>
+                                                <a href="random.html" class="icon_header">
+                                                    <i class="fas fa-random link_icon"></i>
                                                 </a>
-                                                <a href="single_prod.html" class="bg-gray-900 px-3 py-3 hover:bg-red-500 transition duration-300 ease-in-out">
-                                                    <i class="fas fa-search transition duration-300 ease-in-out flex justify-center items-center text-gray-100"></i>
+                                                <a href="single_prod.html" class="icon_header">
+                                                    <i class="fas fa-search link_icon"></i>
                                                 </a>
-                                                <a href="cart.html" class="bg-gray-900 px-3 py-3 hover:bg-red-500 transition duration-300 ease-in-out">
-                                                    <i class="fas fa-heart transition duration-300 ease-in-out flex justify-center items-center text-gray-100"></i>
+                                                <a href="cart.html" class="icon_header">
+                                                    <i class="fas fa-heart link_icon"></i>
                                                 </a>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="px-4 py-3 bg-white">
-                                        <a href="#" class=""><h1 class="camelcase text-gray-800 font-rubic font-semibold text-lg hover:text-red-500 transition duration-300 ease-in-out">blue dress for women</h1></a>
+                                        <a href="#" class=""><h1 class="cart_header">Blue Dress For Women</h1></a>
                                         <div class="flex py-2">
-                                            <p class="line-through text-gray-600 mr-2 font-rubic font-normal text-sm">$65.00</p>
-                                            <p class="text-red-600 mr-2 font-rubic font-se text-sm">$39.00</p>
+                                            <p class="cart_pord_off_dis">$65.00</p>
+                                            <p class="cart_prod_price">$39.00</p>
                                         </div>
                                         <div class="flex">
                                             <div class="">
-                                                <i class="fas fa-star text-yellow-400 text-sm"></i>
-                                                <i class="fas fa-star text-yellow-400 text-sm"></i>
-                                                <i class="fas fa-star text-yellow-400 text-sm"></i>
-                                                <i class="far fa-star text-gray-400 text-sm"></i>
-                                                <i class="far fa-star text-gray-400 text-sm"></i>
+                                                <i class="fas fa-star text-yellow-400 text-xs"></i>
+                                                <i class="fas fa-star text-yellow-400 text-xs"></i>
+                                                <i class="fas fa-star text-yellow-400 text-xs"></i>
+                                                <i class="far fa-star text-gray-400 text-xs"></i>
+                                                <i class="far fa-star text-gray-400 text-xs"></i>
                                             </div>
                                             <div class="ml-2">
-                                                <p class="text-gray-500 font-rubic font-medium">(1)</p>
+                                                <p class="text-gray-500 font-medium text-sm">(1)</p>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="shadow hover:shadow-lg transition duration-300 ease-in-out group xl:mt-0 lg:mt-0 md:mt-0 sm:mt-0 mt-6">
-                                    <div class="overflow-hidden relative">
-                                        <img class="w-full transition duration-700 ease-in-out" src="prod_img/product_img3-1.webp" alt="image" />
+                                <div class="cart_body">
+                                    <div class="cart_desc">
+                                        <img class="cart_img" src="prod_img/product_img3-1.webp" alt="image" />
                                         <div class="flex justify-center">
-                                            <div class="absolute bottom-4 opacity-0 group-hover:opacity-100 transition duration-500 ease-in-out">
-                                                <a href="cart.html" class="bg-gray-900 px-3 py-3 hover:bg-red-500 transition duration-300 ease-in-out">
-                                                    <i class="fas fa-shopping-cart transition duration-300 ease-in-out flex justify-center items-center text-gray-100"></i>
+                                            <div class="icon_desc">
+                                                <a href="cart.html" class="icon_header">
+                                                    <i class="fas fa-shopping-cart link_icon"></i>
                                                 </a>
-                                                <a href="random.html" class="bg-gray-900 px-3 py-3 hover:bg-red-500 transition duration-300 ease-in-out">
-                                                    <i class="fas fa-random transition duration-300 ease-in-out flex justify-center items-center text-gray-100"></i>
+                                                <a href="random.html" class="icon_header">
+                                                    <i class="fas fa-random link_icon"></i>
                                                 </a>
-                                                <a href="single_prod.html" class="bg-gray-900 px-3 py-3 hover:bg-red-500 transition duration-300 ease-in-out">
-                                                    <i class="fas fa-search transition duration-300 ease-in-out flex justify-center items-center text-gray-100"></i>
+                                                <a href="single_prod.html" class="icon_header">
+                                                    <i class="fas fa-search link_icon"></i>
                                                 </a>
-                                                <a href="cart.html" class="bg-gray-900 px-3 py-3 hover:bg-red-500 transition duration-300 ease-in-out">
-                                                    <i class="fas fa-heart transition duration-300 ease-in-out flex justify-center items-center text-gray-100"></i>
+                                                <a href="cart.html" class="icon_header">
+                                                    <i class="fas fa-heart link_icon"></i>
                                                 </a>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="px-4 py-3 bg-white">
-                                        <a href="#" class=""><h1 class="camelcase text-gray-800 font-rubic font-semibold text-lg hover:text-red-500 transition duration-300 ease-in-out">Women Full Slive Dress</h1></a>
+                                        <a href="#" class=""><h1 class="cart_header">Women Full Sliv Dress</h1></a>
                                         <div class="flex py-2">
-                                            <p class="text-red-600 mr-2 font-rubic font-se text-sm">$70.00</p>
+                                            <p class="cart_pord_off_dis">$70.00</p>
                                         </div>
                                         <div class="flex">
                                             <div class="">
-                                                <i class="fas fa-star text-yellow-400 text-sm"></i>
-                                                <i class="fas fa-star text-yellow-400 text-sm"></i>
-                                                <i class="fas fa-star text-yellow-400 text-sm"></i>
-                                                <i class="far fa-star text-gray-400 text-sm"></i>
-                                                <i class="far fa-star text-gray-400 text-sm"></i>
+                                                <i class="fas fa-star text-yellow-400 text-xs"></i>
+                                                <i class="fas fa-star text-yellow-400 text-xs"></i>
+                                                <i class="fas fa-star text-yellow-400 text-xs"></i>
+                                                <i class="far fa-star text-gray-400 text-xs"></i>
+                                                <i class="far fa-star text-gray-400 text-xs"></i>
                                             </div>
                                             <div class="ml-2">
-                                                <p class="text-gray-500 font-rubic font-medium">(1)</p>
+                                                <p class="text-gray-500 font-medium text-sm">(1)</p>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="shadow hover:shadow-lg transition duration-300 ease-in-out group xl:mt-0 lg:mt-0 md:mt-0 sm:mt-0 mt-6">
-                                    <div class="overflow-hidden relative">
-                                        <img class="w-full transition duration-700 ease-in-out" src="prod_img/product_img4-1.webp" alt="image" />
-                                        <p class="bg-red-500 text-white font-medium px-3 absolute top-2 left-2 font-rubic text-white">-40%</p>
+                                 <div class="cart_body">
+                                    <div class="cart_desc">
+                                        <img class="cart_img" src="prod_img/product_img4-1.webp" alt="image" />
+                                        <p class="cart_dis_title">-40%</p>
                                         <div class="flex justify-center">
-                                            <div class="absolute bottom-4 opacity-0 group-hover:opacity-100 transition duration-500 ease-in-out">
-                                                <a href="cart.html" class="bg-gray-900 px-3 py-3 hover:bg-red-500 transition duration-300 ease-in-out">
-                                                    <i class="fas fa-shopping-cart transition duration-300 ease-in-out flex justify-center items-center text-gray-100"></i>
+                                            <div class="icon_desc">
+                                                <a href="cart.html" class="icon_header">
+                                                    <i class="fas fa-shopping-cart link_icon"></i>
                                                 </a>
-                                                <a href="random.html" class="bg-gray-900 px-3 py-3 hover:bg-red-500 transition duration-300 ease-in-out">
-                                                    <i class="fas fa-random transition duration-300 ease-in-out flex justify-center items-center text-gray-100"></i>
+                                                <a href="random.html" class="icon_header">
+                                                    <i class="fas fa-random link_icon"></i>
                                                 </a>
-                                                <a href="single_prod.html" class="bg-gray-900 px-3 py-3 hover:bg-red-500 transition duration-300 ease-in-out">
-                                                    <i class="fas fa-search transition duration-300 ease-in-out flex justify-center items-center text-gray-100"></i>
+                                                <a href="single_prod.html" class="icon_header">
+                                                    <i class="fas fa-search link_icon"></i>
                                                 </a>
-                                                <a href="cart.html" class="bg-gray-900 px-3 py-3 hover:bg-red-500 transition duration-300 ease-in-out">
-                                                    <i class="fas fa-heart transition duration-300 ease-in-out flex justify-center items-center text-gray-100"></i>
+                                                <a href="cart.html" class="icon_header">
+                                                    <i class="fas fa-heart link_icon"></i>
                                                 </a>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="px-4 py-3 bg-white">
-                                        <a href="#" class=""><h1 class="camelcase text-gray-800 font-rubic font-semibold text-lg hover:text-red-500 transition duration-300 ease-in-out">Light Blue Shirt</h1></a>
+                                        <a href="#" class=""><h1 class="cart_header">Light Blue Shirt</h1></a>
                                         <div class="flex py-2">
-                                            <p class="line-through text-gray-600 mr-2 font-rubic font-normal text-sm">$69.00</p>
-                                            <p class="text-red-600 mr-2 font-rubic font-se text-sm">$39.00</p>
+                                            <p class="cart_pord_off_dis">$65.00</p>
+                                            <p class="cart_prod_price">$69.00</p>
                                         </div>
                                         <div class="flex">
                                             <div class="">
-                                                <i class="fas fa-star text-yellow-400 text-sm"></i>
-                                                <i class="fas fa-star text-yellow-400 text-sm"></i>
-                                                <i class="fas fa-star text-yellow-400 text-sm"></i>
-                                                <i class="far fa-star text-gray-400 text-sm"></i>
-                                                <i class="far fa-star text-gray-400 text-sm"></i>
+                                                <i class="fas fa-star text-yellow-400 text-xs"></i>
+                                                <i class="fas fa-star text-yellow-400 text-xs"></i>
+                                                <i class="fas fa-star text-yellow-400 text-xs"></i>
+                                                <i class="far fa-star text-gray-400 text-xs"></i>
+                                                <i class="far fa-star text-gray-400 text-xs"></i>
                                             </div>
                                             <div class="ml-2">
-                                                <p class="text-gray-500 font-rubic font-medium">(1)</p>
+                                                <p class="text-gray-500 font-medium text-sm">(1)</p>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="shadow hover:shadow-lg transition duration-300 ease-in-out group xl:mt-0 lg:mt-0 md:mt-0 sm:mt-0 mt-6">
-                                    <div class="overflow-hidden relative">
-                                        <img class="w-full transition duration-700 ease-in-out" src="prod_img/product_img6-1.webp" alt="image" />
+                               <div class="cart_body">
+                                    <div class="cart_desc">
+                                        <img class="cart_img" src="prod_img/product_img6-1.webp" alt="image" />
+                                        <p class="cart_dis_title">-40%</p>
                                         <div class="flex justify-center">
-                                            <div class="absolute bottom-4 opacity-0 group-hover:opacity-100 transition duration-500 ease-in-out">
-                                                <a href="cart.html" class="bg-gray-900 px-3 py-3 hover:bg-red-500 transition duration-300 ease-in-out">
-                                                    <i class="fas fa-shopping-cart transition duration-300 ease-in-out flex justify-center items-center text-gray-100"></i>
+                                            <div class="icon_desc">
+                                                <a href="cart.html" class="icon_header">
+                                                    <i class="fas fa-shopping-cart link_icon"></i>
                                                 </a>
-                                                <a href="random.html" class="bg-gray-900 px-3 py-3 hover:bg-red-500 transition duration-300 ease-in-out">
-                                                    <i class="fas fa-random transition duration-300 ease-in-out flex justify-center items-center text-gray-100"></i>
+                                                <a href="random.html" class="icon_header">
+                                                    <i class="fas fa-random link_icon"></i>
                                                 </a>
-                                                <a href="single_prod.html" class="bg-gray-900 px-3 py-3 hover:bg-red-500 transition duration-300 ease-in-out">
-                                                    <i class="fas fa-search transition duration-300 ease-in-out flex justify-center items-center text-gray-100"></i>
+                                                <a href="single_prod.html" class="icon_header">
+                                                    <i class="fas fa-search link_icon"></i>
                                                 </a>
-                                                <a href="cart.html" class="bg-gray-900 px-3 py-3 hover:bg-red-500 transition duration-300 ease-in-out">
-                                                    <i class="fas fa-heart transition duration-300 ease-in-out flex justify-center items-center text-gray-100"></i>
+                                                <a href="cart.html" class="icon_header">
+                                                    <i class="fas fa-heart link_icon"></i>
                                                 </a>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="px-4 py-3 bg-white">
-                                        <a href="#" class=""><h1 class="camelcase text-gray-800 font-rubic font-semibold text-lg hover:text-red-500 transition duration-300 ease-in-out">blue Casual Check Shirt</h1></a>
+                                        <a href="#" class=""><h1 class="cart_header">Blue Casual Check Shirt</h1></a>
                                         <div class="flex py-2">
-                                            <p class="text-red-600 mr-2 font-rubic font-se text-sm">$55.00</p>
+                                            <p class="cart_pord_off_dis">$33.00</p>
+                                            <p class="cart_prod_price">$55.00</p>
                                         </div>
                                         <div class="flex">
                                             <div class="">
-                                                <i class="fas fa-star text-yellow-400 text-sm"></i>
-                                                <i class="fas fa-star text-yellow-400 text-sm"></i>
-                                                <i class="fas fa-star text-yellow-400 text-sm"></i>
-                                                <i class="far fa-star text-gray-400 text-sm"></i>
-                                                <i class="far fa-star text-gray-400 text-sm"></i>
+                                                <i class="fas fa-star text-yellow-400 text-xs"></i>
+                                                <i class="fas fa-star text-yellow-400 text-xs"></i>
+                                                <i class="fas fa-star text-yellow-400 text-xs"></i>
+                                                <i class="fas fa-star text-yellow-400 text-xs"></i>
+                                                <i class="fas fa-star text-yellow-400 text-xs"></i>
                                             </div>
                                             <div class="ml-2">
-                                                <p class="text-gray-500 font-rubic font-medium">(1)</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="shadow hover:shadow-lg transition duration-300 ease-in-out group xl:mt-0 lg:mt-0 md:mt-0 sm:mt-0 mt-6">
-                                    <div class="overflow-hidden relative">
-                                        <img class="w-full transition duration-700 ease-in-out" src="prod_img/product_img11-1.webp" alt="image" />
-                                        <p class="bg-red-500 text-white font-medium px-3 absolute top-2 left-2 font-rubic text-white">-20%</p>
-                                        <div class="flex justify-center">
-                                            <div class="absolute bottom-4 opacity-0 group-hover:opacity-100 transition duration-500 ease-in-out">
-                                                <a href="cart.html" class="bg-gray-900 px-3 py-3 hover:bg-red-500 transition duration-300 ease-in-out">
-                                                    <i class="fas fa-shopping-cart transition duration-300 ease-in-out flex justify-center items-center text-gray-100"></i>
-                                                </a>
-                                                <a href="random.html" class="bg-gray-900 px-3 py-3 hover:bg-red-500 transition duration-300 ease-in-out">
-                                                    <i class="fas fa-random transition duration-300 ease-in-out flex justify-center items-center text-gray-100"></i>
-                                                </a>
-                                                <a href="single_prod.html" class="bg-gray-900 px-3 py-3 hover:bg-red-500 transition duration-300 ease-in-out">
-                                                    <i class="fas fa-search transition duration-300 ease-in-out flex justify-center items-center text-gray-100"></i>
-                                                </a>
-                                                <a href="cart.html" class="bg-gray-900 px-3 py-3 hover:bg-red-500 transition duration-300 ease-in-out">
-                                                    <i class="fas fa-heart transition duration-300 ease-in-out flex justify-center items-center text-gray-100"></i>
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="px-4 py-3 bg-white">
-                                        <a href="#" class=""><h1 class="camelcase text-gray-800 font-rubic font-semibold text-lg hover:text-red-500 transition duration-300 ease-in-out">Black Dress for Women</h1></a>
-                                        <div class="flex py-2">
-                                            <p class="text-red-600 mr-2 font-rubic font-se text-sm">$70.00</p>
-                                        </div>
-                                        <div class="flex">
-                                            <div class="">
-                                                <i class="fas fa-star text-yellow-400 text-sm"></i>
-                                                <i class="fas fa-star text-yellow-400 text-sm"></i>
-                                                <i class="fas fa-star text-yellow-400 text-sm"></i>
-                                                <i class="far fa-star text-gray-400 text-sm"></i>
-                                                <i class="far fa-star text-gray-400 text-sm"></i>
-                                            </div>
-                                            <div class="ml-2">
-                                                <p class="text-gray-500 font-rubic font-medium">(1)</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="shadow hover:shadow-lg transition duration-300 ease-in-out group xl:mt-0 lg:mt-0 md:mt-0 sm:mt-0 mt-6">
-                                    <div class="overflow-hidden relative">
-                                        <img class="w-full transition duration-700 ease-in-out" src="prod_img/product_img7-1.webp" alt="image" />
-                                        <div class="flex justify-center">
-                                            <div class="absolute bottom-4 opacity-0 group-hover:opacity-100 transition duration-500 ease-in-out">
-                                                <a href="cart.html" class="bg-gray-900 px-3 py-3 hover:bg-red-500 transition duration-300 ease-in-out">
-                                                    <i class="fas fa-shopping-cart transition duration-300 ease-in-out flex justify-center items-center text-gray-100"></i>
-                                                </a>
-                                                <a href="random.html" class="bg-gray-900 px-3 py-3 hover:bg-red-500 transition duration-300 ease-in-out">
-                                                    <i class="fas fa-random transition duration-300 ease-in-out flex justify-center items-center text-gray-100"></i>
-                                                </a>
-                                                <a href="single_prod.html" class="bg-gray-900 px-3 py-3 hover:bg-red-500 transition duration-300 ease-in-out">
-                                                    <i class="fas fa-search transition duration-300 ease-in-out flex justify-center items-center text-gray-100"></i>
-                                                </a>
-                                                <a href="cart.html" class="bg-gray-900 px-3 py-3 hover:bg-red-500 transition duration-300 ease-in-out">
-                                                    <i class="fas fa-heart transition duration-300 ease-in-out flex justify-center items-center text-gray-100"></i>
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="px-4 py-3 bg-white">
-                                        <a href="#" class=""><h1 class="camelcase text-gray-800 font-rubic font-semibold text-lg hover:text-red-500 transition duration-300 ease-in-out">White Line Dress</h1></a>
-                                        <div class="flex py-2">
-                                            <p class="line-through text-gray-600 mr-2 font-rubic font-normal text-sm">$69.00</p>
-                                            <p class="text-red-600 mr-2 font-rubic font-se text-sm">$39.00</p>
-                                        </div>
-                                        <div class="flex">
-                                            <div class="">
-                                                <i class="fas fa-star text-yellow-400 text-sm"></i>
-                                                <i class="fas fa-star text-yellow-400 text-sm"></i>
-                                                <i class="fas fa-star text-yellow-400 text-sm"></i>
-                                                <i class="far fa-star text-gray-400 text-sm"></i>
-                                                <i class="far fa-star text-gray-400 text-sm"></i>
-                                            </div>
-                                            <div class="ml-2">
-                                                <p class="text-gray-500 font-rubic font-medium">(1)</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="shadow hover:shadow-lg transition duration-300 ease-in-out group xl:mt-0 lg:mt-0 md:mt-0 sm:mt-0 mt-6">
-                                    <div class="overflow-hidden relative">
-                                        <img class="w-full transition duration-700 ease-in-out" src="prod_img/product_img8-1.webp" alt="image" />
-                                        <p class="bg-red-500 text-white font-medium px-3 absolute top-2 left-2 font-rubic text-white">-40%</p>
-                                        <div class="flex justify-center">
-                                            <div class="absolute bottom-4 opacity-0 group-hover:opacity-100 transition duration-500 ease-in-out">
-                                                <a href="cart.html" class="bg-gray-900 px-3 py-3 hover:bg-red-500 transition duration-300 ease-in-out">
-                                                    <i class="fas fa-shopping-cart transition duration-300 ease-in-out flex justify-center items-center text-gray-100"></i>
-                                                </a>
-                                                <a href="random.html" class="bg-gray-900 px-3 py-3 hover:bg-red-500 transition duration-300 ease-in-out">
-                                                    <i class="fas fa-random transition duration-300 ease-in-out flex justify-center items-center text-gray-100"></i>
-                                                </a>
-                                                <a href="single_prod.html" class="bg-gray-900 px-3 py-3 hover:bg-red-500 transition duration-300 ease-in-out">
-                                                    <i class="fas fa-search transition duration-300 ease-in-out flex justify-center items-center text-gray-100"></i>
-                                                </a>
-                                                <a href="cart.html" class="bg-gray-900 px-3 py-3 hover:bg-red-500 transition duration-300 ease-in-out">
-                                                    <i class="fas fa-heart transition duration-300 ease-in-out flex justify-center items-center text-gray-100"></i>
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="px-4 py-3 bg-white">
-                                        <a href="#" class=""><h1 class="camelcase text-gray-800 font-rubic font-semibold text-lg hover:text-red-500 transition duration-300 ease-in-out">Men Blue Jins Shirt</h1></a>
-                                        <div class="flex py-2">
-                                            <p class="line-through text-gray-600 mr-2 font-rubic font-normal text-sm">$65.00</p>
-                                            <p class="text-red-600 mr-2 font-rubic font-se text-sm">$45.00</p>
-                                        </div>
-                                        <div class="flex">
-                                            <div class="">
-                                                <i class="fas fa-star text-yellow-400 text-sm"></i>
-                                                <i class="fas fa-star text-yellow-400 text-sm"></i>
-                                                <i class="fas fa-star text-yellow-400 text-sm"></i>
-                                                <i class="far fa-star text-gray-400 text-sm"></i>
-                                                <i class="far fa-star text-gray-400 text-sm"></i>
-                                            </div>
-                                            <div class="ml-2">
-                                                <p class="text-gray-500 font-rubic font-medium">(1)</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="shadow hover:shadow-lg transition duration-300 ease-in-out group xl:mt-0 lg:mt-0 md:mt-0 sm:mt-0 mt-6">
-                                    <div class="overflow-hidden relative">
-                                        <img class="w-full transition duration-700 ease-in-out" src="prod_img/product_img9-1.webp" alt="image" />
-                                        <p class="bg-red-500 text-white font-medium px-3 absolute top-2 left-2 font-rubic text-white">-40%</p>
-                                        <div class="flex justify-center">
-                                            <div class="absolute bottom-4 opacity-0 group-hover:opacity-100 transition duration-500 ease-in-out">
-                                                <a href="cart.html" class="bg-gray-900 px-3 py-3 hover:bg-red-500 transition duration-300 ease-in-out">
-                                                    <i class="fas fa-shopping-cart transition duration-300 ease-in-out flex justify-center items-center text-gray-100"></i>
-                                                </a>
-                                                <a href="random.html" class="bg-gray-900 px-3 py-3 hover:bg-red-500 transition duration-300 ease-in-out">
-                                                    <i class="fas fa-random transition duration-300 ease-in-out flex justify-center items-center text-gray-100"></i>
-                                                </a>
-                                                <a href="single_prod.html" class="bg-gray-900 px-3 py-3 hover:bg-red-500 transition duration-300 ease-in-out">
-                                                    <i class="fas fa-search transition duration-300 ease-in-out flex justify-center items-center text-gray-100"></i>
-                                                </a>
-                                                <a href="cart.html" class="bg-gray-900 px-3 py-3 hover:bg-red-500 transition duration-300 ease-in-out">
-                                                    <i class="fas fa-heart transition duration-300 ease-in-out flex justify-center items-center text-gray-100"></i>
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="px-4 py-3 bg-white">
-                                        <a href="#" class=""><h1 class="camelcase text-gray-800 font-rubic font-semibold text-lg hover:text-red-500 transition duration-300 ease-in-out">T-Shirt For Girls</h1></a>
-                                        <div class="flex py-2">
-                                            <p class="line-through text-gray-600 mr-2 font-rubic font-normal text-sm">$65.00</p>
-                                            <p class="text-red-600 mr-2 font-rubic font-se text-sm">$39.00</p>
-                                        </div>
-                                        <div class="flex">
-                                            <div class="">
-                                                <i class="fas fa-star text-yellow-400 text-sm"></i>
-                                                <i class="fas fa-star text-yellow-400 text-sm"></i>
-                                                <i class="fas fa-star text-yellow-400 text-sm"></i>
-                                                <i class="far fa-star text-gray-400 text-sm"></i>
-                                                <i class="far fa-star text-gray-400 text-sm"></i>
-                                            </div>
-                                            <div class="ml-2">
-                                                <p class="text-gray-500 font-rubic font-medium">(1)</p>
+                                                <p class="text-gray-500 font-medium text-sm">(1)</p>
                                             </div>
                                         </div>
                                     </div>
@@ -1655,163 +1293,165 @@
         <div class="container mx-auto py-20">
             <div class="max-w-screen-xl mx-auto">
                 <h1 class="flex justify-center text-4xl font-semibold font-rubic pb-3 dark:text-gray-200">featured Products</h1>
-                <div class="sm:grid sm:grid-cols-2 md:grid md:grid-cols-2 lg:grid lg:grid-cols-4 xl:grid xl:grid-cols-4 gap-6 pt-10 px-4">
-                    <div class="shadow hover:shadow-lg transition duration-300 ease-in-out group">
-                        <div class="overflow-hidden relative">
-                            <img class="w-full transition duration-700 ease-in-out" src="prod_img/product_img1-1.webp" alt="image" />
-                            <p class="bg-red-500 text-white font-medium px-3 absolute top-2 left-2 font-rubic text-white">-40%</p>
+                <div class="cart_main_header px-4 pt-10">
+                     <div class="cart_body">
+                        <div class="cart_desc">
+                            <img class="cart_img" src="prod_img/product_img7-1.webp" alt="image" />
                             <div class="flex justify-center">
-                                <div class="absolute bottom-4 opacity-0 group-hover:opacity-100 transition duration-500 ease-in-out">
-                                    <a href="cart.html" class="bg-gray-900 px-3 py-3 hover:bg-red-500 transition duration-300 ease-in-out">
-                                        <i class="fas fa-shopping-cart transition duration-300 ease-in-out flex justify-center items-center text-gray-100"></i>
+                                <div class="icon_desc">
+                                    <a href="cart.html" class="icon_header">
+                                        <i class="fas fa-shopping-cart link_icon"></i>
                                     </a>
-                                    <a href="random.html" class="bg-gray-900 px-3 py-3 hover:bg-red-500 transition duration-300 ease-in-out">
-                                        <i class="fas fa-random transition duration-300 ease-in-out flex justify-center items-center text-gray-100"></i>
+                                    <a href="random.html" class="icon_header">
+                                        <i class="fas fa-random link_icon"></i>
                                     </a>
-                                    <a href="single_prod.html" class="bg-gray-900 px-3 py-3 hover:bg-red-500 transition duration-300 ease-in-out">
-                                        <i class="fas fa-search transition duration-300 ease-in-out flex justify-center items-center text-gray-100"></i>
+                                    <a href="single_prod.html" class="icon_header">
+                                        <i class="fas fa-search link_icon"></i>
                                     </a>
-                                    <a href="cart.html" class="bg-gray-900 px-3 py-3 hover:bg-red-500 transition duration-300 ease-in-out">
-                                        <i class="fas fa-heart transition duration-300 ease-in-out flex justify-center items-center text-gray-100"></i>
+                                    <a href="cart.html" class="icon_header">
+                                        <i class="fas fa-heart link_icon"></i>
                                     </a>
                                 </div>
                             </div>
                         </div>
                         <div class="px-4 py-3 bg-white">
-                            <a href="#" class=""><h1 class="camelcase text-gray-800 font-rubic font-semibold text-lg hover:text-red-500 transition duration-300 ease-in-out">blue dress for women</h1></a>
+                            <a href="#" class=""><h1 class="cart_header">White Line Dress</h1></a>
                             <div class="flex py-2">
-                                <p class="line-through text-gray-600 mr-2 font-rubic font-normal text-sm">$65.00</p>
-                                <p class="text-red-600 mr-2 font-rubic font-se text-sm">$39.00</p>
+                                <p class="cart_pord_off_dis">$45.00</p>
                             </div>
                             <div class="flex">
                                 <div class="">
-                                    <i class="fas fa-star text-yellow-400 text-sm"></i>
-                                    <i class="fas fa-star text-yellow-400 text-sm"></i>
-                                    <i class="fas fa-star text-yellow-400 text-sm"></i>
-                                    <i class="far fa-star text-gray-400 text-sm"></i>
-                                    <i class="far fa-star text-gray-400 text-sm"></i>
+                                    <i class="fas fa-star text-yellow-400 text-xs"></i>
+                                    <i class="fas fa-star text-yellow-400 text-xs"></i>
+                                    <i class="fas fa-star text-yellow-400 text-xs"></i>
+                                    <i class="fas fa-star text-yellow-400 text-xs"></i>
+                                    <i class="far fa-star text-gray-400 text-xs"></i>
                                 </div>
                                 <div class="ml-2">
-                                    <p class="text-gray-500 font-rubic font-medium">(1)</p>
+                                    <p class="text-gray-500 font-medium text-sm">(1)</p>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="shadow hover:shadow-lg transition duration-300 ease-in-out group xl:mt-0 lg:mt-0 md:mt-0 sm:mt-0 mt-6">
-                        <div class="overflow-hidden relative">
-                            <img class="w-full transition duration-700 ease-in-out" src="prod_img/product_img3-1.webp" alt="image" />
+                     <div class="cart_body">
+                        <div class="cart_desc">
+                            <img class="cart_img" src="prod_img/product_img8-1.webp" alt="image" />
+                            <p class="cart_dis_title">-23%</p>
                             <div class="flex justify-center">
-                                <div class="absolute bottom-4 opacity-0 group-hover:opacity-100 transition duration-500 ease-in-out">
-                                    <a href="cart.html" class="bg-gray-900 px-3 py-3 hover:bg-red-500 transition duration-300 ease-in-out">
-                                        <i class="fas fa-shopping-cart transition duration-300 ease-in-out flex justify-center items-center text-gray-100"></i>
+                                <div class="icon_desc">
+                                    <a href="cart.html" class="icon_header">
+                                        <i class="fas fa-shopping-cart link_icon"></i>
                                     </a>
-                                    <a href="random.html" class="bg-gray-900 px-3 py-3 hover:bg-red-500 transition duration-300 ease-in-out">
-                                        <i class="fas fa-random transition duration-300 ease-in-out flex justify-center items-center text-gray-100"></i>
+                                    <a href="random.html" class="icon_header">
+                                        <i class="fas fa-random link_icon"></i>
                                     </a>
-                                    <a href="single_prod.html" class="bg-gray-900 px-3 py-3 hover:bg-red-500 transition duration-300 ease-in-out">
-                                        <i class="fas fa-search transition duration-300 ease-in-out flex justify-center items-center text-gray-100"></i>
+                                    <a href="single_prod.html" class="icon_header">
+                                        <i class="fas fa-search link_icon"></i>
                                     </a>
-                                    <a href="cart.html" class="bg-gray-900 px-3 py-3 hover:bg-red-500 transition duration-300 ease-in-out">
-                                        <i class="fas fa-heart transition duration-300 ease-in-out flex justify-center items-center text-gray-100"></i>
+                                    <a href="cart.html" class="icon_header">
+                                        <i class="fas fa-heart link_icon"></i>
                                     </a>
                                 </div>
                             </div>
                         </div>
                         <div class="px-4 py-3 bg-white">
-                            <a href="#" class=""><h1 class="camelcase text-gray-800 font-rubic font-semibold text-lg hover:text-red-500 transition duration-300 ease-in-out">Women Full Slive Dress</h1></a>
+                            <a href="#" class=""><h1 class="cart_header">Men Blue Jins Shirt</h1></a>
                             <div class="flex py-2">
-                                <p class="text-red-600 mr-2 font-rubic font-se text-sm">$70.00</p>
+                                <p class="cart_pord_off_dis">$69.00</p>
+                                <p class="cart_prod_price">$39.00</p>
                             </div>
                             <div class="flex">
                                 <div class="">
-                                    <i class="fas fa-star text-yellow-400 text-sm"></i>
-                                    <i class="fas fa-star text-yellow-400 text-sm"></i>
-                                    <i class="fas fa-star text-yellow-400 text-sm"></i>
-                                    <i class="far fa-star text-gray-400 text-sm"></i>
-                                    <i class="far fa-star text-gray-400 text-sm"></i>
+                                    <i class="fas fa-star text-yellow-400 text-xs"></i>
+                                    <i class="fas fa-star text-yellow-400 text-xs"></i>
+                                    <i class="fas fa-star text-yellow-400 text-xs"></i>
+                                    <i class="far fa-star text-gray-400 text-xs"></i>
+                                    <i class="far fa-star text-gray-400 text-xs"></i>
                                 </div>
                                 <div class="ml-2">
-                                    <p class="text-gray-500 font-rubic font-medium">(1)</p>
+                                    <p class="text-gray-500 font-medium text-sm">(1)</p>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="shadow hover:shadow-lg transition duration-300 ease-in-out group xl:mt-0 lg:mt-0 md:mt-0 sm:mt-0 mt-6">
-                        <div class="overflow-hidden relative">
-                            <img class="w-full transition duration-700 ease-in-out" src="prod_img/product_img4-1.webp" alt="image" />
-                            <p class="bg-red-500 text-white font-medium px-3 absolute top-2 left-2 font-rubic text-white">-40%</p>
+                    <div class="cart_body">
+                        <div class="cart_desc">
+                            <img class="cart_img" src="prod_img/product_img9-1.webp" alt="image" />
+                            <p class="cart_dis_title">-10%</p>
                             <div class="flex justify-center">
-                                <div class="absolute bottom-4 opacity-0 group-hover:opacity-100 transition duration-500 ease-in-out">
-                                    <a href="cart.html" class="bg-gray-900 px-3 py-3 hover:bg-red-500 transition duration-300 ease-in-out">
-                                        <i class="fas fa-shopping-cart transition duration-300 ease-in-out flex justify-center items-center text-gray-100"></i>
+                                <div class="icon_desc">
+                                    <a href="cart.html" class="icon_header">
+                                        <i class="fas fa-shopping-cart link_icon"></i>
                                     </a>
-                                    <a href="random.html" class="bg-gray-900 px-3 py-3 hover:bg-red-500 transition duration-300 ease-in-out">
-                                        <i class="fas fa-random transition duration-300 ease-in-out flex justify-center items-center text-gray-100"></i>
+                                    <a href="random.html" class="icon_header">
+                                        <i class="fas fa-random link_icon"></i>
                                     </a>
-                                    <a href="single_prod.html" class="bg-gray-900 px-3 py-3 hover:bg-red-500 transition duration-300 ease-in-out">
-                                        <i class="fas fa-search transition duration-300 ease-in-out flex justify-center items-center text-gray-100"></i>
+                                    <a href="single_prod.html" class="icon_header">
+                                        <i class="fas fa-search link_icon"></i>
                                     </a>
-                                    <a href="cart.html" class="bg-gray-900 px-3 py-3 hover:bg-red-500 transition duration-300 ease-in-out">
-                                        <i class="fas fa-heart transition duration-300 ease-in-out flex justify-center items-center text-gray-100"></i>
+                                    <a href="cart.html" class="icon_header">
+                                        <i class="fas fa-heart link_icon"></i>
                                     </a>
                                 </div>
                             </div>
                         </div>
                         <div class="px-4 py-3 bg-white">
-                            <a href="#" class=""><h1 class="camelcase text-gray-800 font-rubic font-semibold text-lg hover:text-red-500 transition duration-300 ease-in-out">Light Blue Shirt</h1></a>
+                            <a href="#" class=""><h1 class="cart_header">T-Shirt For Girls</h1></a>
                             <div class="flex py-2">
-                                <p class="line-through text-gray-600 mr-2 font-rubic font-normal text-sm">$69.00</p>
-                                <p class="text-red-600 mr-2 font-rubic font-se text-sm">$39.00</p>
+                                <p class="cart_pord_off_dis">$45.00</p>
+                                <p class="cart_prod_price">$33.00</p>
                             </div>
                             <div class="flex">
                                 <div class="">
-                                    <i class="fas fa-star text-yellow-400 text-sm"></i>
-                                    <i class="fas fa-star text-yellow-400 text-sm"></i>
-                                    <i class="fas fa-star text-yellow-400 text-sm"></i>
-                                    <i class="far fa-star text-gray-400 text-sm"></i>
-                                    <i class="far fa-star text-gray-400 text-sm"></i>
+                                    <i class="fas fa-star text-yellow-400 text-xs"></i>
+                                    <i class="fas fa-star text-yellow-400 text-xs"></i>
+                                    <i class="fas fa-star text-yellow-400 text-xs"></i>
+                                    <i class="far fa-star text-gray-400 text-xs"></i>
+                                    <i class="far fa-star text-gray-400 text-xs"></i>
                                 </div>
                                 <div class="ml-2">
-                                    <p class="text-gray-500 font-rubic font-medium">(1)</p>
+                                    <p class="text-gray-500 font-medium text-sm">(1)</p>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="shadow hover:shadow-lg transition duration-300 ease-in-out group xl:mt-0 lg:mt-0 md:mt-0 sm:mt-0 mt-6">
-                        <div class="overflow-hidden relative">
-                            <img class="w-full transition duration-700 ease-in-out" src="prod_img/product_img6-1.webp" alt="image" />
+                   <div class="cart_body">
+                        <div class="cart_desc">
+                            <img class="cart_img" src="prod_img/product_img11-1.webp" alt="image" />
+                            <p class="cart_dis_title">-23%</p>
                             <div class="flex justify-center">
-                                <div class="absolute bottom-4 opacity-0 group-hover:opacity-100 transition duration-500 ease-in-out">
-                                    <a href="cart.html" class="bg-gray-900 px-3 py-3 hover:bg-red-500 transition duration-300 ease-in-out">
-                                        <i class="fas fa-shopping-cart transition duration-300 ease-in-out flex justify-center items-center text-gray-100"></i>
+                                <div class="icon_desc">
+                                    <a href="cart.html" class="icon_header">
+                                        <i class="fas fa-shopping-cart link_icon"></i>
                                     </a>
-                                    <a href="random.html" class="bg-gray-900 px-3 py-3 hover:bg-red-500 transition duration-300 ease-in-out">
-                                        <i class="fas fa-random transition duration-300 ease-in-out flex justify-center items-center text-gray-100"></i>
+                                    <a href="random.html" class="icon_header">
+                                        <i class="fas fa-random link_icon"></i>
                                     </a>
-                                    <a href="single_prod.html" class="bg-gray-900 px-3 py-3 hover:bg-red-500 transition duration-300 ease-in-out">
-                                        <i class="fas fa-search transition duration-300 ease-in-out flex justify-center items-center text-gray-100"></i>
+                                    <a href="single_prod.html" class="icon_header">
+                                        <i class="fas fa-search link_icon"></i>
                                     </a>
-                                    <a href="cart.html" class="bg-gray-900 px-3 py-3 hover:bg-red-500 transition duration-300 ease-in-out">
-                                        <i class="fas fa-heart transition duration-300 ease-in-out flex justify-center items-center text-gray-100"></i>
+                                    <a href="cart.html" class="icon_header">
+                                        <i class="fas fa-heart link_icon"></i>
                                     </a>
                                 </div>
                             </div>
                         </div>
                         <div class="px-4 py-3 bg-white">
-                            <a href="#" class=""><h1 class="camelcase text-gray-800 font-rubic font-semibold text-lg hover:text-red-500 transition duration-300 ease-in-out">blue Casual Check Shirt</h1></a>
+                            <a href="#" class=""><h1 class="cart_header">Black Dress For Women</h1></a>
                             <div class="flex py-2">
-                                <p class="text-red-600 mr-2 font-rubic font-se text-sm">$55.00</p>
+                                <p class="cart_pord_off_dis">$65.00</p>
+                                <p class="cart_prod_price">$05.00</p>
                             </div>
                             <div class="flex">
                                 <div class="">
-                                    <i class="fas fa-star text-yellow-400 text-sm"></i>
-                                    <i class="fas fa-star text-yellow-400 text-sm"></i>
-                                    <i class="fas fa-star text-yellow-400 text-sm"></i>
-                                    <i class="far fa-star text-gray-400 text-sm"></i>
-                                    <i class="far fa-star text-gray-400 text-sm"></i>
+                                    <i class="fas fa-star text-yellow-400 text-xs"></i>
+                                    <i class="fas fa-star text-yellow-400 text-xs"></i>
+                                    <i class="fas fa-star text-yellow-400 text-xs"></i>
+                                    <i class="fas fa-star text-yellow-400 text-xs"></i>
+                                    <i class="fas fa-star text-yellow-400 text-xs"></i>
                                 </div>
                                 <div class="ml-2">
-                                    <p class="text-gray-500 font-rubic font-medium">(1)</p>
+                                    <p class="text-gray-500 font-medium text-sm">(2)</p>
                                 </div>
                             </div>
                         </div>
@@ -1820,7 +1460,7 @@
             </div>
         </div>
 
-        <div class="container-fluid mx-auto bg-yellow-50 py-20">
+        <div class="container-fluid mx-auto bg-gray-50 py-20">
             <div class="contaier mx-auto">
                 <div class="max-w-screen-xl mx-auto px-4">
                        <div class="text-center max-w-md mx-auto pb-10">
@@ -1877,7 +1517,7 @@
                 <div class="max-w-screen-xl mx-auto">
                     <div class="xl:flex lg:flex xl:items-center lg:items-center xl:justify-between lg:justify-between text-center">
                         <div class="">
-                            <h1 class="text-gray-200 font-semibold font-rubik xl:text-4xl lg:text-3xl md:text-xl text-lg">Subscribe Our Newsletter</h1>
+                            <h1 class="text-gray-200 font-semibold font-rubik xl:text-2xl lg:text-2xl md:text-xl text-lg">Subscribe Our Newsletter</h1>
                         </div>
                         <div class="xl:pt-0 lg:pt-0 pt-5">
                             <div class="flex justify-center">
@@ -2035,6 +1675,7 @@
                 </div>
              </div>
           </div>
+          <a href="#" id="scroll" style="display: none;"><span></span></a>
         <script>
             function openNav() {
               document.getElementById("mySidenav").style.width = "100%";
