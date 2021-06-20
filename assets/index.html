@@ -85,11 +85,11 @@
                     </div>
                 </div>
             </div>
-            <div class="bg-white dark:bg-gray-900 px-5 z-40" id="content">
+            <div class="bg-white dark:bg-gray-900 px-5 z-40 shadow" id="content">
                 <div class="max-w-screen-xl mx-auto">
-                    <div x-data="{ open: false }" class="flex justify-between items-center py-6 relative">
+                    <div x-data="{ open: false }" class="flex justify-between items-center relative">
                         <div class="">
-                            <a href="index.html" class="text-xl text-gray-800 font-bold font-rubik">Logo</a>
+                            <a href="index.html" class="text-xl text-gray-800 font-bold font-rubik"><img class="h-auto w-44" src="images/logo.png" alt=""></a>
                         </div>
                         <div class="flex justify-end items-center space-x-2">
                             <svg
@@ -246,8 +246,8 @@
                 <div id="slider-1" class="container-fluid mx-auto">
                     <div class="slider-blog" style="background-image: url(images/banner2.jpg);">
                         <div class="prebtn-header">
-                            <button id="sButton1" onclick="sliderButton1()" class="prebtn">
-                                <i class="fas fa-chevron-left left-arrow"></i>
+                            <button id="sButton1" onclick="sliderButton1()" class="prebtn group">
+                                <i class="fas fa-chevron-left slide-arrow"></i>
                             </button>
                         </div>
                         <div class="max-w-sm md:max-w-xl lg:max-w-screen-md xl:max-w-screen-xl mx-auto flex items-center h-full">
@@ -258,8 +258,8 @@
                             </div>
                         </div>
                         <div class="absolute right-10 top-0 flex items-center h-full xl:visible lg:visible md:visible invisible">
-                            <button id="sButton2" onclick="sliderButton2() " class="prebtn">
-                                <i class="fas fa-chevron-right flex justify-center items-center text-gray-500 group-hover:text-gray-200 transition duration-300 ease-in-out"></i>
+                            <button id="sButton2" onclick="sliderButton2() " class="prebtn group">
+                                <i class="fas fa-chevron-right slide-arrow"></i>
                             </button>
                         </div>
                     </div>
@@ -269,8 +269,8 @@
                 <div id="slider-2" class="container-fluid mx-auto">
                     <div class="slider-blog" style="background-image: url(images/banner1.jpg);">
                         <div class="prebtn-header">
-                            <button id="sButton1" onclick="sliderButton1()" class="prebtn">
-                                <i class="fas fa-chevron-left left-arrow"></i>
+                            <button id="sButton1" onclick="sliderButton1()" class="prebtn group">
+                                <i class="fas fa-chevron-left slide-arrow"></i>
                             </button>
                         </div>
                         <div class="max-w-sm md:max-w-xl lg:max-w-screen-md xl:max-w-screen-xl mx-auto flex items-center h-full">
@@ -281,8 +281,8 @@
                             </div>
                         </div>
                         <div class="absolute right-10 top-0 flex items-center h-full xl:visible lg:visible md:visible invisible">
-                            <button id="sButton2" onclick="sliderButton2() " class="prebtn">
-                                <i class="fas fa-chevron-right flex justify-center items-center text-gray-500 group-hover:text-gray-200 transition duration-300 ease-in-out"></i>
+                            <button id="sButton2" onclick="sliderButton2() " class="prebtn group">
+                                <i class="fas fa-chevron-right slide-arrow"></i>
                             </button>
                         </div>
                     </div>
@@ -1468,29 +1468,29 @@
                            <h1 class="text-4xl text-gray-800 font-semibold pt-3">Our Client Say!</h1>
                            <p class="text-gray-600 pt-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.</p>
                        </div>
-                    <div class="slideshow-container shadow-lg bg-white py-10 rounded-lg px-4">
+                    <div class="slideshow-container shadow-lg bg-white py-10 rounded-lg">
     
-                    <div class="mySlides fade max-w-md text-center mx-auto">
+                    <div class="mySlides fade max-w-md text-center mx-auto px-4">
                         <img src="images/user1.webp" class="w-20 h-20 rounded-full mx-auto" alt="">
                         <div class="text-xl text-gray-900 pt-2">Lissa Castro</div>
                         <h1 class="text-pink-500 py-1">Designer</h1>
                         <div class="text-gray-600 font-medium font-rubik text-sm">Sed ut perspiciatis unde omnis iste natus error sit voluptatem amet laudantium, quaeillo inventore sed veritatis et quasi architecto beatae vitae dicta sunt explicabo eiusmod tempor incididunt ut labore.</div>
                     </div>
     
-                    <div class="mySlides fade max-w-md text-center mx-auto">
+                    <div class="mySlides fade max-w-md text-center mx-auto px-4">
                         <img src="images/user2.webp" class="w-20 h-20 rounded-full mx-auto" alt="">
                         <div class="text-xl text-gray-900 pt-2">Adin Smith</div>
                         <h1 class="text-pink-500 py-1">Designer</h1>
                         <div class="text-gray-600 font-medium font-rubik text-sm">Sed ut perspiciatis unde omnis iste natus error sit voluptatem amet laudantium, quaeillo inventore sed veritatis et quasi architecto beatae vitae dicta sunt explicabo eiusmod tempor incididunt ut labore.</div>
                     </div>
     
-                    <div class="mySlides fade max-w-md text-center mx-auto">
+                    <div class="mySlides fade max-w-md text-center mx-auto px-4">
                         <img src="images/user3.webp" class="w-20 h-20 rounded-full mx-auto" alt="">
                         <div class="text-xl text-gray-900 pt-2">Daisy Lana</div>
                         <h1 class="text-pink-500 py-1">Designer</h1>
                         <div class="text-gray-600 font-medium font-rubik text-sm">Sed ut perspiciatis unde omnis iste natus error sit voluptatem amet laudantium, quaeillo inventore sed veritatis et quasi architecto beatae vitae dicta sunt explicabo eiusmod tempor incididunt ut labore.</div>
                     </div>
-                    <div class="mySlides fade max-w-md text-center mx-auto">
+                    <div class="mySlides fade max-w-md text-center mx-auto px-4">
                         <img src="images/user4.webp" class="w-20 h-20 rounded-full mx-auto" alt="">
                         <div class="text-xl text-gray-900 pt-2">John Becker</div>
                         <h1 class="text-pink-500 py-1">Designer</h1>
@@ -1534,7 +1534,7 @@
                 <div class="max-w-screen-xl mx-auto">
                     <div class="xl:grid xl:grid-cols-5 lg:grid lg:grid-cols-5 md:grid md:grid-cols-3 sm:grid sm:grid-cols-2 gap-6 px-4">
                         <div class="xl:pt-0 lg:pt-0 md:pt-8 sm:pt-8 pt-8">
-                            <a href="#" class="capitalize text-gray-100 text-xl font-semibold font-rubic">Logo</a>
+                            <a href="index.html" class="text-xl text-gray-800 font-bold font-rubik"><img class="h-auto w-44" src="images/logo.png" alt=""></a>
                             <p class="text-gray-200 pt-4">If you are going to use of Lorem Ipsum need to be sure there isn't hidden of text</p>
                             <div class="">
                                 <ul class="pt-5 flex justify-">
