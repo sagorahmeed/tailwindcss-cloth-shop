@@ -12,6 +12,14 @@
         <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" referrerpolicy="no-referrer" />
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        
+<style>
+    .dropdown:hover .dropdown-menu {
+      opacity:1;
+      transform: translate(0) scale(1);
+      visibility: visible;
+    }
+        </style>
     </head>
     <body class="body">
         <div class="container-fluid mx-auto bg-white">
@@ -216,7 +224,80 @@
                                     <div class="mr-6">
                                         <i class="fas fa-search text-gray-500 cursor-pointer w-4" onclick="openNav()"> </i>                                    </div>
                                     <div class="relative">
-                                        <i class="fas fa-shopping-cart text-gray-500 cursor-pointer"></i>
+                                        <div class="bg-white flex flex-col justify-center">
+                                            <div class="flex items-center justify-center">
+                                            <div class=" relative inline-block text-left dropdown z-40">
+                                                <span class="rounded-md shadow-sm"
+                                                ><button class="inline-flex justify-center w-full focus:outline-none leading-5" 
+                                                type="button" >
+                                                <i class="fas fa-shopping-cart text-gray-500 cursor-pointer"></i>
+                                                    </button
+                                                ></span>
+                                                <div class="opacity-0 invisible dropdown-menu transition-all duration-300 transform origin-top-right -translate-y-2 scale-95">
+                                                <div class="absolute xl:right-0 lg: right-0 -right-16 w-80 mt-2 origin-top-right bg-white border border-gray-200 divide-y divide-gray-100 rounded-md shadow-lg outline-none" aria-labelledby="headlessui-menu-button-1" id="headlessui-menu-items-117" role="menu">
+                                                   <div class="py-5">
+                                                    <div class="flex justify-between px-3 py-3 border-b border-gray-300">
+                                                        <div class="">
+                                                            <img src="prod_img/product_img1-1.webp" class="h-auto w-16" alt="">
+                                                        </div>
+                                                        <div class="leading-loose">
+                                                           <a href="#" class=""> <h1 class="text-gray-700 text-sm hover:text-red-600 transition duration-300 ease-in-out cursor-pointer uppercase">Blue Dress For Women</h1></a>
+                                                           <p class="text-gray-600 text-sm pt-2"><span>1</span> x <span>$65.00</span></p> 
+                                                        </div>
+                                                        <div class="">
+                                                            <i class="fas fa-times hover:text-red-600 transition duration-300 ease-in-out cursor-pointer"></i>
+                                                        </div>
+                                                    </div>
+                                                    <div class="flex justify-between px-3 py-3 border-b border-gray-300">
+                                                        <div class="">
+                                                            <img src="prod_img/product_img11-1.webp" class="h-auto w-16" alt="">
+                                                        </div>
+                                                        <div class="leading-loose">
+                                                           <a href="#" class=""> <h1 class="text-gray-700 text-sm hover:text-red-600 transition duration-300 ease-in-out cursor-pointer uppercase">Black Dress For Women</h1></a>
+                                                           <p class="text-gray-600 text-sm pt-2"><span>1</span> x <span>$65.00</span></p> 
+                                                        </div>
+                                                        <div class="">
+                                                            <i class="fas fa-times hover:text-red-600 transition duration-300 ease-in-out cursor-pointer"></i>
+                                                        </div>
+                                                    </div>
+                                                    <div class="flex justify-between px-3 py-3 border-b border-gray-300">
+                                                        <div class="">
+                                                            <img src="prod_img/product_img6-1.webp" class="h-auto w-16" alt="">
+                                                        </div>
+                                                        <div class="leading-loose">
+                                                           <a href="#" class=""> <h1 class="text-gray-700 text-sm hover:text-red-600 transition duration-300 ease-in-out cursor-pointer uppercase">Blue Casual Check Shirt</h1></a>
+                                                           <p class="text-gray-600 text-sm pt-2"><span>1</span> x <span>$33.00</span></p> 
+                                                        </div>
+                                                        <div class="">
+                                                            <i class="fas fa-times hover:text-red-600 transition duration-300 ease-in-out cursor-pointer"></i>
+                                                        </div>
+                                                    </div>
+                                                    <div class="flex justify-between px-3 py-6">
+                                                        <div class="">
+                                                            <h1 class="text-gray-800 capitalize">Subtotal:</h1>
+                                                        </div>
+                                                        <div class="">
+                                                            <p class="text-gray-800">$163.00</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="flex justify-between px-3 py-3 pb-2 ">
+                                                        <div class="">
+                                                            <a href="cart.html" class="bg-gray-900 text-white px-4 py-3 text-sm hover:bg-red-600 transition duration-300 ease-in-out capitalize">
+                                                                View Cart
+                                                            </a>
+                                                        </div>
+                                                        <div class="">
+                                                            <a href="cart.html" class="bg-red-600 text-white px-4 py-3 text-sm hover:bg-gray-900 transition duration-300 ease-in-out capitalize">
+                                                                Checkout
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                   </div>
+                                                </div>
+                                                </div>
+                                            </div>
+                                            </div>              
+                                            </div>
                                         <div class="flex-shrink-0 ml-2 self-end mb-1 absolute -top-3 -right-4">
                                             <span class="flex items-center justify-center h-5 w-5 bg-red-500 text-white text-xs rounded-full">0</span>
                                         </div>
@@ -281,7 +362,7 @@
                             </div>
                         </div>
                         <div class="absolute right-10 top-0 flex items-center h-full xl:visible lg:visible md:visible invisible">
-                            <button id="sButton2" onclick="sliderButton2() " class="prebtn group">
+                            <button id="sButton2" onclick="sliderButton2() " class="prebtn ">
                                 <i class="fas fa-chevron-right slide-arrow"></i>
                             </button>
                         </div>
