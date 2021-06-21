@@ -9,6 +9,9 @@
 .body {
     @apply dark:bg-gray-900;
 }
+.dark_btn{
+    @apply bg-red-600 h-10 w-28 hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-red-600 focus:ring-opacity-50 text-white;
+}
 @tailwind utilities;
 /* top navbar start */
 .top-nav {
@@ -59,7 +62,7 @@
     @apply sm:grid sm:grid-cols-2 md:grid md:grid-cols-2 lg:grid lg:grid-cols-4 xl:grid xl:grid-cols-4 gap-6;
 }
 .cart_body{
-    @apply shadow hover:shadow-lg transition duration-300 ease-in-out group xl:mb-0 lg:mb-0 md:mb-0 mb-6 cursor-pointer;
+    @apply shadow hover:shadow-lg transition duration-300 ease-in-out xl:mb-0 lg:mb-0 md:mb-0 mb-6 cursor-pointer;
 }
 .cart_desc{
     @apply overflow-hidden relative;
@@ -71,7 +74,7 @@
     @apply bg-green-500 text-white font-medium px-3 absolute top-2 left-2 text-white text-sm;
 }
 .icon_desc{
-    @apply absolute bottom-4 opacity-0 group-hover:opacity-100 transition duration-500 ease-in-out;
+    @apply absolute bottom-4 transition duration-500 ease-in-out;
 }
 .icon_header{
     @apply bg-gray-700 px-3 py-3 hover:bg-red-500 transition duration-300 ease-in-out;
@@ -89,6 +92,14 @@
    @apply line-through  text-red-600 mr-2 text-xs;
 }
 
+
+
+.footer_list_item{
+    @apply transform translate-x-0 hover:translate-x-2 transition duration-500 ease-in-out transition duration-300 ease-in-out;
+}
+.footer_item{
+    @apply capitalize text-gray-200 text-sm hover:text-red-500 font-semibold;
+}
 
 
 
