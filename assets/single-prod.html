@@ -1,0 +1,830 @@
+<html lang="en" class="dark">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Single Product Page</title>
+        <link rel="stylesheet" href="public/styles.css" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" />
+        <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;1,300&display=swap" rel="stylesheet" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" />
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200&family=Rubik:ital,wght@0,300;1,300&display=swap" rel="stylesheet" />
+        <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" referrerpolicy="no-referrer" />
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet">
+        <style>
+            .bottom-full{bottom: 100%}
+            .top-full{top: 100%}
+          </style>
+<style>
+    .dropdown:hover .dropdown-menu {
+      opacity:1;
+      transform: translate(0) scale(1);
+      visibility: visible;
+    }
+        </style>
+    </head>
+    <body class="body">
+        <div class="container-fluid mx-auto bg-white w-full">
+            <div class="top-nav">
+                <div class="max-w-screen-xl mx-auto">
+                    <div class="top-nav-wrapper">
+                        <div class="flex justify-center items-center">
+                            <div class="group inline-block">
+                                <button class="focus:outline-none py-1 flex items-center min-w-24">
+                                    <span class="dropdown font-rubik">English</span>
+                                    <span>
+                                        <svg class="fill-current dropdown-arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                                            <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
+                                        </svg>
+                                    </span>
+                                </button>
+                                <ul class="dropdown-list">
+                                    <li class="px-3 py-1 hover:bg-gray-100">
+                                        <a href="#" class="dropdown-item font-rubik">English</a>
+                                    </li>
+                                    <li class="px-3 py-1 hover:bg-gray-100">
+                                        <a href="#" class="dropdown-item font-rubik">Franch</a>
+                                    </li>
+                                    <li class="px-3 py-1 hover:bg-gray-100">
+                                        <a href="#" class="dropdown-item font-rubik">United States</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="group inline-block">
+                                <button class="focus:outline-none px-3 py-1 flex items-center min-w-24">
+                                    <span class="dropdown">usd</span>
+                                    <span>
+                                        <svg class="fill-current dropdown-arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                                            <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
+                                        </svg>
+                                    </span>
+                                </button>
+                                <ul class="dropdown-list">
+                                    <li class="px-3 py-1 hover:bg-gray-100">
+                                        <a href="#" class="dropdown-item font-rubik">use</a>
+                                    </li>
+                                    <li class="px-3 py-1 hover:bg-gray-100">
+                                        <a href="#" class="dropdown-item font-rubik">eur</a>
+                                    </li>
+                                    <li class="px-3 py-1 hover:bg-gray-100">
+                                        <a href="#" class="dropdown-item font-rubik">gbr</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="flex justify-center items-center xl:pt-0 lg:pt-0 md:pt-0 pt-3">
+                            <a href="wishlist.html" class="">
+                                <div class="flex items-center">
+                                    <i class="far fa-heart text-gray-400 dark:text-gray-200 text-sm"></i>
+                                    <p class="uppercase text-sm ml-2 font-rubik text-gray-900 dark:text-gray-200">wishlist</p>
+                                </div>
+                            </a>
+                            <a href="signin.html" class="">
+                                <div class="flex items-center ml-4">
+                                    <i class="far fa-user text-gray-400 dark:text-gray-200 text-sm"></i>
+                                    <p class="uppercase text-sm ml-2 font-rubik text-gray-900 dark:text-gray-200">sign in</p>
+                                </div>
+                            </a>
+                            <a href="signup.html" class="">
+                                <div class="flex items-center ml-4">
+                                    <i class="fas fa-lock text-gray-400 dark:text-gray-200 text-sm"></i>
+                                    <p class="uppercase text-sm ml-2 font-rubik text-gray-900 dark:text-gray-200">sign up</p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="bg-white dark:bg-gray-900 z-40 shadow" id="content">
+                <div class="max-w-screen-xl mx-auto">
+                    <div x-data="{ open: false }" class="flex py-6 justify-between items-center relative">
+                        <div class="">
+                            <a href="index.html" class="text-xl text-gray-800 font-bold font-rubik">Logo</a>
+                        </div>  
+                        <div class="flex justify-end items-center space-x-2">
+                            <svg
+                                width="24"
+                                height="24"
+                                xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 20 20"
+                                fill="currentColor"
+                                class="text-yellow-500 dark:text-gray-300 ransition-colors duration-200 xl:visible lg:visible md:visible invisible"
+                            >
+                                <path
+                                    d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z"
+                                    fill-rule="evenodd"
+                                    clip-rule="evenodd"
+                                ></path>
+                            </svg>
+
+                            <div class="">
+                                <input type="checkbox" name="" id="toggle" class="hidden" />
+                                <label for="toggle" class="cursor-pointer">
+                                    <div class="w-10 h-5 flex items-center bg-green-400 dark:bg-gray-500 rounded-full p-1">
+                                        <div class="toggle-dot w-4 h-4 bg-white rounded-full shadow-md transform transition duration-500 ease-in-out"></div>
+                                    </div>
+                                </label>
+                            </div>
+                            <svg width="24" height="24" fill="currentColor" class="dark:text-gray-700 transition-colors duration-200 text-gray-300 xl:visible lg:visible md:visible invisible">
+                                <path
+                                    fill-rule="evenodd"
+                                    clip-rule="evenodd"
+                                    d="M9.353 2.939a1 1 0 01.22 1.08 8 8 0 0010.408 10.408 1 1 0 011.301 1.3A10.003 10.003 0 0112 22C6.477 22 2 17.523 2 12c0-4.207 2.598-7.805 6.273-9.282a1 1 0 011.08.22z"
+                                ></path>
+                            </svg>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <div class="mr-12">
+                                <div id="myDIV" class="w-full">
+                                    <ul
+                                        :class="{'flex': open, 'hidden': !open}"
+                                        class="flex-col xl:px-0 z-40 xl:py-0 lg:py-0 py-7 lg:px-0 px-4 leading-loose flex-grow pb-4 hidden md:pb-0 lg:flex lg:justify-end lg:flex-row xl:h-auto lg:h-auto h-auto top-20 xl:bg-transparent lg:bg-transparent bg-white w-full xl:flex xl:justify-end xl::flex-row xl:static lg:static absolute left-0"
+                                    >
+                                        <a
+                                            href="index.html"
+                                            class="active_btn active font-rubik main-menu-item"
+                                        >
+                                            Home
+                                        </a>
+                                            <div @click.away="open = false" class="relative z-40" x-data="{ open: false }">
+                                                <button
+                                                    @click="open = !open"
+                                                    class="focus:outline-none font-rubik main-menu-item w-full text-left"
+                                                >
+                                                    <span class="transition duration-300 ease-in-out">pages</span>
+                                                    <svg fill="currentColor" viewBox="0 0 20 20" :class="{'rotate-180': open, 'rotate-0': !open}" class="inline w-4 h-4 mt-1 ml-1 transition-transform duration-200 transform md:-mt-1">
+                                                        <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                                                    </svg>
+                                                </button>
+                                                <div
+                                                    x-show="open"
+                                                    x-transition:enter="transition ease-out duration-100"
+                                                    x-transition:enter-start="transform opacity-0 scale-95"
+                                                    x-transition:enter-end="transform opacity-100 scale-100"
+                                                    x-transition:leave="transition ease-in duration-75"
+                                                    x-transition:leave-start="transform opacity-100 scale-100"
+                                                    x-transition:leave-end="transform opacity-0 scale-95"
+                                                    class="absolute left-0 xl:w-56 lg:w-56 w-full md:max-w-screen-sm md:w-screen mt-2 origin-top-right"
+                                                >
+                                                    <div class="px-2 pt-2 pb-4 bg-white rounded-md shadow-xl">
+                                                        <ul class="px-3 py-3">
+                                                            <li class="">
+                                                                <a href="about.html" class="font-rubik page-item">about us</a>
+                                                            </li>
+                                                            <li class="">
+                                                                <a href="contact.html" class="font-rubik page-item">contact us</a>
+                                                            </li>
+                                                            <li class="">
+                                                                <a href="faq.html" class="font-rubik page-item">faq</a>
+                                                            </li>
+                                                            <li class="">
+                                                                <a href="termcondition.html" class="font-rubik page-item">
+                                                                    term and condition
+                                                                </a>
+                                                            </li>
+                                                            <li class="">
+                                                                <a href="error.html" class="font-rubik page-item">
+                                                                    404 error page
+                                                                </a>
+                                                            </li>
+                                                            <li class="">
+                                                                <a href="wishlist.html" class="font-rubik page-item">wishlist</a>
+                                                            </li>
+                                                            <li class="">
+                                                                <a href="login.html" class="font-rubik page-item">login</a>
+                                                            </li>
+                                                            <li class="">
+                                                                <a href="register.html" class="font-rubik page-item">register</a>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        <a
+                                            href="single-prod.html"
+                                            class="active_btn font-rubik main-menu-item"
+                                        >
+                                            products
+                                        </a>
+                                        <a
+                                            href="shop.html"
+                                            class="active_btn font-rubik main-menu-item"
+                                        >
+                                            shop
+                                        </a>
+                                        <a
+                                            href="contact.html"
+                                            class="active_btn font-rubik main-menu-item"
+                                        >
+                                            contact us
+                                        </a>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="">
+                                <div class="flex items-center relative">
+                                    <div class="mr-6">
+                                        <i class="fas fa-search text-gray-500 cursor-pointer w-4" onclick="openNav()"> </i>                                    </div>
+                                    <div class="relative">
+                                        <div class="bg-white flex flex-col justify-center">
+                                            <div class="flex items-center justify-center">
+                                            <div class=" relative inline-block text-left dropdown z-40">
+                                                <span class=""
+                                                ><button class="inline-flex justify-center w-full focus:outline-none leading-5" 
+                                                type="button" >
+                                                <i class="fas fa-shopping-cart text-gray-500 cursor-pointer"></i>
+                                                    </button
+                                                ></span>
+                                                <div class="opacity-0 invisible dropdown-menu transition-all duration-300 transform origin-top-right -translate-y-2 scale-95">
+                                                <div class="absolute xl:right-0 lg: right-0 -right-16 w-80 mt-2 origin-top-right bg-white shadow-xl divide-y divide-gray-100 outline-none" aria-labelledby="headlessui-menu-button-1" id="headlessui-menu-items-117" role="menu">
+                                                   <div class="py-5">
+                                                   <ul class="">
+                                                        <p class="text-gray-600 text-sm text-center hidden">Your Cart Is Empty</p>
+                                                       <li class="flex justify-between px-3 py-3 border-b border-gray-200">
+                                                            <div class="">
+                                                                <img src="prod_img/product_img1-1.webp" class="h-auto w-16" alt="">
+                                                            </div>
+                                                            <div class="leading-loose">
+                                                               <a href="#" class=""> <h1 class="text-gray-700 text-sm hover:text-red-600 transition duration-300 ease-in-out cursor-pointer uppercase">Blue Dress For Women</h1></a>
+                                                               <p class="text-gray-600 text-sm pt-2"><span>1</span> x <span>$65.00</span></p> 
+                                                            </div>
+                                                            <div class="">
+                                                                <i onclick="myFunction()" class="fas fa-times hover:text-red-600 transition duration-300 ease-in-out cursor-pointer p-1"></i>
+                                                            </div>
+                                                       </li>
+                                                       <li class="flex justify-between px-3 py-3 border-b border-gray-200">
+                                                            <div class="">
+                                                                <img src="prod_img/product_img11-1.webp" class="h-auto w-16" alt="">
+                                                            </div>
+                                                            <div class="leading-loose">
+                                                               <a href="#" class=""> <h1 class="text-gray-700 text-sm hover:text-red-600 transition duration-300 ease-in-out cursor-pointer uppercase">Black Dress For Women</h1></a>
+                                                               <p class="text-gray-600 text-sm pt-2"><span>1</span> x <span>$65.00</span></p> 
+                                                            </div>
+                                                            <div class="">
+                                                                <i onclick="myFunction()" class="fas fa-times hover:text-red-600 transition duration-300 ease-in-out cursor-pointer p-1"></i>
+                                                            </div>
+                                                       </li>
+                                                       <li class="flex justify-between px-3 py-3 border-b border-gray-00">
+                                                            <div class="">
+                                                                <img src="prod_img/product_img6-1.webp" class="h-auto w-16" alt="">
+                                                            </div>
+                                                            <div class="leading-loose">
+                                                               <a href="#" class=""> <h1 class="text-gray-700 text-sm hover:text-red-600 transition duration-300 ease-in-out cursor-pointer uppercase">Blue Casual Check Shirt</h1></a>
+                                                               <p class="text-gray-600 text-sm pt-2"><span>1</span> x <span>$33.00</span></p> 
+                                                            </div>
+                                                            <div class="">
+                                                                <i onclick="myFunction()" class="fas fa-times hover:text-red-600 transition duration-300 ease-in-out cursor-pointer p-1"></i>
+                                                            </div>
+                                                       </li>
+                                                   </ul>
+                                                    <div class="flex justify-between px-3 py-6">
+                                                        <div class="">
+                                                            <h1 class="text-gray-800 capitalize">Subtotal:</h1>
+                                                        </div>
+                                                        <div class="">
+                                                            <p class="text-gray-800">$163.00</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="flex justify-between px-3 py-3 pb-2 ">
+                                                        <div class="">
+                                                            <a href="cart.html" class="bg-gray-900 text-white px-4 py-3 text-sm hover:bg-red-600 transition duration-300 ease-in-out capitalize">
+                                                                View Cart
+                                                            </a>
+                                                        </div>
+                                                        <div class="">
+                                                            <a href="checkout.html" class="bg-red-600 text-white px-4 py-3 text-sm hover:bg-gray-900 transition duration-300 ease-in-out capitalize">
+                                                                Checkout
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                   </div>
+                                                </div>
+                                                </div>
+                                            </div>
+                                            </div>              
+                                            </div>
+                                        <div class="flex-shrink-0 ml-2 self-end mb-1 absolute -top-3 -right-4">
+                                            <span class="flex items-center justify-center h-5 w-5 bg-red-500 text-white text-xs rounded-full">0</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="xl:hidden lg:hidden block ml-8">
+                                <button @click="open = !open" class="menu focus:outline-none" onclick="this.classList.toggle('opened');this.setAttribute('aria-expanded', this.classList.contains('opened'))" aria-label="Main Menu">
+                                    <svg class="" width="36" height="auto" viewBox="0 0 100 100">
+                                        <path
+                                            class="line line1"
+                                            d="M 20,29.000046 H 80.000231 C 80.000231,29.000046 94.498839,28.817352 94.532987,66.711331 94.543142,77.980673 90.966081,81.670246 85.259173,81.668997 79.552261,81.667751 75.000211,74.999942 75.000211,74.999942 L 25.000021,25.000058"
+                                        />
+                                        <path class="line line2" d="M 20,50 H 80" />
+                                        <path
+                                            class="line line3"
+                                            d="M 20,70.999954 H 80.000231 C 80.000231,70.999954 94.498839,71.182648 94.532987,33.288669 94.543142,22.019327 90.966081,18.329754 85.259173,18.331003 79.552261,18.332249 75.000211,25.000058 75.000211,25.000058 L 25.000021,74.999942"
+                                        />
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container mx-auto py-20">
+            <div class="max-w-screen-xl mx-auto">
+                <div class="xl:flex lg:flex mx-6 justify-center">
+                    <div class="xl:w-6/12 lg:w-5/12 md:w-7/12 sm:w-7/12 w-10/10 mx-auto">
+                        <div class="">
+                            <div class="border border-gray-200 p-3">
+                                <img class="w-full mx-auto" src="prod_img/product_img6-1.webp" alt="">
+                            </div>
+                        </div>
+                        <div class="flex justify-between items-center px-3">
+                            <i class="fas fa-chevron-left cursor-pointer text-gray-500 hover:text-red-600 transition duration-300 ease-in-out"></i>
+                            <div class="flex justify-between items-center py-4">
+                                <div class="border border-gray-200 p-1 m-3">
+                                    <img class="h-auto xl:w-36 lg:w-24 md:w-20 w-16 mx-auto" src="prod_img/product_img6-1.webp" alt="">
+                                </div>
+                                <div class="border border-gray-200 p-1 m-3">
+                                    <img class="h-auto xl:w-36 lg:w-24 md:w-20 w-16 mx-auto" src="prod_img/product_img11-1.webp" alt="">
+                                </div>
+                                <div class="border border-gray-200 p-1 m-3">
+                                    <img class="h-auto xl:w-36 lg:w-24 md:w-20 w-16 mx-auto" src="prod_img/product_img4-1.webp" alt="">
+                                </div>
+                                <div class="border border-gray-200 p-1 m-3">
+                                    <img class="h-auto xl:w-36 lg:w-24 md:w-20 w-16 mx-auto" src="prod_img/product_img7-1.webp" alt="">
+                                </div>
+                            </div>
+                            <i class="fas fa-chevron-right cursor-pointer text-gray-500 hover:text-red-600 transition duration-300 ease-in-out"></i>
+                        </div>
+                    </div>
+                    <div class="w-full xl:w-2/5 lg:w-2/4 lg:ml-5 xl:ml-5 md:w-2/2 mx-auto xl:mt-0 lg:mt-0 mt-10">
+                        <div class="">
+                            <div class="">
+                                <h1 class="text-gray-800 xl:text-2xl font-medium font-rubik">Blue Casual Check Shirt</h1>
+                            </div>
+                            <div class="flex justify-between items-center pt-4">
+                                <div class="">
+                                    <p class="text-red-600 text-2xl font-medium">$33.00</p>
+                                </div>
+                                <div class="flex items-center">
+                                    <div class="">
+                                        <i class="fas fa-star text-yellow-400 text-sm"></i>
+                                        <i class="fas fa-star text-yellow-400 text-sm"></i>
+                                        <i class="fas fa-star text-yellow-400 text-sm"></i>
+                                        <i class="fas fa-star text-yellow-400 text-sm"></i>
+                                        <i class="fas fa-star text-yellow-400 text-sm"></i>
+                                    </div>
+                                    <div class="text-gray-500 ml-2 font-inter">(1 customer review)</div>
+                                </div>
+                            </div>
+                            <div class="">
+                                <p class="text-gray-500 font-rubik text-sm py-6">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus blandit massa enim. Nullam id varius nunc id varius nunc.</p>
+                            </div>
+                            <div class="">
+                                <div class="flex items-center py-2">
+                                    <img src="images/insurance.png" class="w-5 h-auto" alt="image">
+                                    <p class="text-gray-600 font-rubik text-sm ml-2">1 Year AL Jazeera Brand Warranty</p>
+                                </div>
+                                <div class="flex items-center py-2">
+                                    <img src="images/sync.png" class="w-5 h-auto" alt="image">
+                                    <p class="text-gray-600 font-rubik text-sm ml-2">30 Day Return Policy</p>
+                                </div>
+                                <div class="flex items-center py-2">
+                                    <img src="images/money-bag.png" class="w-5 h-auto" alt="image">
+                                    <p class="text-gray-600 font-rubik text-sm ml-2">Cash on Delivery available</p>
+                                </div>
+                            </div>
+                            <div class="border-t border-b border-gray-200 py-3 flex items-center">
+                                <p class="text-gray-500 font-rubik">Color</p>
+                                <div class="flex items-center ml-20">
+                                    <div class="flex flex-col justify-center mr-2">
+                                        <div class="relative py-3 sm:max-w-xl sm:mx-auto">
+                                          <div class="group cursor-pointer relative inline-block text-center bg-gray-900 h-9 w-9 rounded-full">
+                                            <div class="opacity-0 w-28 bg-gray-800 text-white text-center text-xs rounded transition font-rubik duration-200 ease-in-out py-2 absolute -right-10 mx-auto z-10 group-hover:opacity-100 bottom-full px-3 pointer-events-none mb-2 mr-1">
+                                              Black
+                                              <svg class="absolute text-gray-800 h-2 w-full left-0 top-full" x="0px" y="0px" viewBox="0 0 255 255" xml:space="preserve"><polygon class="fill-current" points="0,0 127.5,127.5 255,0"/></svg>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                      <div class="flex flex-col justify-center mr-2">
+                                        <div class="relative py-3 sm:max-w-xl sm:mx-auto">
+                                          <div class="group cursor-pointer relative inline-block text-center bg-green-500 h-9 w-9 rounded-full">
+                                            <div class="opacity-0 w-28 bg-gray-800 text-white text-center text-xs rounded transition font-rubik duration-200 ease-in-out py-2 absolute -right-10 mx-auto z-10 group-hover:opacity-100 bottom-full px-3 pointer-events-none mb-2 mr-1">
+                                              Green
+                                              <svg class="absolute text-gray-800 h-2 w-full left-0 top-full" x="0px" y="0px" viewBox="0 0 255 255" xml:space="preserve"><polygon class="fill-current" points="0,0 127.5,127.5 255,0"/></svg>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                      <div class="flex flex-col justify-center mr-2">
+                                        <div class="relative py-3 sm:max-w-xl sm:mx-auto">
+                                          <div class="group cursor-pointer relative inline-block text-center bg-pink-500 h-9 w-9 rounded-full">
+                                            <div class="opacity-0 w-28 bg-gray-800 text-white text-center text-xs rounded transition duration-200 ease-in-out py-2 absolute -right-10 mx-auto z-10 group-hover:opacity-100 bottom-full px-3 pointer-events-none mb-2 mr-1">
+                                              Pink
+                                              <svg class="absolute text-gray-800 h-2 w-full left-0 top-full" x="0px" y="0px" viewBox="0 0 255 255" xml:space="preserve"><polygon class="fill-current" points="0,0 127.5,127.5 255,0"/></svg>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                      <div class="flex flex-col justify-center mr-2">
+                                        <div class="relative py-3 sm:max-w-xl sm:mx-auto">
+                                          <div class="group cursor-pointer relative inline-block text-center bg-yellow-500 h-9 w-9 rounded-full">
+                                            <div class="opacity-0 w-28 bg-gray-800 text-white text-center text-xs rounded transition duration-200 ease-in-out py-2 absolute -right-10 mx-auto z-10 group-hover:opacity-100 bottom-full px-3 pointer-events-none mb-2 mr-1">
+                                              Tortoise
+                                              <svg class="absolute text-gray-800 h-2 w-full left-0 top-full" x="0px" y="0px" viewBox="0 0 255 255" xml:space="preserve"><polygon class="fill-current" points="0,0 127.5,127.5 255,0"/></svg>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+               </div>
+            </div>
+        </div>
+        <div class="container-fluid mx-auto pt-10">
+            <div class="container mx-auto">
+                <div class="max-w-screen-xl mx-auto mt-4 rounded">
+                    <!-- Tabs -->
+                    <h1 class="flex justify-center text-4xl font-semibold font-rubic pb-3 dark:text-gray-200">Exclusive Products</h1>
+                    <div class="flex justify-center items-center">
+                        <ul id="tabs" class="grid grid-rows-2 grid-cols-2 gap-4 md:flex md:justify-center md:items-center lg:flex lg:justify-center lg:items-center xl:flex xl:justify-center xl:items-center px-1 pt-2">
+                            <li class="py-1 mx-2 text-center font-semibold text-gray-800 rounded-t dark:text-gray-200"><a class="uppercase font-serif text-sm hover:text-red-600 transition duration-300 ease-in-out" id="default-tab" href="#first">best sellers</a></li>
+                            <li class="py-1 mx-2 text-center font-semibold text-gray-800 rounded-t dark:text-gray-200"><a class="uppercase font-serif text-sm hover:text-red-600 transition duration-300 ease-in-out" href="#second">featured</a></li>
+                            <li class="py-1 mx-2 text-center font-semibold text-gray-800 rounded-t dark:text-gray-200"><a class="uppercase font-serif text-sm hover:text-red-600 transition duration-300 ease-in-out" href="#third">new arrival</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Tab Contents -->
+                    <div class="py-20" id="tab-contents">
+                        <div id="first" class="p-4">
+                            
+                        </div>
+                        <div id="second" class="hidden p-4">
+                           
+                        </div>
+                        <div id="third" class="hidden p-4">
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container mx-auto py-20">
+            <div class="max-w-screen-xl mx-auto">
+                <h1 class="flex justify-center text-4xl font-semibold font-rubic pb-3 dark:text-gray-200">featured Products</h1>
+                <div class="cart_main_header px-4 pt-10">
+                     <div class="cart_body group">
+                        <div class="cart_desc">
+                            <img class="cart_img" src="prod_img/product_img7-1.webp" alt="image" />
+                            <div class="flex justify-center">
+                                <div class="icon_desc opacity-0 group-hover:opacity-100">
+                                    <a href="cart.html" class="icon_header">
+                                        <i class="fas fa-shopping-cart link_icon"></i>
+                                    </a>
+                                    <a href="random.html" class="icon_header">
+                                        <i class="fas fa-random link_icon"></i>
+                                    </a>
+                                    <a href="single_prod.html" class="icon_header">
+                                        <i class="fas fa-search link_icon"></i>
+                                    </a>
+                                    <a href="cart.html" class="icon_header">
+                                        <i class="fas fa-heart link_icon"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="px-4 py-3 bg-white">
+                            <a href="#" class=""><h1 class="cart_header">White Line Dress</h1></a>
+                            <div class="flex py-2">
+                                <p class="cart_pord_off_dis">$45.00</p>
+                            </div>
+                            <div class="flex">
+                                <div class="">
+                                    <i class="fas fa-star text-yellow-400 text-xs"></i>
+                                    <i class="fas fa-star text-yellow-400 text-xs"></i>
+                                    <i class="fas fa-star text-yellow-400 text-xs"></i>
+                                    <i class="fas fa-star text-yellow-400 text-xs"></i>
+                                    <i class="far fa-star text-gray-400 text-xs"></i>
+                                </div>
+                                <div class="ml-2">
+                                    <p class="text-gray-500 font-medium text-sm">(1)</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                     <div class="cart_body group">
+                        <div class="cart_desc">
+                            <img class="cart_img" src="prod_img/product_img8-1.webp" alt="image" />
+                            <p class="cart_dis_title">-23%</p>
+                            <div class="flex justify-center">
+                                <div class="icon_desc opacity-0 group-hover:opacity-100">
+                                    <a href="cart.html" class="icon_header">
+                                        <i class="fas fa-shopping-cart link_icon"></i>
+                                    </a>
+                                    <a href="random.html" class="icon_header">
+                                        <i class="fas fa-random link_icon"></i>
+                                    </a>
+                                    <a href="single_prod.html" class="icon_header">
+                                        <i class="fas fa-search link_icon"></i>
+                                    </a>
+                                    <a href="cart.html" class="icon_header">
+                                        <i class="fas fa-heart link_icon"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="px-4 py-3 bg-white">
+                            <a href="#" class=""><h1 class="cart_header">Men Blue Jins Shirt</h1></a>
+                            <div class="flex py-2">
+                                <p class="cart_pord_off_dis">$69.00</p>
+                                <p class="cart_prod_price">$39.00</p>
+                            </div>
+                            <div class="flex">
+                                <div class="">
+                                    <i class="fas fa-star text-yellow-400 text-xs"></i>
+                                    <i class="fas fa-star text-yellow-400 text-xs"></i>
+                                    <i class="fas fa-star text-yellow-400 text-xs"></i>
+                                    <i class="far fa-star text-gray-400 text-xs"></i>
+                                    <i class="far fa-star text-gray-400 text-xs"></i>
+                                </div>
+                                <div class="ml-2">
+                                    <p class="text-gray-500 font-medium text-sm">(1)</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cart_body group">
+                        <div class="cart_desc">
+                            <img class="cart_img" src="prod_img/product_img9-1.webp" alt="image" />
+                            <p class="cart_dis_title">-10%</p>
+                            <div class="flex justify-center">
+                                <div class="icon_desc opacity-0 group-hover:opacity-100">
+                                    <a href="cart.html" class="icon_header">
+                                        <i class="fas fa-shopping-cart link_icon"></i>
+                                    </a>
+                                    <a href="random.html" class="icon_header">
+                                        <i class="fas fa-random link_icon"></i>
+                                    </a>
+                                    <a href="single_prod.html" class="icon_header">
+                                        <i class="fas fa-search link_icon"></i>
+                                    </a>
+                                    <a href="cart.html" class="icon_header">
+                                        <i class="fas fa-heart link_icon"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="px-4 py-3 bg-white">
+                            <a href="#" class=""><h1 class="cart_header">T-Shirt For Girls</h1></a>
+                            <div class="flex py-2">
+                                <p class="cart_pord_off_dis">$45.00</p>
+                                <p class="cart_prod_price">$33.00</p>
+                            </div>
+                            <div class="flex">
+                                <div class="">
+                                    <i class="fas fa-star text-yellow-400 text-xs"></i>
+                                    <i class="fas fa-star text-yellow-400 text-xs"></i>
+                                    <i class="fas fa-star text-yellow-400 text-xs"></i>
+                                    <i class="far fa-star text-gray-400 text-xs"></i>
+                                    <i class="far fa-star text-gray-400 text-xs"></i>
+                                </div>
+                                <div class="ml-2">
+                                    <p class="text-gray-500 font-medium text-sm">(1)</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                   <div class="cart_body group">
+                        <div class="cart_desc">
+                            <img class="cart_img" src="prod_img/product_img11-1.webp" alt="image" />
+                            <p class="cart_dis_title">-23%</p>
+                            <div class="flex justify-center">
+                                <div class="icon_desc opacity-0 group-hover:opacity-100">
+                                    <a href="cart.html" class="icon_header">
+                                        <i class="fas fa-shopping-cart link_icon"></i>
+                                    </a>
+                                    <a href="random.html" class="icon_header">
+                                        <i class="fas fa-random link_icon"></i>
+                                    </a>
+                                    <a href="single_prod.html" class="icon_header">
+                                        <i class="fas fa-search link_icon"></i>
+                                    </a>
+                                    <a href="cart.html" class="icon_header">
+                                        <i class="fas fa-heart link_icon"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="px-4 py-3 bg-white">
+                            <a href="#" class=""><h1 class="cart_header">Black Dress For Women</h1></a>
+                            <div class="flex py-2">
+                                <p class="cart_pord_off_dis">$65.00</p>
+                                <p class="cart_prod_price">$05.00</p>
+                            </div>
+                            <div class="flex">
+                                <div class="">
+                                    <i class="fas fa-star text-yellow-400 text-xs"></i>
+                                    <i class="fas fa-star text-yellow-400 text-xs"></i>
+                                    <i class="fas fa-star text-yellow-400 text-xs"></i>
+                                    <i class="fas fa-star text-yellow-400 text-xs"></i>
+                                    <i class="fas fa-star text-yellow-400 text-xs"></i>
+                                </div>
+                                <div class="ml-2">
+                                    <p class="text-gray-500 font-medium text-sm">(2)</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid mx-auto bg-red-600 py-12">
+            <div class="container mx-auto">
+                <div class="max-w-screen-xl mx-auto">
+                    <div class="xl:flex lg:flex xl:items-center lg:items-center xl:justify-between lg:justify-between text-center">
+                        <div class="">
+                            <h1 class="text-gray-200 font-semibold font-rubik xl:text-2xl lg:text-2xl md:text-xl text-lg">Subscribe Our Newsletter</h1>
+                        </div>
+                        <div class="xl:pt-0 lg:pt-0 pt-5">
+                            <div class="flex justify-center">
+                                <input class="bg-white border-transparent" type="text" placeholder=" Your email address">
+                                <button class="bg-gray-700 text-white px-3 font-semibold font-rubik hover:bg-gray-900 transition duration-300 ease-in-out">Sign Up</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid mx-auto py-44 bg-gray-900">
+            <div class="container mx-auto">
+                <div class="max-w-screen-xl mx-auto">
+                    <div class="xl:grid xl:grid-cols-5 lg:grid lg:grid-cols-5 md:grid md:grid-cols-3 sm:grid sm:grid-cols-2 gap-6 px-4">
+                        <div class="xl:pt-0 lg:pt-0 md:pt-8 sm:pt-8 pt-8">
+                            <a href="index.html" class="text-xl text-gray-100 font-bold font-rubik">Logo</a>
+                            <p class="text-gray-200 pt-4">If you are going to use of Lorem Ipsum need to be sure there isn't hidden of text</p>
+                            <div class="">
+                                <ul class="pt-5 flex justify-">
+                                    <li class="mx-3 ml-0">
+                                        <a href="#" class=""><i class="fab fa-facebook-f text-lg text-gray-200 hover:text-blue-500 transition duration-300 ease-in-out"></i></a>
+                                    </li>
+                                    <li class="mx-3">
+                                        <a href="#" class=""><i class="fab fa-google text-lg text-gray-200 hover:text-yellow-500 transition duration-300 ease-in-out"></i></a>
+                                    </li>
+                                    <li class="mx-3">
+                                        <a href="#" class=""><i class="fab fa-twitter text-lg text-gray-200 hover:text-blue-400 transition duration-300 ease-in-out"></i></a>
+                                    </li>
+                                    <li class="mx-3">
+                                        <a href="#" class=""><i class="fab fa-instagram text-lg text-gray-200 hover:text-pink-500 transition duration-300 ease-in-out"></i></a>
+                                    </li>
+                                    <li class="mx-3">
+                                        <a href="#" class=""><i class="fab fa-youtube text-lg text-gray-200 hover:text-red-500 transition duration-300 ease-in-out"></i></a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="xl:pt-0 lg:pt-0 md:pt-8 sm:pt-8 pt-8">
+                            <h1 class="capitalize text-gray-100 text-xl font-semibold font-rubic pb-4">user links</h1>
+                            <div class="">
+                                <ul class="leading-loose">
+                                    <li class="footer_list_item">
+                                        <a href="about.html" class="footer_item">About us</a>
+                                    </li>
+                                    <li class="footer_list_item">
+                                        <a href="faq.html" class="footer_item">Faq</a>
+                                    </li>
+                                    <li class="footer_list_item">
+                                        <a href="location.html" class="footer_item">Location</a>
+                                    </li>
+                                    <li class="footer_list_item">
+                                        <a href="affiliates.html" class="footer_item">Affiliates</a>
+                                    </li>
+                                    <li class="footer_list_item">
+                                        <a href="contact.html" class="footer_item">Contact</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="xl:pt-0 lg:pt-0 md:pt-8 sm:pt-8 pt-8">
+                            <h1 class="capitalize text-gray-100 text-xl font-semibold font-rubic pb-4">category</h1>
+                            <div class="">
+                                <ul class="leading-loose">
+                                    <li class="footer_list_item">
+                                        <a href="about.html" class="footer_item">man</a>
+                                    </li>
+                                    <li class="footer_list_item">
+                                        <a href="faq.html" class="footer_item">women</a>
+                                    </li>
+                                    <li class="footer_list_item">
+                                        <a href="location.html" class="footer_item">kid's</a>
+                                    </li>
+                                    <li class="footer_list_item">
+                                        <a href="affiliates.html" class="footer_item">speacial offer</a>
+                                    </li>
+                                    <li class="footer_list_item">
+                                        <a href="contact.html" class="footer_item">best sellers</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="xl:pt-0 lg:pt-0 md:pt-8 sm:pt-8 pt-8">
+                            <h1 class="capitalize text-gray-100 text-xl font-semibold font-rubic pb-4">my account</h1>
+                            <div class="">
+                                <ul class="leading-loose">
+                                    <li class="footer_list_item">
+                                        <a href="about.html" class="footer_item">my account</a>
+                                    </li>
+                                    <li class="footer_list_item">
+                                        <a href="faq.html" class="footer_item">discount</a>
+                                    </li>
+                                    <li class="footer_list_item">
+                                        <a href="location.html" class="footer_item">return</a>
+                                    </li>
+                                    <li class="footer_list_item">
+                                        <a href="affiliates.html" class="footer_item">others history</a>
+                                    </li>
+                                    <li class="footer_list_item">
+                                        <a href="contact.html" class="footer_item">others tracking</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="xl:pt-0 lg:pt-0 md:pt-8 sm:pt-8 pt-8">
+                            <h1 class="capitalize text-gray-100 text-xl font-semibold font-rubic pb-4">contact info</h1>
+                            <div class="">
+                                <ul class="leading-loose">
+                                    <li class="">
+                                        <a href="about.html" class="capitalize text-gray-200 text-sm font-rubic hover:text-red-500 font-semibold transition duration-300 ease-in-out">
+                                            <i class="fas fa-map-marker-alt mr-2"></i> 123 Street, Old Trafford, New South London , UK
+                                        </a>
+                                    </li>
+                                    <li class="">
+                                        <a href="about.html" class="capitalize text-gray-200 text-sm font-rubic hover:text-red-500 font-semibold transition duration-300 ease-in-out"><i class="fas fa-envelope mr-2"></i> info@shopwise.com</a>
+                                    </li>
+                                    <li class="">
+                                        <a href="about.html" class="capitalize text-gray-200 text-sm font-rubic hover:text-red-500 font-semibold transition duration-300 ease-in-out"><i class="fas fa-mobile mr-2"></i> + 457 789 789 65</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid mx-auto py-10 bg-gray-900 border-t border-gray-600">
+            <div class="container mx-auto">
+                <div class="max-w-screen-xl mx-auto px-4">
+                    <div class="xl:flex xl:justify-between xl:items-center lg:flex lg:justify-between lg:items-center md:flex md:justify-between md:items-center text-center">
+                        <div class="xl:pb-0 lg:pb-0 md:pb-0 pb-10">
+                            <p class="text-gray-200 font-rubic font-medium">Copyright 2021.KlbTheme . All rights reserved</p>
+                        </div>
+                        <div class="flex justify-center">
+                            <a href="#" class="w-auto h-auto mr-2 mx-auto"><img class="" src="card_img/visa-1.webp" alt="" /></a>
+                            <a href="#" class="w-auto h-auto mr-2 mx-auto"> <img class="" src="card_img/discover-1.webp" alt="" /></a>
+                            <a href="#" class="w-5auto6 h-auto mr-2 mx-auto"><img class="" src="card_img/amarican_express-1.webp" alt="" /></a>
+                            <a href="#" class="w-auto h-auto mr-2 mx-auto"><img class="" src="card_img/master_card-1.webp" alt="" /></a>
+                            <a href="#" class="w-auto h-auto mx-auto"><img src="card_img/visa-1.webp" alt="" /></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="mySidenav" class="sidenav">
+             <div class="max-w-screen-md mx-auto">
+                <div class="h-full w-full mx-auto flex justify-center items-center xl:px-0 lg:px-0 md:px-0 px-10 relative">
+                    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                    <form class="flex">
+                        <input class="border w-full h-10 border-transparent focus:outline-none focus:ring-2 focus:ring-red-600 focus:border-transparent ...">
+                        <button class="dark_btn">
+                          Search
+                        </button>
+                      </form>
+                </div>
+             </div>
+          </div>
+          <a href="#" id="scroll" style="display: none;"><span></span></a>
+        <script>
+            function openNav() {
+              document.getElementById("mySidenav").style.width = "100%";
+            }
+            
+            function closeNav() {
+              document.getElementById("mySidenav").style.width = "0%";
+            }
+            </script>
+            <script>
+                $('.autoplay').slick({
+                slidesToShow: 3,
+                slidesToScroll: 1,
+                autoplay: true,
+                autoplaySpeed: 2000,
+                });
+            </script>
+        <script type="text/javascript" src="./styles.js"></script>
+    </body>
+</html>
