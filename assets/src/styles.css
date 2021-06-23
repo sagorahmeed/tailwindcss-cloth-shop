@@ -4,7 +4,7 @@
     @apply translate-x-4;
 }
 .btn {
-    @apply bg-red-600 py-4 px-8 text-gray-100 text-sm uppercase hover:bg-gray-900 hover:text-gray-100 transition duration-300 ease-in-out;
+    @apply bg-red-600 py-4 px-8 text-gray-100 text-sm uppercase hover:bg-gray-900 hover:text-gray-100 transition duration-300 ease-in-out rounded;
 }
 .body {
     @apply dark:bg-gray-900;
