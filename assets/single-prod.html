@@ -420,7 +420,7 @@
                                 <div class="">
                                     <h1 class="text-gray-800 xl:text-2xl font-medium font-rubik">Blue Casual Check Shirt</h1>
                                 </div>
-                                <div class="xl:flex xl:justify-between lg:flex lg:justify-between md:flex md:justify-between items-center pt-4">
+                                <div class="xl:flex xl:justify-between lg:flex lg:justify-between md:flex md:justify-between items-center pt-2">
                                     <div class="">
                                         <p class="text-red-600 text-2xl font-medium">$33.00</p>
                                     </div>
@@ -436,23 +436,23 @@
                                     </div>
                                 </div>
                                 <div class="">
-                                    <p class="text-gray-500 font-rubik text-sm py-6">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus blandit massa enim. Nullam id varius nunc id varius nunc.</p>
+                                    <p class="text-gray-500 font-rubik text-sm py-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus blandit massa enim. Nullam id varius nunc id varius nunc.</p>
                                 </div>
                                 <div class="pb-4">
-                                    <div class="flex items-center py-2">
+                                    <div class="flex items-center py-1">
                                         <img src="images/insurance.png" class="w-5 h-auto" alt="image">
                                         <p class="text-gray-600 font-rubik text-sm ml-2">1 Year AL Jazeera Brand Warranty</p>
                                     </div>
-                                    <div class="flex items-center py-2">
+                                    <div class="flex items-center py-1">
                                         <img src="images/sync.png" class="w-5 h-auto" alt="image">
                                         <p class="text-gray-600 font-rubik text-sm ml-2">30 Day Return Policy</p>
                                     </div>
-                                    <div class="flex items-center py-2">
+                                    <div class="flex items-center py-1">
                                         <img src="images/money-bag.png" class="w-5 h-auto" alt="image">
                                         <p class="text-gray-600 font-rubik text-sm ml-2">Cash on Delivery available</p>
                                     </div>
                                 </div>
-                                <div class="border-t border-b border-gray-200 py-3 flex items-center">
+                                <div class="border-t border-b border-gray-200 py-2 flex items-center">
                                     <p class="text-gray-500 font-rubik">Color</p>
                                     <div class="flex items-center ml-20">
                                         <div class="flex flex-col justify-center mr-2">
@@ -497,7 +497,7 @@
                                           </div>
                                     </div>
                                 </div>
-                                <div class="border-b border-gray-200 py-3 flex items-center">
+                                <div class="border-b border-gray-200 py-1 flex items-center">
                                     <p class="text-gray-500 font-rubik">Size</p>
                                     <div class="flex items-center ml-20">
                                         <div class="flex flex-col justify-center ml-2 mr-2">
@@ -546,7 +546,7 @@
                                           </div>
                                     </div>
                                 </div>
-                                <div class="py-10 xl:flex xl:justify-between xl:items-center lg:flex lg:justify-between md:flex md:justify-between">
+                                <div class="py-4 xl:flex xl:justify-between xl:items-center lg:flex lg:justify-between md:flex md:justify-between">
                                     <div class="xl:pb-0 lg:pb-0 md:pb-0 pb-5">
                                         <div class="custom-number-input h-10 w-32">
                                             <div class="flex flex-row h-10 w-full rounded-lg relative bg-transparent mt-1">
@@ -1137,6 +1137,23 @@
                   this.className += " myactive";
                   });
                 }
+                </script>
+                <script>
+
+                $(document).ready(function(){ 
+                $(window).scroll(function(){ 
+                    if ($(this).scrollTop() > 100) { 
+                        $('#scroll').fadeIn(); 
+                    } else { 
+                        $('#scroll').fadeOut(); 
+                    } 
+                }); 
+                $('#scroll').click(function(){ 
+                    $("html, body").animate({ scrollTop: 0 }, 600); 
+                    return false; 
+                }); 
+                });
+
                 </script>
         <script type="text/javascript" src="./styles.js"></script>
     </body>
