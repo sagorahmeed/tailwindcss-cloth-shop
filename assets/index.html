@@ -12,19 +12,6 @@
         <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" referrerpolicy="no-referrer" />
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-        
-<style>
-    .dropdown:hover .dropdown-menu {
-      opacity:1;
-      transform: translate(0) scale(1);
-      visibility: visible;
-    }
-        </style>
-             <style>
-                .dropdown:hover > .dropdown-content {
-                    display: block;
-                }
-            </style>
     </head>
     <body class="body">
         <div class="container-fluid mx-auto bg-white">
@@ -142,7 +129,7 @@
                                     <div id="myDIV" class="w-full">
                                         <ul
                                             :class="{'flex': open, 'hidden': !open}"
-                                            class="flex-col xl:px-0 z-40 xl:py-0 lg:py-0 py-7 lg:px-0 px-4 leading-loose flex-grow pb-4 hidden md:pb-0 lg:flex lg:justify-end lg:flex-row xl:h-auto lg:h-auto h-auto top-20 xl:bg-transparent lg:bg-transparent bg-white w-full xl:flex xl:justify-end xl::flex-row xl:static lg:static absolute left-0"
+                                            class="flex-col xl:px-0 z-40 xl:py-0 lg:py-0 py-7 lg:px-0 px-4 leading-loose flex-grow pb-4 hidden md:pb-0 lg:flex lg:justify-end lg:flex-row xl:h-auto lg:h-auto h-auto top-16 xl:bg-transparent lg:bg-transparent bg-white w-full xl:flex xl:justify-end xl::flex-row xl:static lg:static absolute left-0"
                                         >
                                             <a
                                                 href="index.html"
@@ -317,7 +304,7 @@
                                 </div>
                                 <div class="xl:hidden lg:hidden block mx-5">
                                     <button @click="open = !open" class="menu focus:outline-none" onclick="this.classList.toggle('opened');this.setAttribute('aria-expanded', this.classList.contains('opened'))" aria-label="Main Menu">
-                                        <svg class="md:w-10 w-6" height="auto" viewBox="0 0 100 100">
+                                        <svg class="md:w-8 w-6" height="auto" viewBox="0 0 100 100">
                                             <path
                                                 class="line line1"
                                                 d="M 20,29.000046 H 80.000231 C 80.000231,29.000046 94.498839,28.817352 94.532987,66.711331 94.543142,77.980673 90.966081,81.670246 85.259173,81.668997 79.552261,81.667751 75.000211,74.999942 75.000211,74.999942 L 25.000021,25.000058"
