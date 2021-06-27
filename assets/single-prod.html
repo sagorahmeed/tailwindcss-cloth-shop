@@ -18,6 +18,7 @@
             .bottom-full{bottom: 100%}
             .top-full{top: 100%}
           </style>
+
 <style>
     .dropdown:hover .dropdown-menu {
       opacity:1;
@@ -40,6 +41,22 @@
               outline: none !important;
             }
           </style>
+          <style>
+            /* Style the buttons */
+            .btn {
+              border: none;
+              outline: none;
+              padding: 10px 16px;
+              background-color: #f1f1f1;
+              cursor: pointer;
+              font-size: 18px;
+            }
+            
+            /* Style the active class, and buttons on mouse-over */
+            .myactive, .buttonbtn:hover{
+              color: #ffcb32;
+            }
+            </style>
     </head>
     <body class="body">
         <div class="container-fluid mx-auto bg-white">
@@ -367,53 +384,6 @@
                         </div>
                     </div>
                 </div>
-                <div class="sliderAx h-auto">
-                    <div id="slider-1" class="container-fluid mx-auto">
-                        <div class="slider-blog" style="background-image: url(images/banner2.jpg);">
-                            <div class="prebtn-header">
-                                <button id="sButton1" onclick="sliderButton1()" class="prebtn group">
-                                    <i class="fas fa-chevron-left slide-arrow"></i>
-                                </button>
-                            </div>
-                            <div class="max-w-sm md:max-w-xl lg:max-w-screen-md xl:max-w-screen-xl mx-auto flex items-center h-full">
-                                <div class="xl:max-w-lg">
-                                    <p class="font-rubic text-gray-600 text-xl uppercase">50% off in all products</p>
-                                    <h1 class="xl:text-6xl lg:text-4xl md:text-2xl text-xl text-gray-900 font-bold font-rubik pt-4 pb-8">Man Fashion</h1>
-                                    <a href="shop.html" class="btn">Shop Now</a>
-                                </div>
-                            </div>
-                            <div class="absolute right-10 top-0 flex items-center h-full xl:visible lg:visible md:visible invisible">
-                                <button id="sButton2" onclick="sliderButton2() " class="prebtn group">
-                                    <i class="fas fa-chevron-right slide-arrow"></i>
-                                </button>
-                            </div>
-                        </div>
-                        <br />
-                    </div>
-    
-                    <div id="slider-2" class="container-fluid mx-auto">
-                        <div class="slider-blog" style="background-image: url(images/banner1.jpg);">
-                            <div class="prebtn-header">
-                                <button id="sButton1" onclick="sliderButton1()" class="prebtn group">
-                                    <i class="fas fa-chevron-left slide-arrow"></i>
-                                </button>
-                            </div>
-                            <div class="max-w-sm md:max-w-xl lg:max-w-screen-md xl:max-w-screen-xl mx-auto flex items-center h-full">
-                                <div class="xl:max-w-lg">
-                                    <p class="font-rubic text-gray-600 text-xl uppercase">50% off in all products</p>
-                                    <h1 class="xl:text-6xl lg:text-4xl md:text-2xl text-xl text-gray-900 font-bold font-rubik pt-4 pb-8">Man Fashion</h1>
-                                    <a href="shop.html" class="btn">Shop Now</a>
-                                </div>
-                            </div>
-                            <div class="absolute right-10 top-0 flex items-center h-full xl:visible lg:visible md:visible invisible">
-                                <button id="sButton2" onclick="sliderButton2() " class="prebtn ">
-                                    <i class="fas fa-chevron-right slide-arrow"></i>
-                                </button>
-                            </div>
-                        </div>
-                        <br />
-                    </div>
-                </div>
             </div>
         </div>
         <div class="container-fluid mx-auto py-20">
@@ -576,8 +546,8 @@
                                           </div>
                                     </div>
                                 </div>
-                                <div class="py-10 flex justify-between items-center">
-                                    <div class="">
+                                <div class="py-10 xl:flex xl:justify-between xl:items-center lg:flex lg:justify-between md:flex md:justify-between">
+                                    <div class="xl:pb-0 lg:pb-0 md:pb-0 pb-5">
                                         <div class="custom-number-input h-10 w-32">
                                             <div class="flex flex-row h-10 w-full rounded-lg relative bg-transparent mt-1">
                                               <button data-action="decrement" class="bg-gray-100 shadow text-gray-600 mr-4 hover:text-gray-700 hover:bg-gray-300 p-3 flex justify-center items-center rounded-full cursor-pointer outline-none">
@@ -590,7 +560,7 @@
                                           </div>
                                        </div>
                                     </div>
-                                   <div class="">
+                                   <div class="xl:pb-0 lg:pb-0 md:pb-0 pb-5">
                                        <a href="cart.html" class=""><button type="button" class="btn">Add to cart</button></a>
                                    </div>
                                    <div class="">
@@ -635,11 +605,11 @@
                 <div class="max-w-screen-xl mx-auto mt-4 rounded">
                     <!-- Tabs -->
                     <h1 class="flex justify-center text-4xl font-semibold font-rubik pb-3 dark:text-gray-200">Exclusive Products</h1>
-                    <div class="flex justify-center items-center">
-                        <ul id="tabs" class="grid grid-rows-2 w-full grid-cols-2 gap-4 md:flex md:justify-start border-b border-gray-200 md:items-start lg:flex lg:justify-start lg:items-start xl:flex xl:justify-start xl:items-center pt-2 mx-4">
-                            <li class="py-1 text-center font-medium text-gray-800 rounded-t dark:text-gray-200"><a class="uppercase font-rubik text-sm hover:text-red-600 transition duration-300 ease-in-out" id="default-tab" href="#first">Description</a></li>
-                            <li class="py-1 text-center font-medium text-gray-800 rounded-t dark:text-gray-200"><a class="uppercase font-rubik text-sm hover:text-red-600 transition duration-300 ease-in-out" href="#second">Additional Information</a></li>
-                            <li class="py-1 text-center font-medium text-gray-800 rounded-t dark:text-gray-200"><a class="uppercase font-rubik text-sm hover:text-red-600 transition duration-300 ease-in-out" href="#third">Reviews(1)</a></li>
+                    <div class="xl:flex xl:justify-center xl:items-center lg:flex lg:justify-center lg:items-center md:flex md:justify-center md:items-center text-left">
+                        <ul id="tabs" class="pt-2 mx-4 xl:flex xl:items-center lg:flex lg:items-center md:flex md:items-center text-left">
+                            <li class="text-center font-medium text-gray-800 rounded-t dark:text-gray-200 mx-3"><a class="uppercase font-rubik xl:text-sm lg:text-sm md:text-sm text-xs hover:text-red-600 transition duration-300 ease-in-out" id="default-tab" href="#first">Description</a></li>
+                            <li class="text-center font-medium text-gray-800 rounded-t dark:text-gray-200 mx-3"><a class="uppercase font-rubik xl:text-sm lg:text-sm md:text-sm text-xs hover:text-red-600 transition duration-300 ease-in-out" href="#second">Additional Information</a></li>
+                            <li class="text-center font-medium text-gray-800 rounded-t dark:text-gray-200 mx-3"><a class="uppercase font-rubik xl:text-sm lg:text-sm md:text-sm text-xs hover:text-red-600 transition duration-300 ease-in-out" href="#third">Reviews(1)</a></li>
                         </ul>
                     </div>
 
@@ -668,11 +638,11 @@
                             <div class="">
                                 <h1 class="text-2xl text-gray-800 pb-6 font-rubik">1 review for Blue Casual Check Shirt</h1>
                                 <div class="">
-                                    <div class="xl:flex border-b border-gray-200">
+                                    <div class="xl:flex border-b border-gray-200 py-6">
                                         <div class="">
                                             <img src="images/images.jpeg" class="w-28 h-auto shadow rounded-lg mr-10 mb-8" alt="">
                                         </div>
-                                        <div class="">
+                                        <div class="xl:pb-0 lg:pb-0">
                                             <div class="flex justify-between">
                                                <div class="">
                                                    <p class="text-gray-700 font-rubik">Admin</p>
@@ -702,33 +672,33 @@
                                         </div>
                                         <div class="mt-6">
                                             <h1 class="font-inter text-sm font-semibold text-gray-500">Your rating *</h1>
-                                            <div class="flex items-center pt-3">
-                                                <div class="cursor-pointer group pr-2">
-                                                    <i class="fas fa-star text-gray-300 group-hover:text-yellow-400 transition duration-200 ease-in-out mb-1"></i>
+                                            <div id="mycontent" class="xl:flex xl:items-center lg:flex lg:items-center md:flex md:items-center pt-4">
+                                                <div class="buttonbtn myactive text-gray-300 pb-1 cursor-pointer xl:pr-3 lg:pr-3 md:pr-3 pr-0">
+                                                    <i class="fas fa-star"></i>
                                                 </div>
-                                                <div class="cursor-pointer group border-l border-gray-200 px-2">
-                                                    <i class="fas fa-star text-gray-300 group-hover:text-yellow-400 transition duration-200 ease-in-out"></i>
-                                                    <i class="fas fa-star text-gray-300 group-hover:text-yellow-400 transition duration-200 ease-in-out"></i>
+                                                <div class="buttonbtn text-gray-300 cursor-pointer xl:border-l lg:border-l md:border-l border-l-transparent border-gray-300 xl:px-3 lg:px-3 md:px-3 px-0">
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
                                                 </div>
-                                                <div class="cursor-pointer group border-l border-gray-200 px-2">
-                                                    <i class="fas fa-star text-gray-300 group-hover:text-yellow-400 transition duration-200 ease-in-out"></i>
-                                                    <i class="fas fa-star text-gray-300 group-hover:text-yellow-400 transition duration-200 ease-in-out"></i>
-                                                    <i class="fas fa-star text-gray-300 group-hover:text-yellow-400 transition duration-200 ease-in-out"></i>
+                                                <div class="buttonbtn text-gray-300 cursor-pointer pb-1 xl:border-l lg:border-l md:border-l border-l-transparent border-gray-300 lg:px-3 md:px-3 px-0">
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
                                                 </div>
-                                                <div class="cursor-pointer group border-l border-gray-200 px-2">
-                                                    <i class="fas fa-star text-gray-300 group-hover:text-yellow-400 transition duration-200 ease-in-out"></i>
-                                                    <i class="fas fa-star text-gray-300 group-hover:text-yellow-400 transition duration-200 ease-in-out"></i>
-                                                    <i class="fas fa-star text-gray-300 group-hover:text-yellow-400 transition duration-200 ease-in-out"></i>
-                                                    <i class="fas fa-star text-gray-300 group-hover:text-yellow-400 transition duration-200 ease-in-out"></i>
+                                                <div class="buttonbtn text-gray-300 cursor-pointer pb-1 xl:border-l lg:border-l md:border-l border-l-transparent border-gray-300 lg:px-3 md:px-3 px-0">
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
                                                 </div>
-                                                <div class="cursor-pointer group border-l border-gray-200 pl-2">
-                                                    <i class="fas fa-star text-gray-300 group-hover:text-yellow-400 transition duration-200 ease-in-out"></i>
-                                                    <i class="fas fa-star text-gray-300 group-hover:text-yellow-400 transition duration-200 ease-in-out"></i>
-                                                    <i class="fas fa-star text-gray-300 group-hover:text-yellow-400 transition duration-200 ease-in-out"></i>
-                                                    <i class="fas fa-star text-gray-300 group-hover:text-yellow-400 transition duration-200 ease-in-out"></i>
-                                                    <i class="fas fa-star text-gray-300 group-hover:text-yellow-400 transition duration-200 ease-in-out"></i>
+                                                <div class="buttonbtn text-gray-300 cursor-pointer pb-1 xl:border-l lg:border-l md:border-l border-l-transparent border-gray-300 lg:px-3 md:px-3 px-0">
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
                                                 </div>
-                                            </div>
+                                              </div>
                                         </div>
                                         <div class="mt-6">
                                             <h1 class="font-inter text-sm font-semibold text-gray-500">Your review *</h1>
@@ -794,7 +764,7 @@
                             </div>
                         </div>
                         <div class="px-4 py-3 bg-white">
-                            <a href="#" class=""><h1 class="cart_header">White Line Dress</h1></a>
+                            <a href="single-prod.html" class=""><h1 class="cart_header">White Line Dress</h1></a>
                             <div class="flex py-2">
                                 <p class="cart_pord_off_dis">$45.00</p>
                             </div>
@@ -834,7 +804,7 @@
                             </div>
                         </div>
                         <div class="px-4 py-3 bg-white">
-                            <a href="#" class=""><h1 class="cart_header">Men Blue Jins Shirt</h1></a>
+                            <a href="single-prod.html" class=""><h1 class="cart_header">Men Blue Jins Shirt</h1></a>
                             <div class="flex py-2">
                                 <p class="cart_pord_off_dis">$69.00</p>
                                 <p class="cart_prod_price">$39.00</p>
@@ -875,7 +845,7 @@
                             </div>
                         </div>
                         <div class="px-4 py-3 bg-white">
-                            <a href="#" class=""><h1 class="cart_header">T-Shirt For Girls</h1></a>
+                            <a href="single-prod.html" class=""><h1 class="cart_header">T-Shirt For Girls</h1></a>
                             <div class="flex py-2">
                                 <p class="cart_pord_off_dis">$45.00</p>
                                 <p class="cart_prod_price">$33.00</p>
@@ -916,7 +886,7 @@
                             </div>
                         </div>
                         <div class="px-4 py-3 bg-white">
-                            <a href="#" class=""><h1 class="cart_header">Black Dress For Women</h1></a>
+                            <a href="single-prod.html" class=""><h1 class="cart_header">Black Dress For Women</h1></a>
                             <div class="flex py-2">
                                 <p class="cart_pord_off_dis">$65.00</p>
                                 <p class="cart_prod_price">$05.00</p>
@@ -1156,6 +1126,18 @@
                     btn.addEventListener("click", increment);
                 });
             </script>
+            <script>
+                // Add active class to the current button (highlight it)
+                var header = document.getElementById("mycontent");
+                var btns = header.getElementsByClassName("buttonbtn");
+                for (var i = 0; i < btns.length; i++) {
+                  btns[i].addEventListener("click", function() {
+                  var current = document.getElementsByClassName("myactive");
+                  current[0].className = current[0].className.replace(" myactive", "");
+                  this.className += " myactive";
+                  });
+                }
+                </script>
         <script type="text/javascript" src="./styles.js"></script>
     </body>
 </html>
