@@ -4,7 +4,7 @@
     @apply translate-x-4;
 }
 .btn-danger {
-    @apply bg-red-600 py-4 px-8 text-gray-100 text-sm uppercase hover:bg-gray-900 hover:text-gray-100 transition duration-300 ease-in-out rounded;
+    @apply capitalize bg-red-500 text-white hover:bg-transparent hover:text-red-500 transition duration-500 focus:outline-none ease-in-out border border-red-500 hover:border-red-500 rounded font-medium px-8 py-3;
 }
 .body {
     @apply dark:bg-gray-900;
@@ -374,3 +374,23 @@ li:hover > button svg {
     transition: 0.3s ease-in-out;
 }
 /* navbar and dropdown */
+
+
+
+
+/* blog page start */
+
+    .blog_img{
+        @apply xl:w-full lg:w-full md:w-full w-full transform hover:scale-110 transition duration-700 ease-in-out;
+    }
+    .blog_heading{
+        @apply text-gray-800 text-xl font-semibold hover:text-red-600 transition duration-300 ease-in-out py-3;
+    }
+    .blog_info{
+        @apply hover:text-red-600 transition duration-300 ease-in-out text-sm text-gray-700 ml-1;
+    }
+    .blog_desc{
+        @apply text-gray-500 text-sm leading-loose font-semibold;
+    }
+
+/* blog page start */
