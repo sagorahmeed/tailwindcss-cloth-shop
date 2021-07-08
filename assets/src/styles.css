@@ -9,9 +9,6 @@
 .body {
     @apply dark:bg-gray-900;
 }
-.dark_btn{
-    @apply bg-red-600 h-10 w-28 hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-red-600 focus:ring-opacity-50 text-white;
-}
 @tailwind utilities;
 /* top navbar start */
 .top-nav {
@@ -379,6 +376,9 @@ li:hover > button svg {
 
 
 /* blog page start */
+    .main-blog{
+        @apply xl:mr-5 lg:mr-5 bg-white shadow hover:shadow-lg transition duration-300 ease-in-out cursor-pointer;
+    }
 
     .blog_img{
         @apply xl:w-full lg:w-full md:w-full w-full transform hover:scale-110 transition duration-700 ease-in-out;
@@ -394,3 +394,7 @@ li:hover > button svg {
     }
 
 /* blog page start */
+
+.pagination-item{
+    @apply h-10 w-10 border border-gray-200 flex justify-center items-center text-gray-400 hover:bg-red-600 transition duration-300 ease-in-out hover:text-white hover:border-red-600 mx-1 cursor-pointer text-sm;
+}
