@@ -371,8 +371,9 @@ li:hover > button svg {
     transition: 0.3s ease-in-out;
 }
 /* navbar and dropdown */
-
-
+#listCart{
+    display: none;
+}
 
 
 /* blog page start */
@@ -397,4 +398,184 @@ li:hover > button svg {
 
 .pagination-item{
     @apply h-10 w-10 border border-gray-200 flex justify-center items-center text-gray-400 hover:bg-red-600 transition duration-300 ease-in-out hover:text-white hover:border-red-600 mx-1 cursor-pointer text-sm;
+}
+
+
+
+
+/* input range */
+
+.wrapper {
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+width: 100%;
+}
+
+.filter-price {
+width: 100%;
+border: 0;
+padding: 0;
+margin: 0; 
+}
+
+.price-title {
+position: relative;
+color: gray;
+font-size: 14px;
+line-height: 1.2em;
+font-weight: 400;
+width: 100%;
+}
+
+.dolar{
+color: gray;
+}
+
+.price-field {
+position: relative;
+width: 100%;
+height: 36px;
+box-sizing: border-box;
+padding-top: 15px;
+border-radius: 3px;
+}
+
+.price-field input[type=range] {
+position: absolute;
+}
+
+/* Reset style for input range */
+
+.price-field input[type=range] {
+width: 100%;
+height: 2px; 
+border: 0;
+outline: 0;
+box-sizing: border-box;
+border-radius: 5px;
+pointer-events: none;
+-webkit-appearance: none;
+}
+
+.price-field input[type=range]::-webkit-slider-thumb {
+-webkit-appearance: none;
+}
+
+.price-field input[type=range]:active,
+.price-field input[type=range]:focus {
+outline: 0;
+}
+
+.price-field input[type=range]::-ms-track {
+width: 188px;
+height: 2px; 
+border: 0;
+outline: 0;
+box-sizing: border-box;
+border-radius: 5px;
+pointer-events: none;
+background: transparent;
+border-color: transparent;
+color: transparent;
+border-radius: 5px;
+}
+
+/* Style toddler input range */
+
+.price-field input[type=range]::-webkit-slider-thumb { 
+/* WebKit/Blink */
+position: relative;
+-webkit-appearance: none;
+margin: 0;
+border: 0;
+outline: 0;
+border-radius: 50%;
+height: 17px;
+width: 17px;
+box-shadow: -1px 2px 3px rgb(189, 188, 188);
+margin-top: -8px;
+background-color: rgb(247, 247, 247);
+cursor: pointer;
+cursor: pointer;
+pointer-events: all;
+z-index: 100;
+}
+
+
+
+/* Style track input range */
+
+.price-field input[type=range]::-webkit-slider-runnable-track { 
+/* WebKit/Blink */
+width: 100%;
+height: 4px;
+cursor: pointer;
+background: rgb(247, 27, 75);
+border-radius: 30px;
+}
+
+
+.price-field input[type=range]::-ms-track { 
+/* IE */
+width: 188px;
+height: 2px;
+cursor: pointer;
+background: rgb(218, 12, 12);
+border-radius: 5px;
+}
+
+/* Style for input value block */
+
+.price-wrap {
+display: flex;
+justify-content: center;
+color: rgb(0, 0, 0);
+font-size: 14px;
+line-height: 1.2em;
+font-weight: 400;
+margin-bottom: 7px;
+}
+
+.price-wrap-1, 
+.price-wrap-2 {
+display: flex;
+}
+
+.price-title {
+margin-right: 5px;
+}
+
+.price-wrap_line {
+margin: 0 10px;
+}
+
+.price-wrap #one, 
+.price-wrap #two {
+width: 17px;
+text-align: right;
+margin: 0;
+padding: 0;
+margin-right: 2px;
+background:  0;
+border: 0;
+outline: 0;
+color:gray;
+font-family: 'Karla', 'Arial', sans-serif;
+font-size: 14px;
+line-height: 1.2em;
+font-weight: 400;
+}
+
+.price-wrap label {
+text-align: right;
+}
+
+/* Style for active state input */
+
+.active-pagi,
+.pagi-btn:hover {
+background-color: #f9444a;
+color: #fff;
 }

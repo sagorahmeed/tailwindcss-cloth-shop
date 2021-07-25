@@ -115,8 +115,8 @@
                     <div class="max-w-screen-xl mx-auto">
                         <div x-data="{ open: false }" class="flex py-6 justify-between items-center relative">
                             <div class="">
-                                <a href="index.html" class="text-xl text-gray-800 font-bold font-rubik">Logo</a>
-                            </div>
+                                <a href="index.html" class="text-xl text-gray-800 font-bold font-rubik"><img class="w-44 h-auto" src="images/logo_black.webp" alt=""></a>
+                            </div>  
                             <div class="flex justify-end items-center space-x-2 w-10 ml-8">
                                 <svg
                                     width=""
@@ -132,7 +132,7 @@
                                         clip-rule="evenodd"
                                     ></path>
                                 </svg>
-
+    
                                 <div class="">
                                     <input type="checkbox" name="" id="toggle" class="hidden" />
                                     <label for="toggle" class="cursor-pointer">
@@ -156,67 +156,82 @@
                                             :class="{'flex': open, 'hidden': !open}"
                                             class="flex-col xl:px-0 z-40 xl:py-0 lg:py-0 py-7 lg:px-0 px-4 leading-loose flex-grow pb-4 hidden md:pb-0 lg:flex lg:justify-end lg:flex-row xl:h-auto lg:h-auto h-auto top-16 xl:bg-transparent lg:bg-transparent bg-white w-full xl:flex xl:justify-end xl::flex-row xl:static lg:static absolute left-0"
                                         >
-                                            <a href="index.html" class="active_btn active font-rubik main-menu-item">
+                                            <a
+                                                href="index.html"
+                                                class="active_btn active font-rubik main-menu-item"
+                                            >
                                                 Home
                                             </a>
-                                            <div @click.away="open = false" class="relative z-40" x-data="{ open: false }">
-                                                <button @click="open = !open" class="focus:outline-none font-rubik main-menu-item w-full text-left">
-                                                    <span class="transition duration-300 ease-in-out">pages</span>
-                                                    <svg fill="currentColor" viewBox="0 0 20 20" :class="{'rotate-180': open, 'rotate-0': !open}" class="inline w-4 h-4 mt-1 ml-1 transition-transform duration-200 transform md:-mt-1">
-                                                        <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path>
-                                                    </svg>
-                                                </button>
-                                                <div
-                                                    x-show="open"
-                                                    x-transition:enter="transition ease-out duration-100"
-                                                    x-transition:enter-start="transform opacity-0 scale-95"
-                                                    x-transition:enter-end="transform opacity-100 scale-100"
-                                                    x-transition:leave="transition ease-in duration-75"
-                                                    x-transition:leave-start="transform opacity-100 scale-100"
-                                                    x-transition:leave-end="transform opacity-0 scale-95"
-                                                    class="absolute left-0 xl:w-56 lg:w-56 w-full md:max-w-screen-sm md:w-screen mt-2 origin-top-right"
-                                                >
-                                                    <div class="px-2 pt-2 pb-4 bg-white rounded-md shadow-xl">
-                                                        <ul class="px-3 py-3">
-                                                            <li class="">
-                                                                <a href="about.html" class="font-rubik page-item">about us</a>
-                                                            </li>
-                                                            <li class="">
-                                                                <a href="contact.html" class="font-rubik page-item">contact us</a>
-                                                            </li>
-                                                            <li class="">
-                                                                <a href="faq.html" class="font-rubik page-item">faq</a>
-                                                            </li>
-                                                            <li class="">
-                                                                <a href="termcondition.html" class="font-rubik page-item">
-                                                                    term and condition
-                                                                </a>
-                                                            </li>
-                                                            <li class="">
-                                                                <a href="error.html" class="font-rubik page-item">
-                                                                    404 error page
-                                                                </a>
-                                                            </li>
-                                                            <li class="">
-                                                                <a href="wishlist.html" class="font-rubik page-item">wishlist</a>
-                                                            </li>
-                                                            <li class="">
-                                                                <a href="login.html" class="font-rubik page-item">login</a>
-                                                            </li>
-                                                            <li class="">
-                                                                <a href="register.html" class="font-rubik page-item">register</a>
-                                                            </li>
-                                                        </ul>
+                                                <div @click.away="open = false" class="relative z-40" x-data="{ open: false }">
+                                                    <button
+                                                        @click="open = !open"
+                                                        class="focus:outline-none font-rubik main-menu-item w-full text-left"
+                                                    >
+                                                        <span class="transition duration-300 ease-in-out">pages</span>
+                                                        <svg fill="currentColor" viewBox="0 0 20 20" :class="{'rotate-180': open, 'rotate-0': !open}" class="inline w-4 h-4 mt-1 ml-1 transition-transform duration-200 transform md:-mt-1">
+                                                            <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                                                        </svg>
+                                                    </button>
+                                                    <div
+                                                        x-show="open"
+                                                        x-transition:enter="transition ease-out duration-100"
+                                                        x-transition:enter-start="transform opacity-0 scale-95"
+                                                        x-transition:enter-end="transform opacity-100 scale-100"
+                                                        x-transition:leave="transition ease-in duration-75"
+                                                        x-transition:leave-start="transform opacity-100 scale-100"
+                                                        x-transition:leave-end="transform opacity-0 scale-95"
+                                                        class="absolute left-0 xl:w-56 lg:w-56 w-full md:max-w-screen-sm md:w-screen mt-2 origin-top-right"
+                                                    >
+                                                        <div class="px-2 pt-2 pb-4 bg-white rounded-md shadow-xl">
+                                                            <ul class="px-3 py-3">
+                                                                <li class="">
+                                                                    <a href="about.html" class="font-rubik page-item">about us</a>
+                                                                </li>
+                                                                <li class="">
+                                                                    <a href="contact.html" class="font-rubik page-item">contact us</a>
+                                                                </li>
+                                                                <li class="">
+                                                                    <a href="faq.html" class="font-rubik page-item">faq</a>
+                                                                </li>
+                                                                <li class="">
+                                                                    <a href="termcondition.html" class="font-rubik page-item">
+                                                                        term and condition
+                                                                    </a>
+                                                                </li>
+                                                                <li class="">
+                                                                    <a href="error.html" class="font-rubik page-item">
+                                                                        404 error page
+                                                                    </a>
+                                                                </li>
+                                                                <li class="">
+                                                                    <a href="wishlist.html" class="font-rubik page-item">wishlist</a>
+                                                                </li>
+                                                                <li class="">
+                                                                    <a href="login.html" class="font-rubik page-item">login</a>
+                                                                </li>
+                                                                <li class="">
+                                                                    <a href="register.html" class="font-rubik page-item">register</a>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
                                                     </div>
                                                 </div>
-                                            </div>
-                                            <a href="blog.html" class="active_btn font-rubik main-menu-item">
+                                            <a
+                                                href="blog.html"
+                                                class="active_btn font-rubik main-menu-item"
+                                            >
                                                 Blog
                                             </a>
-                                            <a href="shop.html" class="active_btn font-rubik main-menu-item">
+                                            <a
+                                                href="shop.html"
+                                                class="active_btn font-rubik main-menu-item"
+                                            >
                                                 shop
                                             </a>
-                                            <a href="contact.html" class="active_btn font-rubik main-menu-item">
+                                            <a
+                                                href="contact.html"
+                                                class="active_btn font-rubik main-menu-item"
+                                            >
                                                 contact us
                                             </a>
                                         </ul>
@@ -225,100 +240,91 @@
                                 <div class="">
                                     <div class="flex items-center relative">
                                         <div class="mr-6">
-                                            <i class="fas fa-search text-gray-500 cursor-pointer w-4" onclick="openNav()"> </i>
+                                            <i class="fas fa-search text-gray-500 cursor-pointer w-4" onclick="openNav()"> </i> 
                                         </div>
                                         <div class="relative">
                                             <div class="bg-white flex flex-col justify-center">
                                                 <div class="flex items-center justify-center">
-                                                    <div class="relative inline-block text-left dropdown z-40">
-                                                        <span class="">
-                                                            <button class="inline-flex justify-center w-full focus:outline-none leading-5" type="button">
-                                                                <i class="fas fa-shopping-cart text-gray-500 cursor-pointer"></i>
-                                                            </button>
-                                                        </span>
-                                                        <div class="opacity-0 invisible dropdown-menu transition-all duration-300 transform origin-top-right -translate-y-2 scale-95">
-                                                            <div
-                                                                class="absolute xl:right-0 lg:right-0 md:right-0 -right-24 w-80 mt-2 origin-top-right bg-white shadow-xl divide-y divide-gray-100 outline-none"
-                                                                aria-labelledby="headlessui-menu-button-1"
-                                                                id="headlessui-menu-items-117"
-                                                                role="menu"
-                                                            >
-                                                                <div class="py-5">
-                                                                    <ul class="">
-                                                                        <p class="text-gray-600 text-sm text-center hidden">Your Cart Is Empty</p>
-                                                                        <li class="flex justify-between px-3 py-3 border-b border-gray-200">
-                                                                            <div class="">
-                                                                                <img src="prod_img/product_img1-1.webp" class="h-auto w-16" alt="" />
-                                                                            </div>
-                                                                            <div class="leading-loose">
-                                                                                <a href="#" class="">
-                                                                                    <h1 class="text-gray-700 text-sm hover:text-red-600 transition duration-300 ease-in-out cursor-pointer uppercase">Blue Dress For Women</h1>
-                                                                                </a>
-                                                                                <p class="text-gray-600 text-sm pt-2"><span>1</span> x <span>$65.00</span></p>
-                                                                            </div>
-                                                                            <div class="">
-                                                                                <i class="fas fa-times hover:text-red-600 transition duration-300 ease-in-out cursor-pointer p-1"></i>
-                                                                            </div>
-                                                                        </li>
-                                                                        <li class="flex justify-between px-3 py-3 border-b border-gray-200">
-                                                                            <div class="">
-                                                                                <img src="prod_img/product_img11-1.webp" class="h-auto w-16" alt="" />
-                                                                            </div>
-                                                                            <div class="leading-loose">
-                                                                                <a href="#" class="">
-                                                                                    <h1 class="text-gray-700 text-sm hover:text-red-600 transition duration-300 ease-in-out cursor-pointer uppercase">Black Dress For Women</h1>
-                                                                                </a>
-                                                                                <p class="text-gray-600 text-sm pt-2"><span>1</span> x <span>$65.00</span></p>
-                                                                            </div>
-                                                                            <div class="">
-                                                                                <i class="fas fa-times hover:text-red-600 transition duration-300 ease-in-out cursor-pointer p-1"></i>
-                                                                            </div>
-                                                                        </li>
-                                                                        <li class="flex justify-between px-3 py-3 border-b border-gray-00">
-                                                                            <div class="">
-                                                                                <img src="prod_img/product_img6-1.webp" class="h-auto w-16" alt="" />
-                                                                            </div>
-                                                                            <div class="leading-loose">
-                                                                                <a href="#" class="">
-                                                                                    <h1 class="text-gray-700 text-sm hover:text-red-600 transition duration-300 ease-in-out cursor-pointer uppercase">Blue Casual Check Shirt</h1>
-                                                                                </a>
-                                                                                <p class="text-gray-600 text-sm pt-2"><span>1</span> x <span>$33.00</span></p>
-                                                                            </div>
-                                                                            <div class="">
-                                                                                <i class="fas fa-times hover:text-red-600 transition duration-300 ease-in-out cursor-pointer p-1"></i>
-                                                                            </div>
-                                                                        </li>
-                                                                    </ul>
-                                                                    <div class="flex justify-between px-3 py-6">
-                                                                        <div class="">
-                                                                            <h1 class="text-gray-800 capitalize">Subtotal:</h1>
-                                                                        </div>
-                                                                        <div class="">
-                                                                            <p class="text-gray-800">$163.00</p>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="flex justify-between px-3 py-3 pb-2">
-                                                                        <div class="">
-                                                                            <a href="cart.html" class="bg-gray-900 text-white px-4 py-3 text-sm hover:bg-red-600 transition duration-300 ease-in-out capitalize">
-                                                                                View Cart
-                                                                            </a>
-                                                                        </div>
-                                                                        <div class="">
-                                                                            <a href="checkout.html" class="bg-red-600 text-white px-4 py-3 text-sm hover:bg-gray-900 transition duration-300 ease-in-out capitalize">
-                                                                                Checkout
-                                                                            </a>
-                                                                        </div>
-                                                                    </div>
+                                                <div class=" relative inline-block text-left dropdown z-40">
+                                                    <span class=""
+                                                    ><button class="inline-flex justify-center w-full focus:outline-none leading-5" 
+                                                    type="button" >
+                                                    <i class="fas fa-shopping-cart text-gray-500 cursor-pointer"></i>
+                                                        </button
+                                                    ></span>
+                                                    <div class="opacity-0 invisible dropdown-menu transition-all duration-300 transform origin-top-right -translate-y-2 scale-95">
+                                                    <div class="absolute xl:right-0 lg:right-0 md:right-0 -right-24 w-80 mt-2 origin-top-right bg-white shadow-xl divide-y divide-gray-100 outline-none" aria-labelledby="headlessui-menu-button-1" id="headlessui-menu-items-117" role="menu">
+                                                       <div class="py-5">
+                                                       <ul class="">
+                                                            <p class="text-gray-600 text-sm text-center hidden">Your Cart Is Empty</p>
+                                                           <li class="flex justify-between px-3 py-3 border-b border-gray-200">
+                                                                <div class="">
+                                                                    <img src="prod_img/product_img1-1.webp" class="h-auto w-16" alt="">
                                                                 </div>
+                                                                <div class="leading-loose">
+                                                                   <a href="#" class=""> <h1 class="text-gray-700 text-sm hover:text-red-600 transition duration-300 ease-in-out cursor-pointer uppercase">Blue Dress For Women</h1></a>
+                                                                   <p class="text-gray-600 text-sm pt-2"><span>1</span> x <span>$65.00</span></p> 
+                                                                </div>
+                                                                <div class="">
+                                                                    <i class="fas fa-times hover:text-red-600 transition duration-300 ease-in-out cursor-pointer p-1"></i>
+                                                                </div>
+                                                           </li>
+                                                           <li class="flex justify-between px-3 py-3 border-b border-gray-200">
+                                                                <div class="">
+                                                                    <img src="prod_img/product_img11-1.webp" class="h-auto w-16" alt="">
+                                                                </div>
+                                                                <div class="leading-loose">
+                                                                   <a href="#" class=""> <h1 class="text-gray-700 text-sm hover:text-red-600 transition duration-300 ease-in-out cursor-pointer uppercase">Black Dress For Women</h1></a>
+                                                                   <p class="text-gray-600 text-sm pt-2"><span>1</span> x <span>$65.00</span></p> 
+                                                                </div>
+                                                                <div class="">
+                                                                    <i class="fas fa-times hover:text-red-600 transition duration-300 ease-in-out cursor-pointer p-1"></i>
+                                                                </div>
+                                                           </li>
+                                                           <li class="flex justify-between px-3 py-3 border-b border-gray-00">
+                                                                <div class="">
+                                                                    <img src="prod_img/product_img6-1.webp" class="h-auto w-16" alt="">
+                                                                </div>
+                                                                <div class="leading-loose">
+                                                                   <a href="#" class=""> <h1 class="text-gray-700 text-sm hover:text-red-600 transition duration-300 ease-in-out cursor-pointer uppercase">Blue Casual Check Shirt</h1></a>
+                                                                   <p class="text-gray-600 text-sm pt-2"><span>1</span> x <span>$33.00</span></p> 
+                                                                </div>
+                                                                <div class="">
+                                                                    <i class="fas fa-times hover:text-red-600 transition duration-300 ease-in-out cursor-pointer p-1"></i>
+                                                                </div>
+                                                           </li>
+                                                       </ul>
+                                                        <div class="flex justify-between px-3 py-6">
+                                                            <div class="">
+                                                                <h1 class="text-gray-800 capitalize">Subtotal:</h1>
+                                                            </div>
+                                                            <div class="">
+                                                                <p class="text-gray-800">$163.00</p>
                                                             </div>
                                                         </div>
+                                                        <div class="flex justify-between px-3 py-3 pb-2 ">
+                                                            <div class="">
+                                                                <a href="cart.html" class="bg-gray-900 text-white px-4 py-3 text-sm hover:bg-red-600 transition duration-300 ease-in-out capitalize">
+                                                                    View Cart
+                                                                </a>
+                                                            </div>
+                                                            <div class="">
+                                                                <a href="checkout.html" class="bg-red-600 text-white px-4 py-3 text-sm hover:bg-gray-900 transition duration-300 ease-in-out capitalize">
+                                                                    Checkout
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                       </div>
+                                                    </div>
                                                     </div>
                                                 </div>
-                                            </div>
+                                                </div>              
+                                                </div>
                                             <div class="flex-shrink-0 ml-2 self-end mb-1 absolute -top-3 -right-3">
                                                 <span class="flex items-center justify-center h-4 w-4 bg-red-500 text-white text-xs rounded-full">3</span>
                                             </div>
                                         </div>
+                                     
                                     </div>
                                 </div>
                                 <div class="xl:hidden lg:hidden block mx-5">
@@ -341,7 +347,7 @@
                                         <div id="demo"></div>
                                         <div class="dropdown inline-block relative group">
                                             <button class="inline-flex items-center focus:outline-none relative flex items-center">
-                                                <img src="images/images (1).jpeg" class="xl:w-8 lg:w-8 md:w-7 sm:w-6 w-6 h-auto rounded-full" alt="image" />
+                                                <img src="images/images (1).jpeg" class="xl:w-8 lg:w-8 md:w-7 sm:w-6 w-6 h-auto rounded-full" alt="image">
                                             </button>
                                             <ul class="dropdown-content z-10 bg-white rounded shadow-lg absolute xl:right-0 lg:right-0 md:right-0 sm:right-0 -right-4 hidden text-gray-700 pt-1 w-44">
                                                 <li class="shadow-lg px-3 py-3 mt-5">
@@ -356,6 +362,53 @@
                                 </div>
                             </div>
                         </div>
+                    </div>
+                </div>
+                <div class="sliderAx h-auto">
+                    <div id="slider-1" class="container-fluid mx-auto">
+                        <div class="slider-blog" style="background-image: url(images/banner2.jpg);">
+                            <div class="prebtn-header">
+                                <button id="sButton1" onclick="sliderButton1()" class="prebtn group">
+                                    <i class="fas fa-chevron-left slide-arrow"></i>
+                                </button>
+                            </div>
+                            <div class="max-w-sm md:max-w-xl lg:max-w-screen-md xl:max-w-screen-xl mx-auto flex items-center h-full">
+                                <div class="xl:max-w-lg">
+                                    <p class="font-rubic text-gray-600 text-xl uppercase">50% off in all products</p>
+                                    <h1 class="xl:text-6xl lg:text-4xl md:text-2xl text-xl text-gray-900 font-bold font-rubik pt-4 pb-8">Man Fashion</h1>
+                                    <a href="shop.html" class="btn-danger">Shop Now</a>
+                                </div>
+                            </div>
+                            <div class="absolute right-10 top-0 flex items-center h-full xl:visible lg:visible md:visible invisible">
+                                <button id="sButton2" onclick="sliderButton2() " class="prebtn group">
+                                    <i class="fas fa-chevron-right slide-arrow"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <br />
+                    </div>
+    
+                    <div id="slider-2" class="container-fluid mx-auto">
+                        <div class="slider-blog" style="background-image: url(images/banner1.jpg);">
+                            <div class="prebtn-header">
+                                <button id="sButton1" onclick="sliderButton1()" class="prebtn group">
+                                    <i class="fas fa-chevron-left slide-arrow"></i>
+                                </button>
+                            </div>
+                            <div class="max-w-sm md:max-w-xl lg:max-w-screen-md xl:max-w-screen-xl mx-auto flex items-center h-full">
+                                <div class="xl:max-w-lg">
+                                    <p class="font-rubic text-gray-600 text-xl uppercase">50% off in all products</p>
+                                    <h1 class="xl:text-6xl lg:text-4xl md:text-2xl text-xl text-gray-900 font-bold font-rubik pt-4 pb-8">Man Fashion</h1>
+                                    <a href="shop.html" class="btn-danger">Shop Now</a>
+                                </div>
+                            </div>
+                            <div class="absolute right-10 top-0 flex items-center h-full xl:visible lg:visible md:visible invisible">
+                                <button id="sButton2" onclick="sliderButton2() " class="prebtn ">
+                                    <i class="fas fa-chevron-right slide-arrow"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <br />
                     </div>
                 </div>
             </div>
@@ -423,7 +476,7 @@
                 <div class="max-w-screen-xl mx-auto">
                     <div class="xl:grid xl:grid-cols-5 lg:grid lg:grid-cols-5 md:grid md:grid-cols-3 sm:grid sm:grid-cols-2 gap-6 px-4">
                         <div class="xl:pt-0 lg:pt-0 md:pt-8 sm:pt-8 pt-8">
-                            <a href="index.html" class="text-xl text-gray-100 font-bold font-rubik">Logo</a>
+                            <a href="index.html" class="text-xl text-gray-100 font-bold font-rubik"><img class="w-44 h-auto" src="images/logo_white.webp" alt=""></a>
                             <p class="text-gray-200 pt-4">If you are going to use of Lorem Ipsum need to be sure there isn't hidden of text</p>
                             <div class="">
                                 <ul class="pt-5 flex justify-">
