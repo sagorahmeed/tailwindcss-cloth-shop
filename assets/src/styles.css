@@ -4,7 +4,7 @@
     @apply translate-x-4;
 }
 .btn-danger {
-    @apply capitalize bg-red-500 text-white hover:bg-transparent hover:text-red-500 transition duration-500 focus:outline-none ease-in-out border border-red-500 hover:border-red-500 rounded font-medium px-8 py-4;
+    @apply capitalize bg-red-500 text-white hover:bg-transparent hover:text-red-500 transition duration-500 focus:outline-none ease-in-out border border-red-500 hover:border-red-500 rounded font-medium px-8 py-3.5;
 }
 .body {
     @apply dark:bg-gray-900;
