@@ -208,10 +208,10 @@
                                                                     <a href="wishlist.html" class="font-rubik page-item">wishlist</a>
                                                                 </li>
                                                                 <li class="">
-                                                                    <a href="login.html" class="font-rubik page-item">login</a>
+                                                                    <a href="signin.html" class="font-rubik page-item">login</a>
                                                                 </li>
                                                                 <li class="">
-                                                                    <a href="register.html" class="font-rubik page-item">register</a>
+                                                                    <a href="signup.html" class="font-rubik page-item">register</a>
                                                                 </li>
                                                             </ul>
                                                         </div>
@@ -354,8 +354,8 @@
                                                 <li class="shadow-lg px-3 py-3 mt-5">
                                                     <h1 class="pb-1 border-b border-gray-300 block mb-3 font-semibold text-gray-700 capitalize">John Doe</h1>
                                                     <div class="py-1"><a href="account.html" class="text-gray-500 capitalize font-rubic hover:text-red-600 transition duration-300 ease-in-out">My Account</a></div>
-                                                    <div class="py-1"><a href="register.html" class="text-gray-500 capitalize font-rubic hover:text-red-600 transition duration-300 ease-in-out">Register</a></div>
-                                                    <div class="py-1"><a href="login.html" class="text-gray-500 capitalize font-rubic hover:text-red-600 transition duration-300 ease-in-out">Login</a></div>
+                                                    <div class="py-1"><a href="signup.html" class="text-gray-500 capitalize font-rubic hover:text-red-600 transition duration-300 ease-in-out">Register</a></div>
+                                                    <div class="py-1"><a href="signin.html" class="text-gray-500 capitalize font-rubic hover:text-red-600 transition duration-300 ease-in-out">Login</a></div>
                                                 </li>
                                             </ul>
                                         </div>
@@ -367,50 +367,36 @@
                 </div>
             </div>
         </div>
-        <div class="container mx-auto py-44">
-            <div class="max-w-screen-sm mx-auto">
-                <div class="shadow-lg px-8 py-8 rounded-lg xl:mx-0 lg:mx-0 md:mx-0 mx-6">
-                    <form id="contact-me" class="">
-
-
-                        <h2 class="w-full my-2 text-xl font-bold leading-tight my-5">Register</h2>
-                        <!-- name field -->
-                        <div class="flex flex-wrap mb-6">
-                            <div class="relative w-full appearance-none label-floating">
-                                <input class="tracking-wide py-3 px-4 mb-3 leading-relaxed appearance-none block w-full border border-gray-200 rounded focus:outline-none focus:bg-white"
-                                id="name" type="text" placeholder="Username *"required>
-                                <label for="name" class="absolute tracking-wide py-2 px-4 mb-4 opacity-0 leading-tight block top-0 left-0 cursor-text">
-                                    Username
-                                </label>
-                            </div>
-                        </div>
-
-                        <div class="flex flex-wrap mb-6">
-                            <div class="relative w-full appearance-none label-floating">
-                                <input class="tracking-wide py-3 px-4 mb-3 leading-relaxed appearance-none block w-full border border-gray-200 rounded focus:outline-none focus:bg-white"
-                                id="email" type="text" placeholder="Email Address *"required>
-                                <label for="email" class="absolute tracking-wide py-2 px-4 mb-4 opacity-0 leading-tight block top-0 left-0 cursor-text">
-                                    Email adress
-                                </label>
-                            </div>
-                        </div>
-                        <!-- email field -->
-                        <div class="flex flex-wrap mb-6">
-                            <div class="relative w-full appearance-none label-floating">
-                                <input class="tracking-wide py-3     px-4 mb-3 leading-relaxed appearance-none block w-full border border-gray-200 rounded focus:outline-none focus:bg-white"
-                                id="Pass" type="password" placeholder="Password *"required>
-                                <label for="Pass" class="absolute tracking-wide py-2 px-4 mb-4 opacity-0 leading-tight block top-0 left-0 cursor-text">
-                                    Your password
-                                </label>
-                            </div>
-                        </div>
+        <div class="py-44">
+            <div class="max-w-screen-md mx-auto">
+                <div class="mx-6">
+                    <div class="">
                         <div class="">
-                            <p class="text-gray-500 text-sm">Your personal data will be used to support your experience throughout this website, to manage access to your account, and for other purposes described in our <a href="#" class="text-gray-800 hover:text-red-500 transition duration-300 ease-in-out">privacy policy</a>.</p>
+                            <div class="">
+                                <div class="">
+                                    <h1 class="font-bold text-gray-900 font-rubik pb-4">Register</h1>
+                                    <div class="">
+                                        <label class="text-gray-600 font-inter text-sm" for="">Username *</label>
+                                        <input type="text" class="mt-2 w-full h-12 border border-gray-300 rounded">
+                                    </div>
+                                    <div class="mt-8">
+                                        <label class="text-gray-600 font-inter text-sm" for="">Email address *</label>
+                                        <input type="text" class="mt-2 w-full h-12 border border-gray-300 rounded">
+                                    </div>
+                                    <div class="mt-8">
+                                        <label class="text-gray-600 font-inter text-sm" for="">Password *</label>
+                                        <input type="password" class="mt-2 w-full h-12 border border-gray-300 rounded">
+                                    </div>
+                                    <div class="my-7">
+                                        <p class="text-gray-600 leading-loose font-inter"> Your personal data will be used to support your experience throughout this website, to manage access to your account, and for other purposes described in our <a href="#" class="text-gray-700 font-semibold hover:text-red-600 transition duration-300 ease-in-out">privacy policy</a>.</p>
+                                    </div>
+                                    <div class="my-4 mt-8">
+                                        <a href="#" class="btn-danger">Register</a>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <div class="my-5">
-                           <button class="btn-danger" type="submit">Register</button>
-                        </div>
-                    </form>
+                    </div>
                 </div>
             </div>
         </div>
